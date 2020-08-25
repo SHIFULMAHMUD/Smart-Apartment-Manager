@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/colorPrimary"
+    tools:context=".LoginActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:id="@+id/image">
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/circle"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/ll1"
+            android:layout_below="@+id/image"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/image_cell"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_phone"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                style="@style/parent">
+
+                <EditText
+                    android:id="@+id/editTextLoginPhone"
+                    style="@style/modifiedEditText"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/mobile"
+                    android:textColor="@android:color/white"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ll1"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_lock"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/parent"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/editTextLoginPassword"
+                    style="@style/modifiedEditText"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/pass"
+                    android:textColor="@android:color/white"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll3"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ll2"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_account"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textAccountType"
+                style="@style/parent"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/editTextAccountName"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:focusable="false"
+                    android:hint="@string/account"
+                    style="@style/modifiedEditText"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cirLoginButton"
+            style="@style/loginButton"
+            android:text="@string/login"
+            android:layout_below="@+id/ll3"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:textSize="15sp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="12"
+            android:id="@+id/ll4"
+            android:layout_below="@+id/cirLoginButton"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                android:layout_weight="3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New User?"
+                android:layout_weight="6"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll5"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/ll4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:text="Don't have an account?" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:text="@string/register" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

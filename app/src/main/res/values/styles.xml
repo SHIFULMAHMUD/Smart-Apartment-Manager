@@ -1,0 +1,37 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="modifiedEditText" parent="parent">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="modifiedNewEditText" parent="parent">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="loginButton" parent="viewParent">
+        <item name="android:background">@drawable/login_btn_bk</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="registerButton" parent="viewParent">
+        <item name="android:background">@drawable/register_btn_bk</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Apartment Manager</string>
+    <string name="pass">Password</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="name">Name</string>
+    <string name="account">Account Type</string>
+    <string name="gender">Gender</string>
+    <string name="pic">NID Image</string>
+    <string name="nid">NID Number</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+</resources>

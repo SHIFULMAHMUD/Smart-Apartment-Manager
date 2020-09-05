@@ -12,11 +12,11 @@
     </style>
     <style name="modifiedEditText" parent="parent">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="modifiedNewEditText" parent="parent">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
     <style name="viewParent">
         <item name="android:layout_width">wrap_content</item>

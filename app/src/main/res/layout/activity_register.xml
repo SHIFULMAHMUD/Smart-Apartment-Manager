@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorBack"
     tools:context=".RegisterActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/image_name"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_person_black"/>
+                android:src="@drawable/ic_person_white"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputName"
                 style="@style/parent">
@@ -54,6 +54,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:hint="@string/name"
+                    android:textColorHint="@color/colorAccent"
+                    android:backgroundTint="@color/colorAccent"
                     android:inputType="text"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -72,7 +74,7 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/image_cell"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_phone_black"/>
+                android:src="@drawable/ic_phone"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputPhone"
                 style="@style/parent">
@@ -83,6 +85,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:hint="@string/mobile"
+                    android:textColorHint="@color/colorAccent"
+                    android:backgroundTint="@color/colorAccent"
                     android:inputType="phone"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -100,7 +104,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_lock_black"/>
+                android:src="@drawable/ic_lock"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputPassword"
                 style="@style/parent"
@@ -111,6 +115,8 @@
                     style="@style/modifiedNewEditText"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:backgroundTint="@color/colorAccent"
                     android:hint="@string/pass"
                     android:inputType="textPassword"
                     android:maxLines="1" />
@@ -129,16 +135,18 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_account_black"/>
+                android:src="@drawable/ic_account"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textAccountType"
                 style="@style/parent"
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/editTextAccountName"
+                    android:id="@+id/editTextRegisterAccountType"
                     android:inputType="text"
+                    android:backgroundTint="@color/colorAccent"
                     android:maxLines="1"
+                    android:textColorHint="@color/colorAccent"
                     android:focusable="false"
                     android:hint="@string/account"
                     style="@style/modifiedNewEditText"
@@ -160,17 +168,19 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_gender_black"/>
+                android:src="@drawable/ic_gender_white"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textGender"
                 style="@style/parent"
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/editTextGender"
+                    android:id="@+id/editTextRegisterGender"
                     android:inputType="text"
+                    android:textColorHint="@color/colorAccent"
                     android:maxLines="1"
                     android:focusable="false"
+                    android:backgroundTint="@color/colorAccent"
                     android:hint="@string/gender"
                     style="@style/modifiedNewEditText"
                     android:layout_marginRight="10dp"
@@ -191,57 +201,62 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/image_nid"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_nid_number_black"/>
+                android:src="@drawable/ic_nid_white"/>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputNid"
                 style="@style/parent">
 
                 <EditText
-                    android:id="@+id/editTextNid"
+                    android:id="@+id/editTextRegisterNid"
                     style="@style/modifiedNewEditText"
                     android:layout_marginRight="10dp"
+                    android:textColorHint="@color/colorAccent"
                     android:layout_marginLeft="10dp"
                     android:hint="@string/nid"
+                    android:backgroundTint="@color/colorAccent"
                     android:inputType="number"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:id="@+id/ll7"
-            android:layout_margin="10dp"
+            android:background="@android:color/white"
             android:layout_below="@+id/ll6"
             android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorBack"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Choose NID Photo"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/getImage"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ll7">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/image_nid_pic"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/ic_nid_photo_black"/>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputNidPic"
-                style="@style/parent">
-
-                <EditText
-                    android:id="@+id/editTextNidPic"
-                    style="@style/modifiedNewEditText"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:hint="@string/pic"
-                    android:focusable="false"
-                    android:maxLines="1" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:id="@+id/viewImage"
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:src="@drawable/addpicture"/>
         </LinearLayout>
         <Button
-            android:id="@+id/cirLoginButton"
+            android:id="@+id/cirRegisterButton"
             style="@style/registerButton"
             android:text="@string/register"
-            android:layout_below="@+id/ll7"
+            android:layout_below="@+id/getImage"
             android:layout_centerInParent="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:textSize="15sp"
             android:layout_gravity="right"
             android:layout_marginRight="10dp" />
@@ -250,14 +265,14 @@
             android:layout_height="wrap_content"
             android:weightSum="12"
             android:id="@+id/ll8"
-            android:layout_below="@+id/cirLoginButton"
+            android:layout_below="@+id/cirRegisterButton"
             android:gravity="center"
             android:layout_marginTop="30dp">
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/colorAccent"
                 android:layout_weight="3"/>
 
             <TextView
@@ -265,7 +280,7 @@
                 android:layout_height="wrap_content"
                 android:text="Already a user?"
                 android:layout_weight="6"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="12sp"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"/>
@@ -273,7 +288,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/colorAccent"
                 android:layout_weight="3"/>
 
         </LinearLayout>
@@ -293,7 +308,7 @@
                 android:textAlignment="center"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="15sp"
                 android:text="Do you have an account?" />
             <TextView
@@ -303,7 +318,7 @@
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:text="@string/login" />
         </LinearLayout>

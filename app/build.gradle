@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "shiful.android.apartmentmanagementsystem"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -31,4 +31,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.github.GrenderG:Toasty:1.5.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.github.maayyaannkk:ImagePicker:1.0.6'
+    //https://github.com/Karumi/Dexter
+    // Dexter runtime permissions
+    implementation 'com.karumi:dexter:5.0.0'
 }

@@ -48,6 +48,8 @@
                     android:hint="@string/mobile"
                     android:textColor="@android:color/white"
                     android:inputType="phone"
+                    android:textColorHint="@color/colorAccent"
+                    android:backgroundTint="@color/colorAccent"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -73,7 +75,9 @@
                     android:id="@+id/editTextLoginPassword"
                     style="@style/modifiedEditText"
                     android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/colorAccent"
                     android:layout_marginLeft="10dp"
+                    android:textColorHint="@color/colorAccent"
                     android:hint="@string/pass"
                     android:textColor="@android:color/white"
                     android:inputType="textPassword"
@@ -99,14 +103,16 @@
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/editTextAccountName"
+                    android:id="@+id/editTextAccountType"
                     android:inputType="text"
                     android:maxLines="1"
                     android:focusable="false"
                     android:hint="@string/account"
                     style="@style/modifiedEditText"
+                    android:textColorHint="@color/colorAccent"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/colorAccent"
                     android:textColor="@android:color/white" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

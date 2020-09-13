@@ -11,15 +11,34 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_layout">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimaryDark"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:orientation="vertical"
+            android:layout_below="@+id/toolbar_layout"
             android:background="@drawable/background"
             android:id="@+id/layout1">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Welcome User"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
@@ -32,7 +51,7 @@
             android:id="@+id/cardview1"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="170dp"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="10dp"
             app:cardElevation="6dp">
@@ -59,6 +78,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/notice_layout"
                         android:orientation="vertical">
                         <ImageView
                             android:layout_width="40dp"
@@ -76,23 +97,29 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/events_layout"
                         android:orientation="vertical">
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/ic_event"></ImageView>
+                            android:src="@drawable/ic_event">
+                        </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:text="Events"></TextView>
+                            android:text="Events">
+                        </TextView>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/history_layout"
                         android:orientation="vertical">
                         <ImageView
                             android:layout_width="40dp"
@@ -158,11 +185,6 @@
                     app:cardBackgroundColor="#91DB26"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-               <!--     <ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:layout_gravity="center"/>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -198,15 +220,13 @@
                     android:layout_columnWeight="1"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_marginLeft="5dp"
+                    android:id="@+id/cardview_pay_rent"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     app:cardBackgroundColor="#FF8A45"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -241,6 +261,7 @@
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
+                    android:id="@+id/cardview_pay_utility"
                     android:layout_marginBottom="5dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#6398DE"
@@ -285,6 +306,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
+                    android:id="@+id/cardview_guest"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
                     app:cardBackgroundColor="#00D3FB"
@@ -329,15 +351,13 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
+                    android:id="@+id/cardview_task"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
                     app:cardBackgroundColor="#FFA2B4"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -378,10 +398,7 @@
                     app:cardBackgroundColor="#FFB200"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -412,7 +429,6 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:id="@+id/profile_cv"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -420,13 +436,11 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
+                    android:id="@+id/cardview_complain"
                     app:cardBackgroundColor="#BC6348"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -460,7 +474,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:id="@+id/food_donate_cv"
+                    android:id="@+id/cardview_guard"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
@@ -468,10 +482,7 @@
                     app:cardBackgroundColor="#AF3DAF"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -489,7 +500,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Gateman"
+                            android:text="Guard"
                             android:textSize="16sp"
                             android:gravity="center"
                             android:textColor="@android:color/white"
@@ -508,15 +519,12 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:id="@+id/donate_money_cv"
+                    android:id="@+id/logout_cv"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#FF3939"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

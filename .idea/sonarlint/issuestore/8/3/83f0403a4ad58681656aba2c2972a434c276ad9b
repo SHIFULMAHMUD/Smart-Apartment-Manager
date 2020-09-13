@@ -1,0 +1,19 @@
+
+E
+java:S16590"*Declare "etxtPassword" on a separate line.(ÕÉÇŠúÿÿÿÿ
+E
+java:S1066:"/Merge this if statement with the enclosing one.(ÜÉÌâ
+c
+java:S1871g"HThis case's code block is the same as the block for the case on line 98.(ªëÅŞúÿÿÿÿ
+<	java:S131a""Add a default case to this switch.(¼œóÛüÿÿÿÿ
+f
+java:S1301a"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ
+L
+java:S1874/"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú
+R
+java:S1874…"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ
+R	java:S125ú"<This block of commented-out lines of code should be removed.(æ³¨¾
+D
+java:S16590")Declare "etxtAccount" on a separate line.(ÕÉÇŠúÿÿÿÿ
+I
+java:S1874†"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜

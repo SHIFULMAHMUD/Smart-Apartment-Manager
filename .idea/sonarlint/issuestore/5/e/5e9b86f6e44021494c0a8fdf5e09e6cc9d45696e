@@ -1,0 +1,15 @@
+
+h	java:S116"SRename this field "DELAY_MS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ…÷Š
+7
+java:S1170"!Make this final field static too.(Ÿ…÷Š
+n	java:S116"TRename this field "PERIOD_MS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚’ÙÊýÿÿÿÿ
+i	java:S116"TRename this field "NUM_PAGES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ˆš‘
+<
+java:S1170"!Make this final field static too.(‚’ÙÊýÿÿÿÿ
+M
+java:S1197"8Move the array designator from the variable to the type.(ôˆãs
+=
+java:S1659"'Declare "NUM_PAGES" on a separate line.(·ˆš‘
+m
+java:S1301:"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8¹ÑÆŒÈ.
+k	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‘—Öÿÿÿÿÿ

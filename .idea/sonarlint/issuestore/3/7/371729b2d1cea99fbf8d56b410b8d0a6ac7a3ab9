@@ -1,0 +1,17 @@
+
+R
+java:S1659"0Declare "cardViewPayUtility" on a separate line.(½ªÃùÿÿÿÿ8—×¼ğÇ.
+L
+java:S1659"*Declare "cardViewTask" on a separate line.(½ªÃùÿÿÿÿ8˜æøòÇ.
+f
+java:S1301f"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+L
+java:S1659"/Declare "linearLayoutEvent" on a separate line.(ùßáğ8şÏÍ›È.
+P
+java:S1659".Declare "cardViewComplain" on a separate line.(½ªÃùÿÿÿÿ8ï¨ñÇ.
+O
+java:S1659"-Declare "cardViewPayRent" on a separate line.(½ªÃùÿÿÿÿ8 ÇæêÇ.
+N
+java:S1659",Declare "cardViewLogout" on a separate line.(½ªÃùÿÿÿÿ8…‹ñÇ.
+M
+java:S1659"+Declare "cardViewGuard" on a separate line.(½ªÃùÿÿÿÿ8…“ˆÈ.

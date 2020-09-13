@@ -9,4 +9,7 @@
     <string name="nid">NID Number</string>
     <string name="login">LOGIN</string>
     <string name="register">REGISTER</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="no_data_found">No Data Found!</string>
+    <string name="something_went_wrong">Something went wrong!</string>
 </resources>

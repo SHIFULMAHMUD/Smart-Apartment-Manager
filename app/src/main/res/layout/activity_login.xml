@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:background="@color/colorPrimary"
     tools:context=".LoginActivity">
     <RelativeLayout
@@ -13,7 +12,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/toolbar_layout">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorFlat"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
+            android:layout_below="@+id/toolbar_layout"
             android:gravity="center"
             android:id="@+id/image">
             <ImageView
@@ -27,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:id="@+id/ll1"
+            android:layout_marginLeft="10dp"
             android:layout_below="@+id/image"
             android:orientation="horizontal">
             <ImageView
@@ -57,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ll2"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/ll1"
             android:orientation="horizontal">
@@ -88,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ll3"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/ll2"
             android:orientation="horizontal">
@@ -166,6 +187,7 @@
             android:orientation="horizontal"
             android:id="@+id/ll5"
             android:gravity="center"
+            android:layout_marginBottom="50dp"
             android:layout_marginTop="30dp"
             android:layout_below="@+id/ll4">
             <TextView

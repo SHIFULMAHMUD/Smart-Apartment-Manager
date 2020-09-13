@@ -1,0 +1,44 @@
+
+m
+java:S1301E"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
+n	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó…§Â8à£‚Ç.
+J
+java:S1659!"(Declare "etxtGender" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+t
+java:S3776)"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨Œşÿÿÿÿ8”ÿÜãÅ.
+S
+java:S1874¼"0Remove this use of "getColor"; it is deprecated.(©ÖåÂüÿÿÿÿ8¯‘É¼Å.
+j
+java:S1871K"HThis case's code block is the same as the block for the case on line 70.(ªëÅŞúÿÿÿÿ8¯‘É¼Å.
+C	java:S131E""Add a default case to this switch.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
+Y
+java:S1874…"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8¯‘É¼Å.
+n
+java:S3252º"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ğèê¬8¯‘É¼Å.
+C	java:S131m""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
+M
+java:S1659%"0Declare "linearLayoutNidPic" on a separate line.(£§İè8¦úı‘Å.
+k
+java:S1871¥"MThis branch's code block is the same as the block for the branch on line 285.(á¢–¬8¯‘É¼Å.
+M
+java:S1659!"+Declare "etxtNidNumber" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+Q
+java:S1874º"3Remove this use of "FILL_PARENT"; it is deprecated.(ğèê¬8¯‘É¼Å.
+L
+java:S1659!"*Declare "etxtPassword" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+p	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ÃŸæûÿÿÿÿ8¯‘É¼Å.
+K
+java:S1659!")Declare "etxtAccount" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+m
+java:S1301m"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
+S
+java:S1874&"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8–ÈŒúÂ.
+m
+java:S3252º"OUse static access with "android.view.ViewGroup$LayoutParams" for "FILL_PARENT".(ğèê¬8¯‘É¼Å.
+P
+java:S1874†"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8¯‘É¼Å.
+s	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ÃŸæûÿÿÿÿ8à£‚Ç.
+H
+java:S1659!"&Declare "etxtCell" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+k
+java:S1871s"IThis case's code block is the same as the block for the case on line 110.(ªëÅŞúÿÿÿÿ8ÈÉĞ¼Å.

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "shiful.android.apartmentmanagementsystem"
+        applicationId "com.android.apartmentmanagementsystem"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -39,4 +39,12 @@ dependencies {
     //https://github.com/Karumi/Dexter
     // Dexter runtime permissions
     implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.android.support:design:29.1.1'
+    //https://github.com/chrisbanes/PhotoView
+    //PhotoView aims to help produce an easily usable implementation of a zooming Android ImageView.
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //Scan QR Code
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    //Generate QR Code
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
 }

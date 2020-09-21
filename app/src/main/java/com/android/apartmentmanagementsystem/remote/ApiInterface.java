@@ -152,6 +152,10 @@ public interface ApiInterface {
             @Query("name") String name,
             @Query("cell") String cell
     );
+    @GET("my_guard.php")
+    Call<List<Contacts>> getMyGuard(
+            @Query("name") String name
+    );
     @GET("rent_history.php")
     Call<List<Rent>> getRent(
             @Query("getcell") String getcell

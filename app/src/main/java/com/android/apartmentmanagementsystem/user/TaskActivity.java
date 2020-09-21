@@ -26,6 +26,8 @@ import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TaskActivity extends AppCompatActivity {
     EditText renter_name_et, renter_cell_et, task_et;
@@ -33,10 +35,13 @@ public class TaskActivity extends AppCompatActivity {
     Button submit_btn;
     String[] flat = { "1st", "2nd", "3rd", "4th"};
     String[] floor = { "1st", "2nd", "3rd", "4th", "5th", "6th"};
-    String[] guard = { "Guard 1", "Guard 2"};
+    private ArrayList<String> guard;
+    ArrayAdapter<String> cc;
     String flat_no="";
     String floor_no="";
     String guard_name="";
+    private List<Contacts> contactsList;
+    private ApiInterface apiInterface;
     String current_date,current_time;
     private ProgressDialog loading;
     @Override
@@ -48,10 +53,12 @@ public class TaskActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Manage Task");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
+        guard = new ArrayList<String>();
         renter_name_et =findViewById(R.id.renter_name_et);
         renter_cell_et =findViewById(R.id.renter_cell_et);
         task_et =findViewById(R.id.task_et);
-
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        getGuardData("");
         Thread t = new Thread() {
             @Override
             public void run() {
@@ -127,21 +134,24 @@ public class TaskActivity extends AppCompatActivity {
         bb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
         spinner_floor_no.setAdapter(bb);
+
         spinner_guard_name =findViewById(R.id.spinner3);
         spinner_guard_name.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                guard_name=guard[position];
+                getGuardData("");
+                guard_name= guard.get(position);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
         //Creating the ArrayAdapter instance having the country list
-        ArrayAdapter cc = new ArrayAdapter(this,android.R.layout.simple_spinner_item, guard);
+
+        cc = new ArrayAdapter<String>(TaskActivity.this,android.R.layout.simple_spinner_item, guard);
         cc.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Setting the ArrayAdapter data on the Spinner
         spinner_guard_name.setAdapter(cc);
+
         submit_btn=findViewById(R.id.submitTaskButton);
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -219,6 +229,25 @@ public class TaskActivity extends AppCompatActivity {
         });
 
     }
+    public void getGuardData(String name) {
+        Call<List<Contacts>> call = apiInterface.getMyGuard(name);
+        call.enqueue(new Callback<List<Contacts>>() {
+            @Override
+            public void onResponse(Call<List<Contacts>> call, Response<List<Contacts>> response) {
+                contactsList = response.body();
+                cc.clear();
+                for (int i = 0; i < contactsList.size(); i++) {
+                    cc.add(contactsList.get(i).getName());
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Contacts>> call, Throwable t) {
+
+            }
+        });
+    }
     private void assignTask(String name,String cell,String flat_no,String floor_no, String guard_name, String task, String date, String time) {
 
         loading=new ProgressDialog(this);
@@ -244,8 +273,6 @@ public class TaskActivity extends AppCompatActivity {
                     finish();*/
                 }
 
-
-
                 else {
                     loading.dismiss();
                     Toasty.error(TaskActivity.this, message, Toasty.LENGTH_SHORT).show();
@@ -260,6 +287,7 @@ public class TaskActivity extends AppCompatActivity {
             }
         });
     }
+
     //for back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import es.dmoral.toasty.Toasty;
 import in.mayanknagwanshi.imagepicker.ImageSelectActivity;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.Multipart;
+import retrofit2.http.PUT;
+
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
@@ -29,11 +35,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+
 public class RegisterActivity extends AppCompatActivity {
     EditText etxtName, etxtCell, etxtPassword,etxtAccount,etxtGender,etxtNidNumber;
     Button btnSignUp;
     ImageView viewImage;
-    String text;
+    String text,mediaPath,user_name,user_cell,user_password,user_account,user_gender,user_nid;
     LinearLayout linearLayoutGotoLogin,linearLayoutNidPic;
     private ProgressDialog loading;
 
@@ -170,23 +178,23 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //taking values
-                String name = etxtName.getText().toString();
-                String cell = etxtCell.getText().toString();
-                String password = etxtPassword.getText().toString();
-                String account = etxtAccount.getText().toString();
-                String gender = etxtGender.getText().toString();
-                String nid = etxtNidNumber.getText().toString();
-                String nid_pic= String.valueOf(viewImage);
+                 user_name = etxtName.getText().toString();
+                 user_cell = etxtCell.getText().toString();
+                 user_password = etxtPassword.getText().toString();
+                 user_account = etxtAccount.getText().toString();
+                 user_gender = etxtGender.getText().toString();
+                 user_nid = etxtNidNumber.getText().toString();
+
 
                 //validation
-                if (name.isEmpty())
+                if (user_name.isEmpty())
                 {
                     etxtName.setError("Name can not be empty! ");
                     etxtName.requestFocus();
 
                 }
 
-                else if (cell.length()!=11 || !cell.startsWith("01"))
+                else if (user_cell.length()!=11 || !user_cell.startsWith("01"))
                 {
                     etxtCell.setError("Invalid cell!");
                     etxtCell.requestFocus();
@@ -194,29 +202,29 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
 
-                else if (password.isEmpty())
+                else if (user_password.isEmpty())
                 {
                     etxtPassword.setError("Password can not be empty! ");
                     etxtPassword.requestFocus();
 
-                }else if ((password.length() < 4)) {
+                }else if ((user_password.length() < 4)) {
                     etxtPassword.setError("Password should be more than 3 characters!");
                     etxtPassword.requestFocus();
 
                 }
-                else if (account.isEmpty())
+                else if (user_account.isEmpty())
                 {
                     etxtAccount.setError("Account Type can not be empty! ");
                     etxtAccount.requestFocus();
                     Toasty.error(RegisterActivity.this, "Please select account type !", Toast.LENGTH_SHORT).show();
                 }
-                else if (gender.isEmpty())
+                else if (user_gender.isEmpty())
                 {
                     etxtGender.setError("Please select gender ! ");
                     etxtGender.requestFocus();
                     Toasty.error(RegisterActivity.this, "Please select gender !", Toast.LENGTH_SHORT).show();
                 }
-                else if (nid.isEmpty())
+                else if (user_nid.isEmpty())
                 {
                     etxtNidNumber.setError("NID number can not be empty! ");
                     etxtNidNumber.requestFocus();
@@ -224,7 +232,7 @@ public class RegisterActivity extends AppCompatActivity {
                 else
                 {
                     //call signup method
-                    sign_up(name,cell,password,account,gender,nid,nid_pic);
+                    sign_up(user_name,user_cell,user_password,user_account,user_gender,user_nid);
                 }
 
             }
@@ -242,7 +250,7 @@ public class RegisterActivity extends AppCompatActivity {
             if (requestCode == 1213 && resultCode == RESULT_OK && null != data) {
 
 
-                String mediaPath = data.getStringExtra(ImageSelectActivity.RESULT_FILE_PATH);
+                mediaPath = data.getStringExtra(ImageSelectActivity.RESULT_FILE_PATH);
                 Bitmap selectedImage = BitmapFactory.decodeFile(mediaPath);
                 viewImage.setImageBitmap(selectedImage);
 
@@ -256,15 +264,27 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     //signup method
-    private void sign_up(String name,String cell,String password,String account,String gender,String nid,String nid_pic) {
+    private void sign_up(String name,String cell,String password,String account,String gender,String nid) {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Please wait....");
         loading.show();
+        File file = new File(mediaPath);
+
+        // Parsing any Media type file
+        RequestBody requestBody = RequestBody.create(MediaType.parse("*/*"), file);
+        MultipartBody.Part fileToUpload = MultipartBody.Part.createFormData("file", file.getName(), requestBody);
+        RequestBody filename = RequestBody.create(MediaType.parse("text/plain"), file.getName());
+
+        RequestBody p_name = RequestBody.create(MediaType.parse("text/plain"), user_name);
+        RequestBody p_cell = RequestBody.create(MediaType.parse("text/plain"), user_cell);
+        RequestBody p_password = RequestBody.create(MediaType.parse("text/plain"), user_password);
+        RequestBody p_account = RequestBody.create(MediaType.parse("text/plain"), user_account);
+        RequestBody p_gender = RequestBody.create(MediaType.parse("text/plain"), user_gender);
+        RequestBody p_nid = RequestBody.create(MediaType.parse("text/plain"),user_nid);
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-
-        Call<Contacts> call = apiInterface.signUp(name, cell, password,account,gender,nid,nid_pic);
+        Call<Contacts> call = apiInterface.signUp(fileToUpload, filename,p_name, p_cell, p_password,p_account,p_gender,p_nid);
         call.enqueue(new Callback<Contacts>() {
             @Override
             public void onResponse(Call<Contacts> call, Response<Contacts> response) {

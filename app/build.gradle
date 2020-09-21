@@ -44,6 +44,7 @@ dependencies {
     //PhotoView aims to help produce an easily usable implementation of a zooming Android ImageView.
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     //Scan QR Code
+    // Zxing barcode dependency
     implementation 'me.dm7.barcodescanner:zxing:1.9.13'
     //Generate QR Code
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'

@@ -14,24 +14,33 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".GuestActivity"></activity>
-        <activity android:name=".EventsActivity" />
-        <activity android:name=".NoticeActivity" />
-        <activity android:name=".GuardActivity" />
-        <activity android:name=".TaskActivity" />
-        <activity android:name=".ComplainActivity" />
-        <activity android:name=".PayUtilityBillActivity" />
-        <activity android:name=".PayRentActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".user.history.ComplainHistoryActivity"></activity>
+        <activity android:name=".user.history.TaskHistoryActivity" />
+        <activity android:name=".user.history.GuestHistoryActivity" />
+        <activity android:name=".user.history.UtilityHistoryActivity" />
+        <activity android:name=".user.history.RentHistoryActivity" />
+        <activity android:name=".user.HistoryActivity" />
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".guard.GuardMainActivity" />
+        <activity android:name=".guard.GuardHomeActivity" />
+        <activity android:name=".user.GuestActivity" />
+        <activity android:name=".user.EventsActivity" />
+        <activity android:name=".user.NoticeActivity" />
+        <activity android:name=".user.GuardActivity" />
+        <activity android:name=".user.TaskActivity" />
+        <activity android:name=".user.ComplainActivity" />
+        <activity android:name=".user.PayUtilityBillActivity" />
+        <activity android:name=".user.PayRentActivity" />
+        <activity android:name=".user.HomeActivity" />
         <activity android:name=".FlatActivity" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".RentActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".user.RentActivity" />
+        <activity android:name=".user.MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".RegisterActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".HomeActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +53,8 @@
             android:required="false" />
     </application>
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10sp"
+    android:background="@drawable/layoutroundborder">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/deleteicon"
+        android:src="@drawable/ic_reply"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Please Enter Guest Code Here"
+            android:textColor="#221f20"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/notes"
+            android:textColor="#c2c2c2"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="25sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/editbor"
+            android:drawableLeft="@drawable/ic_hand"
+            android:drawablePadding="5sp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="enter code here"
+            android:textColorHint="#e5e6e7"
+            android:inputType="number"
+            android:paddingLeft="5sp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:background="@drawable/gradd2"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Submit"
+            android:textColor="@color/colorAccent"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

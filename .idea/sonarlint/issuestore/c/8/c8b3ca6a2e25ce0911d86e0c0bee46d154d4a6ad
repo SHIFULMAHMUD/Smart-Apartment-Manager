@@ -1,0 +1,14 @@
+
+J
+java:S16591"(Declare "bkash_cell" on a separate line.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.
+E
+java:S16591"#Declare "month" on a separate line.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.
+r	java:S1161"QRename this field "trx_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.
+D
+java:S16591""Declare "time" on a separate line.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.
+X	java:S125?"<This block of commented-out lines of code should be removed.(Ö™Â§8Ö‚çÕÊ.
+v	java:S1161"URename this field "bkash_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.
+F
+java:S16591"$Declare "trx_id" on a separate line.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.
+D
+java:S16591""Declare "date" on a separate line.(ó«¢éùÿÿÿÿ8Ö‚çÕÊ.

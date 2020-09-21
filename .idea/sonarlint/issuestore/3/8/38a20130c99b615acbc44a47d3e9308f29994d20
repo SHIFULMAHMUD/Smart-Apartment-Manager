@@ -1,0 +1,19 @@
+
+O
+java:S1128"-Remove this unused import 'android.os.Build'.(ãÇ¤Úýÿÿÿÿ8›Àº«É.
+`
+java:S1128">Remove this unused import 'android.content.pm.PackageManager'.(€®¥õÿÿÿÿÿ8‰«ó«É.
+Z
+java:S1128"=Remove this unused import 'androidx.core.app.ActivityCompat'.(þ¤—²8‰«ó«É.
+u	java:S116"TRename this field "qrcode_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖŒ«Äüÿÿÿÿ8¨îš¬É.
+V
+java:S1128"4Remove this unused import 'es.dmoral.toasty.Toasty'.(–‹¹©øÿÿÿÿ8‰«ó«É.
+O
+java:S1128	"-Remove this unused import 'android.Manifest'.(¦øïŽúÿÿÿÿ8‰«ó«É.
+]	java:S1256"<This block of commented-out lines of code should be removed.(óŽ’®ÿÿÿÿÿ8û·©¬É.
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ8ˆþÎ¬É.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8›Àº«É.
+t
+java:S1128"WRemove this unused import 'me.dm7.barcodescanner.zxing.ZXingScannerView.ResultHandler'.(ò¬‘ý8›Àº«É.

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorBack"
+    tools:context=".UpdateProfileActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_layout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll1"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_name"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_person_white"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputName"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextUpdateName"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/name"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll2"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll1"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_lock"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            style="@style/parent"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/editTextUpdatePassword"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll3"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll2"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_gender_white"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textGender"
+            style="@style/parent"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/editTextUpdateGender"
+                android:inputType="text"
+                android:textColorHint="@color/colorAccent"
+                android:maxLines="1"
+                android:focusable="false"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/gender"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll4"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll3"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_nid"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_nid_white"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputNid"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextUpdateNid"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/nid"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateProfileButton"
+        style="@style/registerButton"
+        android:text="Update"
+        android:layout_below="@+id/ll4"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:textSize="15sp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>
+
+
+</ScrollView>

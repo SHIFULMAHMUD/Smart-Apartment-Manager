@@ -32,6 +32,15 @@ public class Contacts {
     @SerializedName("event")
     private String event;
 
+    @SerializedName("time")
+    private String time;
+
+
+
+    public String getTime() {
+        return time;
+    }
+
     public String getName() {
         return name;
     }
@@ -75,4 +84,6 @@ public class Contacts {
     }
 
     public String getEvent() { return event; }
+
+
 }

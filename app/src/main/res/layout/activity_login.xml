@@ -137,12 +137,21 @@
                     android:textColor="@android:color/white" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
+        <CheckBox
+            android:id="@+id/ch_rememberme"
+            style="@style/viewParent"
+            android:text="Remember Me"
+            android:layout_below="@+id/ll3"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
         <Button
             android:id="@+id/cirLoginButton"
             style="@style/loginButton"
             android:text="@string/login"
-            android:layout_below="@+id/ll3"
+            android:layout_below="@+id/ch_rememberme"
             android:layout_centerInParent="true"
             android:layout_marginTop="50dp"
             android:textSize="15sp"

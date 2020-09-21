@@ -7,6 +7,9 @@ import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import com.android.apartmentmanagementsystem.guard.GuardHomeActivity;
+import com.android.apartmentmanagementsystem.guard.GuardMainActivity;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
@@ -14,19 +17,26 @@ import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.user.HomeActivity;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -40,12 +50,21 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.util.List;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements TextWatcher,
+        CompoundButton.OnCheckedChangeListener{
     LinearLayout gotoSignUp;
     Button loginBtn;
     String text;
+    String getCell;
     private ProgressDialog loading;
     EditText etxtCell,etxtPassword,etxtAccount;
+    private CheckBox rem_userpass;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    private static final String PREF_NAME = "prefs";
+    private static final String KEY_REMEMBER = "remember";
+    private static final String KEY_USERCELL = "usercell";
+    private static final String KEY_PASS = "password";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +80,28 @@ public class LoginActivity extends AppCompatActivity {
             requestStoragePermission();
         }
         }
+        etxtCell = findViewById(R.id.editTextLoginPhone);
+        etxtPassword = findViewById(R.id.editTextLoginPassword);
+
+        //Fetching cell from shared preferences
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+        rem_userpass=findViewById(R.id.ch_rememberme);
+        sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        if (sharedPreferences.getBoolean(KEY_REMEMBER, false))
+            rem_userpass.setChecked(true);
+        else
+            rem_userpass.setChecked(false);
+
+        etxtCell.setText(sharedPreferences.getString(KEY_USERCELL, ""));
+        etxtPassword.setText(sharedPreferences.getString(KEY_PASS, ""));
+
+        etxtCell.addTextChangedListener(this);
+        etxtPassword.addTextChangedListener(this);
+        rem_userpass.setOnCheckedChangeListener(this);
         gotoSignUp = findViewById(R.id.ll5);
         gotoSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,16 +112,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         loginBtn = findViewById(R.id.cirLoginButton);
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        etxtCell = findViewById(R.id.editTextLoginPhone);
-        etxtPassword = findViewById(R.id.editTextLoginPassword);
+
         etxtAccount = findViewById(R.id.editTextAccountType);
         etxtAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,8 +179,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
                 else if (account.isEmpty()) {
-                    etxtPassword.setError("Select user account type! ");
-                    etxtPassword.requestFocus();
+                    etxtAccount.setError("Select account type! ");
+                    etxtAccount.requestFocus();
                     Toasty.error(LoginActivity.this, "Please select account type !", Toast.LENGTH_SHORT).show();
                 } else {
                     //call login method
@@ -256,7 +288,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //signup method
-    private void login(String cell,String password,String account) {
+    private void login(final String cell, String password, final String account) {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Please wait....");
@@ -275,10 +307,25 @@ public class LoginActivity extends AppCompatActivity {
                 if (value.equals("success"))
                 {
                     loading.dismiss();
+                    SharedPreferences sp = LoginActivity.this.getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+
+                    //Creating editor to store values to shared preferences
+                    SharedPreferences.Editor editor = sp.edit();
+                    //Adding values to editor
+                    editor.putString(Constant.CELL_SHARED_PREF, cell);
+
+                    //Saving values to editor
+                    editor.commit();
                     Toasty.success(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
-                    Intent intent=new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                    finish();
+                    if (account.equals("Renter")) {
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else if (account.equals("Guard")) {
+                        Intent intent = new Intent(LoginActivity.this, GuardHomeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
                 }
 
 
@@ -297,4 +344,38 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        managePrefs();
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        managePrefs();
+    }
+
+    private void managePrefs(){
+        if(rem_userpass.isChecked()){
+            editor.putString(KEY_USERCELL, etxtCell.getText().toString().trim());
+            editor.putString(KEY_PASS, etxtPassword.getText().toString().trim());
+            editor.putBoolean(KEY_REMEMBER, true);
+            editor.apply();
+        }else{
+            editor.putBoolean(KEY_REMEMBER, false);
+            editor.remove(KEY_PASS);
+            editor.remove(KEY_USERCELL);
+            editor.apply();
+        }
+}
 }

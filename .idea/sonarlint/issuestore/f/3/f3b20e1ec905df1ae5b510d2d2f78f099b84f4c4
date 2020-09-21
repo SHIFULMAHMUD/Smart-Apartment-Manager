@@ -1,0 +1,13 @@
+
+i	java:S100-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı²¤f8ı´‚İÊ.
+j	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘üïê8ı´‚İÊ.
+o	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆâ®Æşÿÿÿÿ8ı´‚İÊ.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³°¨Œûÿÿÿÿ8ı´‚İÊ.
+r	java:S116"VRename this field "paying_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕŠ–ö8ì×şÜÊ.
+v	java:S116"URename this field "bkash_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¦ªØüÿÿÿÿ8ì×şÜÊ.
+y	java:S116"XRename this field "rent_of_month" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³öˆÉşÿÿÿÿ8ì×şÜÊ.
+r	java:S116"VRename this field "paying_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öø†»8ì×şÜÊ.
+w	java:S116	"VRename this field "rent_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª×ºñÿÿÿÿÿ8ì×şÜÊ.
+s	java:S116"WRename this field "bkash_trx_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°…›ê8ì×şÜÊ.
+j	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍŸä®8ı´‚İÊ.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‰¯8ı´‚İÊ.

@@ -1,17 +1,0 @@
-
-K
-java:S1128".Remove this unused import 'android.view.Menu'.(£¯Ò…8×Àç‡È.
-S
-java:S1128"6Remove this unused import 'android.view.MenuInflater'.(¥ñ´Ò8×Àç‡È.
-y
-java:S1450"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8á¡æ‡È.
-m
-java:S1301V"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8ºÌ„ŒÈ.
-Q
-java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è8×Àç‡È.
-c
-java:S1128"ARemove this unused import 'androidx.appcompat.widget.SearchView'.(þçþËúÿÿÿÿ8×Àç‡È.
-S
-java:S1128"6Remove this unused import 'android.app.SearchManager'.(‚â¤±8×Àç‡È.
-O
-java:S1128"3Remove this unused import 'android.content.Intent'.(³ð‹G8¾ºè‡È.

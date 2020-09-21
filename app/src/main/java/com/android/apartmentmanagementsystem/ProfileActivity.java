@@ -10,12 +10,17 @@ import retrofit2.Response;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
+import com.android.apartmentmanagementsystem.user.ComplainActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +30,8 @@ import java.util.List;
 public class ProfileActivity extends AppCompatActivity {
     private List<Contacts> contactsList;
     private ApiInterface apiInterface;
+    String getCell,userName,userCell,userPassword,userAccountType,userGender,userNid;
+    Button updateBtn;
     TextView nameTv,cellTv,accountTv,genderTv,nidTv;
     private ProgressDialog loading;
     @Override
@@ -42,12 +49,28 @@ public class ProfileActivity extends AppCompatActivity {
         accountTv=findViewById(R.id.profile_account_tv);
         genderTv=findViewById(R.id.profile_gender_tv);
         nidTv=findViewById(R.id.profile_nid_tv);
-       getProfileData("","","","","","");
+        updateBtn=findViewById(R.id.updateProfileBtn);
+//Fetching cell from shared preferences
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+        getProfileData(getCell);
 
+        updateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ProfileActivity.this,UpdateProfileActivity.class);
+                intent.putExtra("name",userName);
+                intent.putExtra("pass",userPassword);
+                intent.putExtra("gender",userGender);
+                intent.putExtra("nid",userNid);
+                startActivity(intent);
+            }
+        });
     }
 
 
-    public void getProfileData(String name, String cell, String password, String account, String gender, final String nid) {
+    public void getProfileData(String cell) {
 
         loading=new ProgressDialog(ProfileActivity.this);
         loading.setCancelable(false);
@@ -56,7 +79,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         Call<List<Contacts>> call;
-        call = apiInterface.getProfile(name,cell,password,account,gender,nid);
+        call = apiInterface.getProfile(cell);
 
         call.enqueue(new Callback<List<Contacts>>() {
             @Override
@@ -75,12 +98,12 @@ public class ProfileActivity extends AppCompatActivity {
                     } else {
 
 
-                        String userName = profileData.get(0).getName();
-                        String userCell = profileData.get(0).getCell();
-                        String userPassword = profileData.get(0).getPassword();
-                        String userAccountType = profileData.get(0).getAccount();
-                        String userGender = profileData.get(0).getGender();
-                        String userNid = profileData.get(0).getNid();
+                        userName = profileData.get(0).getName();
+                        userCell = profileData.get(0).getCell();
+                        userPassword = profileData.get(0).getPassword();
+                        userAccountType = profileData.get(0).getAccount();
+                        userGender = profileData.get(0).getGender();
+                        userNid = profileData.get(0).getNid();
 
                         //String productImage = profileData.get(0).getProductImage();
 
@@ -126,12 +149,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     }
-    //when activity is resumed this method is called
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getProfileData("", "","","","","");
-    }
+
     //for back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

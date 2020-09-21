@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorHome"
-    tools:context=".HomeActivity">
+    tools:context=".user.HomeActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -54,6 +54,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:orientation="horizontal"
                 android:background="#4CB6AC"
                 android:id="@+id/layout2">
@@ -92,6 +93,7 @@
                 android:orientation="horizontal"
                 android:background="#0970BF"
                 android:layout_marginTop="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_below="@+id/layout2"
                 android:id="@+id/layout3">
                 <ImageView

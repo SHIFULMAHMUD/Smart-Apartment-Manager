@@ -1,38 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorBack"
+tools:context=".user.GuestActivity">
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="@color/colorBack"
-    tools:context=".GuestActivity">
-<ImageView
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-    android:layout_marginLeft="100dp"
-    android:layout_marginTop="50dp"
-    android:background="@drawable/addpicture"
-    android:id="@+id/QR_Image"></ImageView>
-    <EditText
+    android:layout_height="wrap_content">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_value"
+        android:id="@+id/toolbar_layout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll1"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_name"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_person_white"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputName"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextGuestName"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="Guest Name"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll2"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll1"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_cell"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_phone"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPhone"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextGuestPhone"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="Guest Mobile Number"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="phone"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll3"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll2"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_nid"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_guest"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputNid"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextTotalGuest"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginLeft="10dp"
+                android:hint="Number of Person"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll6"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll3"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_purpose"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_purpose"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPurpose"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextPurpose"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginLeft="10dp"
+                android:hint="Visit Purpose"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll7"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll6"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/image_host"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_phone"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputHost"
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextHostCell"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginLeft="10dp"
+                android:hint="Host Mobile Number"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="phone"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll4"
+        android:background="@android:color/white"
+        android:layout_below="@+id/ll7"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorBack"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Generate QR Code"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll5"
+        android:gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/QR_Image"
-        android:gravity="center"></EditText>
+        android:layout_below="@+id/ll4">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/addpicture"
+            android:id="@+id/QR_Image"></ImageView>
+    </LinearLayout>
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edt_value"
-        android:layout_marginTop="50dp"
-        android:text="Start"
-        android:id="@+id/start"></Button>
+        android:id="@+id/start"
+        style="@style/loginButton"
+        android:text="Generate QR"
+        android:layout_below="@+id/ll5"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorLogo"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp" />
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        style="@style/loginButton"
+        android:text="Save QR Code"
         android:layout_below="@+id/start"
-        android:text="Save"
-        android:layout_marginTop="50dp"
-        android:id="@+id/save"></Button>
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:textColor="@color/colorLogo"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp" />
+    <Button
+        android:id="@+id/send"
+        style="@style/loginButton"
+        android:text="Send to Guest"
+        android:layout_below="@+id/save"
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/colorLogo"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp" />
+
+
 </RelativeLayout>
+
+
+</ScrollView>

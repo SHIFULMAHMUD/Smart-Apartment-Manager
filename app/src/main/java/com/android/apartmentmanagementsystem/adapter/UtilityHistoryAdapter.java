@@ -33,8 +33,8 @@ public class UtilityHistoryAdapter extends RecyclerView.Adapter<UtilityHistoryAd
 
     @Override
     public void onBindViewHolder(@NonNull UtilityHistoryAdapter.MyViewHolder holder, int position) {
-        holder.gas_bill.setText(utilities.get(position).getGas_bill_amount());
-        holder.electricity_bill.setText(utilities.get(position).getElectricity_bill_amount());
+        holder.gas_bill.setText("Tk "+ utilities.get(position).getGas_bill_amount());
+        holder.electricity_bill.setText("Tk "+ utilities.get(position).getElectricity_bill_amount());
         holder.month.setText(utilities.get(position).getRent_of_month());
         holder.trx_id.setText(utilities.get(position).getBkash_trx_id());
         holder.bkash_cell.setText(utilities.get(position).getBkash_cell());

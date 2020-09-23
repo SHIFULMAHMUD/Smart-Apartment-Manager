@@ -1,82 +1,82 @@
 
-z	java:S116""YRename this field "renter_name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8‹ŞÖçÈ.
-|	java:S116#"`Rename this field "spinner_payment_month" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ô¶•8İçÈ.
-R
-java:S3740ƒ"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8§ ½éÈ.
-n
-java:S1301¡"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8ò«ÖşÈ.
-c
-java:S2142c"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ä†ÀíÈ.
-£
-java:S1186p"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8é‡¶éÈ.
-n	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“®ˆ8ê¼ÚşÈ.
-V
-java:S1128"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8Ÿ¢¸íÈ.
 t
 java:S3776."RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(¨Œşÿÿÿÿ8ê¼ÚşÈ.
-s	java:S116+"WRename this field "current_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó”ğÇ8çÒ»íÈ.
-P
-java:S1659#"3Declare "spinner_payment_month" on a separate line.(©ô¶•8İçÈ.
-y	java:S116""XRename this field "bkash_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8ÛëÙçÈ.
-M
-java:S1659""+Declare "bkash_cell_et" on a separate line.(Õ¿Øêùÿÿÿÿ8ÛëÙçÈ.
-s	java:S116("RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æĞ¡‘ûÿÿÿÿ8ø‰µéÈ.
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8§ ½éÈ.
-G
-java:S1659+"*Declare "current_time" on a separate line.(ó”ğÇ8çÒ»íÈ.
-E	java:S108M")Either remove or fill this block of code.(ä ¹€8±êµíÈ.
-n	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÂÅÕ8ê¼ÚşÈ.
-R
-java:S3740ƒ"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8§ ½éÈ.
-^	java:S125"<This block of commented-out lines of code should be removed.(ş•»³øÿÿÿÿ8´ØıéÈ.
+L
+java:S3740t"/Provide the parametrized type for this generic.(îÈ»ı8ò²éÈ.
+n	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸°•ê8ê¼ÚşÈ.
+O
+java:S1659""-Declare "bkash_trx_id_et" on a separate line.(Õ¿Øêùÿÿÿÿ8¼ïØçÈ.
+s	java:S116""RRename this field "note_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8ö£ÚçÈ.
+w	java:S116#"[Rename this field "spinner_floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ô¶•8®ÉÜçÈ.
 n
 java:S1301™"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Å¦ìéÈ.
-s	java:S116""RRename this field "note_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8ö£ÚçÈ.
-c
-java:S2142M"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8±êµíÈ.
-w	java:S116#"[Rename this field "spinner_floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ô¶•8®ÉÜçÈ.
-n	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ê°†8ê¼ÚşÈ.
+£
+java:S1186p"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8é‡¶éÈ.
+s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8‘ğêÈ.
+y	java:S116""XRename this field "bkash_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8ÛëÙçÈ.
+G
+java:S1659+"*Declare "current_time" on a separate line.(ó”ğÇ8çÒ»íÈ.
+z	java:S116""YRename this field "renter_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8á±×çÈ.
 D	java:S131¡""Add a default case to this switch.(¼œóÛüÿÿÿÿ8ò«ÖşÈ.
 M
 java:S3740’"/Provide the parametrized type for this generic.(û´Àù8å”ÃéÈ.
-K
-java:S1659#".Declare "spinner_floor_no" on a separate line.(©ô¶•8®ÉÜçÈ.
-L
-java:S3740t"/Provide the parametrized type for this generic.(îÈ»ı8ò²éÈ.
+n	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬‘ä–8ê¼ÚşÈ.
+R
+java:S3740ƒ"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8§ ½éÈ.
+R
+java:S3740ƒ"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8§ ½éÈ.
+z	java:S116""YRename this field "renter_name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8‹ŞÖçÈ.
+v	java:S116$"URename this field "submit_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë‘Ÿñøÿÿÿÿ8™–¸çÈ.
+s	java:S116("RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æĞ¡‘ûÿÿÿÿ8ø‰µéÈ.
+P
+java:S1659#"3Declare "spinner_payment_month" on a separate line.(©ô¶•8İçÈ.
+o	java:S116)"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ñ‰Î8é‡¶éÈ.
+z	java:S116""YRename this field "rent_amount_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8Ôù×çÈ.
+s	java:S116+"WRename this field "current_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó”ğÇ8çÒ»íÈ.
+E	java:S108c")Either remove or fill this block of code.(ä ¹€8ä†ÀíÈ.
+n	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ê°†8ê¼ÚşÈ.
+v	java:S116#"ZRename this field "spinner_flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ô¶•8ĞúÛçÈ.
+n
+java:S1301¡"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8ò«ÖşÈ.
+M
+java:S1659""+Declare "bkash_cell_et" on a separate line.(Õ¿Øêùÿÿÿÿ8ÛëÙçÈ.
+c
+java:S2142M"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8±êµíÈ.
 M
 java:S3740’"/Provide the parametrized type for this generic.(û´Àù8å”ÃéÈ.
-N
-java:S1659"",Declare "rent_amount_et" on a separate line.(Õ¿Øêùÿÿÿÿ8Ôù×çÈ.
-G
-java:S1659""%Declare "note_et" on a separate line.(Õ¿Øêùÿÿÿÿ8ö£ÚçÈ.
-n	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬‘ä–8ê¼ÚşÈ.
-N
-java:S1659"",Declare "renter_cell_et" on a separate line.(Õ¿Øêùÿÿÿÿ8á±×çÈ.
-{	java:S116""ZRename this field "bkash_trx_id_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8¼ïØçÈ.
-v	java:S116#"ZRename this field "spinner_flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ô¶•8ĞúÛçÈ.
-E	java:S108c")Either remove or fill this block of code.(ä ¹€8ä†ÀíÈ.
-s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8İøñêÈ.
-O
-java:S1659""-Declare "bkash_trx_id_et" on a separate line.(Õ¿Øêùÿÿÿÿ8¼ïØçÈ.
+V
+java:S1128"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8Ÿ¢¸íÈ.
+n	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“®ˆ8ê¼ÚşÈ.
+|	java:S116#"`Rename this field "spinner_payment_month" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ô¶•8İçÈ.
 v	java:S116*"URename this field "month_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çˆÏëşÿÿÿÿ8´¶éÈ.
-_	java:S107í"=Method has 11 parameters, which is greater than 7 authorized.(åÑÛÍüÿÿÿÿ8İøñêÈ.
-s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8İøñêÈ.
-v	java:S116$"URename this field "submit_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë‘Ÿñøÿÿÿÿ8™–¸çÈ.
-s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8™§îêÈ.
-s	java:S116+"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó”ğÇ8çÒ»íÈ.
-Y
-java:S1874ï"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8÷ğøéÈ.
-L
-java:S3740t"/Provide the parametrized type for this generic.(îÈ»ı8ò²éÈ.
-s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8‘ğêÈ.
-o	java:S116)"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ñ‰Î8é‡¶éÈ.
-S
-java:S1874,"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8ÌıûéÈ.
-z	java:S116""YRename this field "renter_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8á±×çÈ.
-z	java:S116""YRename this field "rent_amount_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8Ôù×çÈ.
-n	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸°•ê8ê¼ÚşÈ.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8§ ½éÈ.
 ¤
 java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8å”ÃéÈ.
+n	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÂÅÕ8ê¼ÚşÈ.
 P
 java:S1874ğ"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8ÌıûéÈ.
+s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8İøñêÈ.
+N
+java:S1659"",Declare "rent_amount_et" on a separate line.(Õ¿Øêùÿÿÿÿ8Ôù×çÈ.
+s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8İøñêÈ.
+_	java:S107í"=Method has 11 parameters, which is greater than 7 authorized.(åÑÛÍüÿÿÿÿ8İøñêÈ.
+G
+java:S1659""%Declare "note_et" on a separate line.(Õ¿Øêùÿÿÿÿ8ö£ÚçÈ.
+S
+java:S1874,"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8ÌıûéÈ.
+c
+java:S2142c"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ä†ÀíÈ.
+s	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÑÛÍüÿÿÿÿ8™§îêÈ.
+s	java:S116+"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó”ğÇ8çÒ»íÈ.
+E	java:S108M")Either remove or fill this block of code.(ä ¹€8±êµíÈ.
+Y
+java:S1874ï"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8÷ğøéÈ.
+N
+java:S1659"",Declare "renter_cell_et" on a separate line.(Õ¿Øêùÿÿÿÿ8á±×çÈ.
+L
+java:S3740t"/Provide the parametrized type for this generic.(îÈ»ı8ò²éÈ.
+K
+java:S1659#".Declare "spinner_floor_no" on a separate line.(©ô¶•8®ÉÜçÈ.
+{	java:S116""ZRename this field "bkash_trx_id_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ¿Øêùÿÿÿÿ8¼ïØçÈ.
+^	java:S125"<This block of commented-out lines of code should be removed.(ş•»³øÿÿÿÿ8´ØıéÈ.

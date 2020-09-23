@@ -15,7 +15,7 @@ import com.android.apartmentmanagementsystem.ProfileActivity;
 import com.android.apartmentmanagementsystem.R;
 
 public class MainActivity extends AppCompatActivity {
-    CardView cardViewProfile,cardViewPayRent,cardViewPayUtility,cardViewComplain,cardViewLogout,cardViewTask,cardViewGuard,cardViewGuest;
+    CardView cardViewProfile,cardViewPayRent,cardViewPayUtility,cardViewComplain,cardViewLogout,cardViewTask,cardViewGuard,cardViewGuest,cardViewReport;
     LinearLayout linearLayoutNotice,linearLayoutEvent,linearLayoutHistory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +58,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        cardViewReport=findViewById(R.id.cardview_report);
+        cardViewReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, ReportActivity.class);
+                startActivity(intent);
+            }
+        });
         cardViewGuest=findViewById(R.id.cardview_guest);
         cardViewGuest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,GuestActivity.class);
+                Intent intent=new Intent(MainActivity.this,GuestHomeActivity.class);
                 startActivity(intent);
             }
         });

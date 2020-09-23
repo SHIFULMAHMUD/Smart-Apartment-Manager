@@ -1,12 +1,12 @@
 
-^
-java:S1192""HDefine a constant instead of duplicating this literal "#3E51B1" 6 times.(«øˆğ
-E
-java:S3740!"/Provide the parametrized type for this generic.(Êƒ×©
 t
 java:S32528"YUse static access with "androidx.recyclerview.widget.LinearLayoutManager" for "VERTICAL".(ÖïâÉıÿÿÿÿ
 J
 java:S3740"/Provide the parametrized type for this generic.(ûââúÿÿÿÿ
+Q	java:S1251"<This block of commented-out lines of code should be removed.(İÓ–å
+^
+java:S1192""HDefine a constant instead of duplicating this literal "#3E51B1" 6 times.(«øˆğ
 f
 java:S1301D"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
-Q	java:S1251"<This block of commented-out lines of code should be removed.(İÓ–å
+E
+java:S3740!"/Provide the parametrized type for this generic.(Êƒ×©

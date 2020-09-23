@@ -1,17 +1,17 @@
 
-?
-java:S16594""Declare "cell" on a separate line.(£•ø˜8­à…âÊ.
 s
 java:S1128
 "QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8½·ïáÊ.
+?
+java:S16594""Declare "cell" on a separate line.(£•ø˜8­à…âÊ.
 X	java:S125C"<This block of commented-out lines of code should be removed.(Ö™Â§8ØğÂÔÊ.
-?
-java:S16594""Declare "time" on a separate line.(£•ø˜8¢‚‡âÊ.
-?
-java:S16594""Declare "date" on a separate line.(£•ø˜8ØğÂÔÊ.
 B
 java:S16594"%Declare "purpose" on a separate line.(£•ø˜8½¤†âÊ.
-A
-java:S16594"$Declare "qrcode" on a separate line.(£•ø˜8¢‚‡âÊ.
 @
 java:S16594"#Declare "total" on a separate line.(£•ø˜8­à…âÊ.
+?
+java:S16594""Declare "time" on a separate line.(£•ø˜8¢‚‡âÊ.
+A
+java:S16594"$Declare "qrcode" on a separate line.(£•ø˜8¢‚‡âÊ.
+?
+java:S16594""Declare "date" on a separate line.(£•ø˜8ØğÂÔÊ.

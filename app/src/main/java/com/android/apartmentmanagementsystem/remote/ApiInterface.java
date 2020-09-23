@@ -8,6 +8,7 @@ import com.android.apartmentmanagementsystem.model.Complain;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.model.Guest;
 import com.android.apartmentmanagementsystem.model.Rent;
+import com.android.apartmentmanagementsystem.model.Report;
 import com.android.apartmentmanagementsystem.model.Task;
 import com.android.apartmentmanagementsystem.model.Utility;
 
@@ -133,6 +134,11 @@ public interface ApiInterface {
             @Query("cell") String cell
 
     );
+    @GET("find_qr.php")
+    Call<List<Guest>> getQr(
+            @Query("qr_code") String qr_code
+
+    );
 
 
 
@@ -152,6 +158,7 @@ public interface ApiInterface {
             @Query("name") String name,
             @Query("cell") String cell
     );
+
     @GET("my_guard.php")
     Call<List<Contacts>> getMyGuard(
             @Query("name") String name
@@ -175,5 +182,17 @@ public interface ApiInterface {
     @GET("complain_history.php")
     Call<List<Complain>> getComplain(
             @Query("cell") String cell
+    );
+    @GET("rent_report.php")
+    Call<List<Report>> getRentReport(
+            @Query("cell") String cell
+    );
+    @GET("utility_report.php")
+    Call<List<Report>> getUtilityReport(
+            @Query("cell") String cell
+    );
+    @GET("my_guest.php")
+    Call<List<Guest>> getQrGuest(
+            @Query("qr_code") String qr_code
     );
 }

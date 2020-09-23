@@ -1,76 +1,76 @@
 
-s	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÅšƒÿÿÿÿÿ8¡­Û¿È.
-n	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¨ï›8¡­Û¿È.
-m
-java:S3252Î"OUse static access with "android.view.ViewGroup$LayoutParams" for "FILL_PARENT".(ğèê¬8¯‘É¼Å.
-p	java:S100‹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡áÃÊûÿÿÿÿ8¯‘É¼Å.
-o	java:S116,"TRename this field "user_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8 òı¿È.
-L
-java:S1128"/Remove this unused import 'retrofit2.http.PUT'.(Ğµ ‹8ø¡‚ÂÈ.
-r	java:S116,"WRename this field "user_account" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8­°ş¿È.
-n	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÀæà8¡­Û¿È.
-G
-java:S1659,"+Declare "user_password" on a separate line.(Ğ¹íu8ë‘ş¿È.
-s	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾š¢İıÿÿÿÿ8¡­Û¿È.
-Q
-java:S1874Î"3Remove this use of "FILL_PARENT"; it is deprecated.(ğèê¬8¯‘É¼Å.
-m
-java:S1301M"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
-J
-java:S1659)"(Declare "etxtGender" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-s	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñé¬òùÿÿÿÿ8¡­Û¿È.
-s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º²Ô½ÿÿÿÿÿ8¡­Û¿È.
-L
-java:S1659)"*Declare "etxtPassword" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-I
-java:S1172‹"&Remove these unused method parameters.(¡áÃÊûÿÿÿÿ8üÉˆÀÈ.
-K
-java:S1659)")Declare "etxtAccount" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-C
-java:S1659,"'Declare "user_cell" on a separate line.(Ğ¹íu8 òı¿È.
-j
-java:S1871S"HThis case's code block is the same as the block for the case on line 78.(ªëÅŞúÿÿÿÿ8¯‘É¼Å.
-n	java:S116,"SRename this field "user_nid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8¯‚ÿ¿È.
-B
-java:S1659,"&Declare "user_nid" on a separate line.(Ğ¹íu8¯‚ÿ¿È.
-o	java:S116,"TRename this field "user_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8íµı¿È.
-k
-java:S1871{"IThis case's code block is the same as the block for the case on line 118.(ªëÅŞúÿÿÿÿ8ÈÉĞ¼Å.
-E
-java:S1659,")Declare "user_gender" on a separate line.(Ğ¹íu8¶ãş¿È.
-C
-java:S1659,"'Declare "user_name" on a separate line.(Ğ¹íu8íµı¿È.
-k
-java:S1871¹"MThis branch's code block is the same as the block for the branch on line 305.(á¢–¬8¯‘É¼Å.
-W
-java:S1128"5Remove this unused import 'retrofit2.http.Multipart'.(ù«÷åşÿÿÿÿ8Şõ„ÂÈ.
-m
-java:S1301u"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
-S
-java:S1874."6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8–ÈŒúÂ.
-H
-java:S1659)"&Declare "etxtCell" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-Y
-java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8¯‘É¼Å.
-S
-java:S1874Ğ"0Remove this use of "getColor"; it is deprecated.(©ÖåÂüÿÿÿÿ8¯‘É¼Å.
-q	java:S116,"VRename this field "user_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8¶ãş¿È.
-t
-java:S37761"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨Œşÿÿÿÿ8”ÿÜãÅ.
-n
-java:S1192•"KDefine a constant instead of duplicating this literal "text/plain" 7 times.(¥ìœ¢ûÿÿÿÿ8¡­Û¿È.
-F
-java:S1659,"*Declare "user_account" on a separate line.(Ğ¹íu8­°ş¿È.
-C	java:S131u""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
-M
-java:S1659)"+Declare "etxtNidNumber" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-C
-java:S1659,"'Declare "mediaPath" on a separate line.(Ğ¹íu8€Ïß¿È.
-P
-java:S1874"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8¯‘É¼Å.
-C	java:S131M""Add a default case to this switch.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
-M
-java:S1659-"0Declare "linearLayoutNidPic" on a separate line.(£§İè8¦úı‘Å.
 n
 java:S3252Î"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ğèê¬8¯‘É¼Å.
+s	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾š¢İıÿÿÿÿ8¡­Û¿È.
+E
+java:S1659,")Declare "user_gender" on a separate line.(Ğ¹íu8¶ãş¿È.
+o	java:S116,"TRename this field "user_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8 òı¿È.
+q	java:S116,"VRename this field "user_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8¶ãş¿È.
+n	java:S116,"SRename this field "user_nid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8¯‚ÿ¿È.
+S
+java:S1874Ğ"0Remove this use of "getColor"; it is deprecated.(©ÖåÂüÿÿÿÿ8¯‘É¼Å.
+C
+java:S1659,"'Declare "user_name" on a separate line.(Ğ¹íu8íµı¿È.
+J
+java:S1659)"(Declare "etxtGender" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+k
+java:S1871¹"MThis branch's code block is the same as the block for the branch on line 305.(á¢–¬8¯‘É¼Å.
+S
+java:S1874."6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8–ÈŒúÂ.
+Q
+java:S1874Î"3Remove this use of "FILL_PARENT"; it is deprecated.(ğèê¬8¯‘É¼Å.
+p	java:S100‹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡áÃÊûÿÿÿÿ8¯‘É¼Å.
+C
+java:S1659,"'Declare "user_cell" on a separate line.(Ğ¹íu8 òı¿È.
+I
+java:S1172‹"&Remove these unused method parameters.(¡áÃÊûÿÿÿÿ8üÉˆÀÈ.
+W
+java:S1128"5Remove this unused import 'retrofit2.http.Multipart'.(ù«÷åşÿÿÿÿ8Şõ„ÂÈ.
+o	java:S116,"TRename this field "user_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8íµı¿È.
+j
+java:S1871S"HThis case's code block is the same as the block for the case on line 78.(ªëÅŞúÿÿÿÿ8¯‘É¼Å.
+M
+java:S1659-"0Declare "linearLayoutNidPic" on a separate line.(£§İè8¦úı‘Å.
+m
+java:S3252Î"OUse static access with "android.view.ViewGroup$LayoutParams" for "FILL_PARENT".(ğèê¬8¯‘É¼Å.
+k
+java:S1871{"IThis case's code block is the same as the block for the case on line 118.(ªëÅŞúÿÿÿÿ8ÈÉĞ¼Å.
+F
+java:S1659,"*Declare "user_account" on a separate line.(Ğ¹íu8­°ş¿È.
+n
+java:S1192•"KDefine a constant instead of duplicating this literal "text/plain" 7 times.(¥ìœ¢ûÿÿÿÿ8¡­Û¿È.
+K
+java:S1659)")Declare "etxtAccount" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+n	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¨ï›8¡­Û¿È.
 s	java:S116,"XRename this field "user_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8ë‘ş¿È.
+C
+java:S1659,"'Declare "mediaPath" on a separate line.(Ğ¹íu8€Ïß¿È.
+C	java:S131M""Add a default case to this switch.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
+C	java:S131u""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
+s	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñé¬òùÿÿÿÿ8¡­Û¿È.
+M
+java:S1659)"+Declare "etxtNidNumber" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+B
+java:S1659,"&Declare "user_nid" on a separate line.(Ğ¹íu8¯‚ÿ¿È.
+Y
+java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8¯‘É¼Å.
+s	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÅšƒÿÿÿÿÿ8¡­Û¿È.
+m
+java:S1301u"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
+t
+java:S37761"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨Œşÿÿÿÿ8”ÿÜãÅ.
+n	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÀæà8¡­Û¿È.
+m
+java:S1301M"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
+L
+java:S1659)"*Declare "etxtPassword" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+H
+java:S1659)"&Declare "etxtCell" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+r	java:S116,"WRename this field "user_account" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¹íu8­°ş¿È.
+L
+java:S1128"/Remove this unused import 'retrofit2.http.PUT'.(Ğµ ‹8ø¡‚ÂÈ.
+s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º²Ô½ÿÿÿÿÿ8¡­Û¿È.
+P
+java:S1874"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8¯‘É¼Å.
+G
+java:S1659,"+Declare "user_password" on a separate line.(Ğ¹íu8ë‘ş¿È.

@@ -1,6 +1,7 @@
 package com.android.apartmentmanagementsystem.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.model.Guest;
+import com.android.apartmentmanagementsystem.user.GuestActivity;
 
 import java.util.List;
 
@@ -64,10 +66,11 @@ public class GuestHistoryAdapter extends RecyclerView.Adapter<GuestHistoryAdapte
 
         @Override
         public void onClick(View view) {
-            /*Intent i = new Intent(context, EditorActivity.class);
-            i.putExtra("id", contacts.get(getAdapterPosition()).getId());
-            i.putExtra("name", contacts.get(getAdapterPosition()).getName());
-            i.putExtra("email", contacts.get(getAdapterPosition()).getEmail());
+            /*Intent i = new Intent(context, GuestActivity.class);
+            i.putExtra("name", guests.get(getAdapterPosition()).getGuest_name());
+            i.putExtra("cell", guests.get(getAdapterPosition()).getGuest_cell());
+            i.putExtra("total", guests.get(getAdapterPosition()).getTotal_guest());
+            i.putExtra("purpose", guests.get(getAdapterPosition()).getPurpose());
             context.startActivity(i);*/
         }
     }

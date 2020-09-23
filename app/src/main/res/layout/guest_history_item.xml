@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:card_view="http://schemas.android.com/apk/res-auto"
-card_view:cardBackgroundColor="#2196F3"
+card_view:cardBackgroundColor="#FFFFFF"
 android:layout_width="match_parent"
 android:layout_margin="10dp"
 card_view:cardCornerRadius="10dp"
@@ -19,20 +19,20 @@ android:layout_height="wrap_content">
         android:orientation="horizontal">
         <TextView
             android:text="Guest Name :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/guest_name_tv"
             android:text="Guest Name"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
@@ -48,20 +48,20 @@ android:layout_height="wrap_content">
         android:orientation="horizontal">
         <TextView
             android:text="Guest Cell :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/guest_cell_tv"
             android:text="Guest Cell"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
@@ -78,22 +78,20 @@ android:layout_height="wrap_content">
 
         <TextView
             android:text="Total Guest :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/total_guest_tv"
             android:text="Total Guest"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
@@ -107,20 +105,20 @@ android:layout_height="wrap_content">
         android:orientation="horizontal">
         <TextView
             android:text="Visit Purpose :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/purpose_tv"
             android:text="Purpose"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="16dp"
@@ -137,22 +135,20 @@ android:layout_height="wrap_content">
 
         <TextView
             android:text="QR Code :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/qrcode_tv"
             android:text="QR Code"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
@@ -167,22 +163,20 @@ android:layout_height="wrap_content">
 
         <TextView
             android:text="Date :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/date_tv"
             android:text="Date"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
@@ -197,20 +191,20 @@ android:layout_height="wrap_content">
 
         <TextView
             android:text="Time :"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/time_tv"
             android:text="Time"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"

@@ -31,7 +31,7 @@ public class RentHistoryAdapter extends RecyclerView.Adapter<RentHistoryAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull RentHistoryAdapter.MyViewHolder holder, int position) {
-        holder.amount.setText(rents.get(position).getRent_amount());
+        holder.amount.setText("Tk "+ rents.get(position).getRent_amount());
         holder.month.setText(rents.get(position).getRent_of_month());
         holder.trx_id.setText(rents.get(position).getBkash_trx_id());
         holder.bkash_cell.setText(rents.get(position).getBkash_cell());

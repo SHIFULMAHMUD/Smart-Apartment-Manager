@@ -14,7 +14,11 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".user.history.ComplainHistoryActivity"></activity>
+        <activity android:name=".user.ReportActivity"></activity>
+        <activity android:name=".user.UtilityReportActivity" />
+        <activity android:name=".user.RentReportActivity" />
+        <activity android:name=".user.GuestHomeActivity" />
+        <activity android:name=".user.history.ComplainHistoryActivity" />
         <activity android:name=".user.history.TaskHistoryActivity" />
         <activity android:name=".user.history.GuestHistoryActivity" />
         <activity android:name=".user.history.UtilityHistoryActivity" />

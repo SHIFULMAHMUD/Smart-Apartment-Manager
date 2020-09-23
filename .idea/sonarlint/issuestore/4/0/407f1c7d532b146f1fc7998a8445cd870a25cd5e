@@ -1,8 +1,8 @@
 
-y
-java:S1450 "\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8 ùˆÒÊ.
 m
 java:S1301U"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8 ùˆÒÊ.
+y
+java:S1450 "\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8 ùˆÒÊ.
 o
 java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.adapter.Adapter'.(‰Åæ8·Ğ›âÊ.
 s

@@ -45,7 +45,7 @@ public class GuestActivity extends AppCompatActivity{
     Button start, save, send;
     String inputValue;
     EditText guest_name_et,guest_cell_et,total_guest_et,purpose_et,host_cell_et;
-    String savePath = Environment.getExternalStorageDirectory().getPath() + "/QRCode/";
+    String name,cell,total,purpose;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
     String current_date,current_time;
@@ -56,14 +56,22 @@ public class GuestActivity extends AppCompatActivity{
         setContentView(R.layout.activity_guest);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Manage Guest");
+        getSupportActionBar().setTitle("Add Guest");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
+        name = getIntent().getStringExtra("name");
+        cell = getIntent().getStringExtra("cell");
+        total = getIntent().getStringExtra("total");
+        purpose = getIntent().getStringExtra("purpose");
         qrImage = (ImageView) findViewById(R.id.QR_Image);
         guest_name_et=findViewById(R.id.editTextGuestName);
+        guest_name_et.setText(name);
         guest_cell_et=findViewById(R.id.editTextGuestPhone);
+        guest_cell_et.setText(cell);
         total_guest_et=findViewById(R.id.editTextTotalGuest);
+        total_guest_et.setText(total);
         purpose_et=findViewById(R.id.editTextPurpose);
+        purpose_et.setText(purpose);
         host_cell_et=findViewById(R.id.editTextHostCell);
         start = (Button) findViewById(R.id.start);
         save = (Button) findViewById(R.id.save);

@@ -1,0 +1,11 @@
+
+r	java:S116"VRename this field "paying_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕŠ–ö8˜­‹ÉË.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‰¯8ªöÉË.
+o	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÎÅ˜ÿÿÿÿÿ8ªöÉË.
+w	java:S116"VRename this field "rent_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª×ºñÿÿÿÿÿ8ãŠÉË.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘üïê8ªöÉË.
+{	java:S116"ZRename this field "gas_bill_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ß¡¦ùÿÿÿÿ8ëºÉË.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³°¨Œûÿÿÿÿ8ªöÉË.
+y	java:S116	"XRename this field "rent_of_month" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³öˆÉşÿÿÿÿ8›Ÿ„ÉË.
+o	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¯âûÿÿÿÿ8ªöÉË.
+ƒ	java:S116"bRename this field "electricity_bill_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş›Áüÿÿÿÿ8Ä¿ÉË.

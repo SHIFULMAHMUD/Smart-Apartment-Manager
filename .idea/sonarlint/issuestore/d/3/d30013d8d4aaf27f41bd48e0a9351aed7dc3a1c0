@@ -1,21 +1,21 @@
 
-X	java:S125C"<This block of commented-out lines of code should be removed.(Ö™Â§8ø—¾ÔÊ.
-E
-java:S16594"#Declare "month" on a separate line.(ø·ôıÿÿÿÿ8•Ô‡áÊ.
-t	java:S1164"SRename this field "gas_bill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·ôıÿÿÿÿ8ãû„áÊ.
+J
+java:S16594"(Declare "bkash_cell" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
+F
+java:S16594"$Declare "trx_id" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
+D
+java:S16594""Declare "time" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
 |	java:S1164"[Rename this field "electricity_bill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·ôıÿÿÿÿ8•Ô‡áÊ.
+t	java:S1164"SRename this field "gas_bill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·ôıÿÿÿÿ8ãû„áÊ.
 s
 java:S1128
 "QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8¾Š±áÊ.
-J
-java:S16594"(Declare "bkash_cell" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
-D
-java:S16594""Declare "time" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
-v	java:S1164"URename this field "bkash_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
-D
-java:S16594""Declare "date" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
-F
-java:S16594"$Declare "trx_id" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
 P
 java:S16594".Declare "electricity_bill" on a separate line.(ø·ôıÿÿÿÿ8•Ô‡áÊ.
+v	java:S1164"URename this field "bkash_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
+X	java:S125C"<This block of commented-out lines of code should be removed.(Ö™Â§8ø—¾ÔÊ.
+D
+java:S16594""Declare "date" on a separate line.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
 r	java:S1164"QRename this field "trx_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·ôıÿÿÿÿ8Ã»‡áÊ.
+E
+java:S16594"#Declare "month" on a separate line.(ø·ôıÿÿÿÿ8•Ô‡áÊ.

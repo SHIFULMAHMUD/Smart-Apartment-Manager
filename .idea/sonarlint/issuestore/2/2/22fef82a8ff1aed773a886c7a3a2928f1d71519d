@@ -1,0 +1,12 @@
+
+S
+java:S16590"1Declare "electricity_bill_tv" on a separate line.(¡ÕÌŞÿÿÿÿÿ8ÁµÕÓË.
+t	java:S1160"SRename this field "month_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ÕÌŞÿÿÿÿÿ8¶éĞÓË.
+X	java:S125="<This block of commented-out lines of code should be removed.(Ö™Â§8¶éĞÓË.
+G
+java:S16590"%Declare "date_tv" on a separate line.(¡ÕÌŞÿÿÿÿÿ8¶éĞÓË.
+s	java:S1160"RRename this field "date_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ÕÌŞÿÿÿÿÿ8¶éĞÓË.
+w	java:S1160"VRename this field "gas_bill_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ÕÌŞÿÿÿÿÿ8œâÔÓË.
+	java:S1160"^Rename this field "electricity_bill_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ÕÌŞÿÿÿÿÿ8ÁµÕÓË.
+K
+java:S16590")Declare "gas_bill_tv" on a separate line.(¡ÕÌŞÿÿÿÿÿ8œâÔÓË.

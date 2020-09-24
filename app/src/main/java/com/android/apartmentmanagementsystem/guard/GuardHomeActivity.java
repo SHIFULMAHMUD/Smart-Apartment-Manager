@@ -9,8 +9,10 @@ import retrofit2.Response;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -24,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.LoginActivity;
 import com.android.apartmentmanagementsystem.ProfileActivity;
 import com.android.apartmentmanagementsystem.R;
@@ -39,10 +42,10 @@ import java.util.List;
 public class GuardHomeActivity extends AppCompatActivity {
     private LinearLayout scanqr, entermanually;
     private Dialog dialog;
-    String qrCode,guestName,guestCell,totalGuest,purpose,hostCell;
+    String qrCode,guestName,guestCell,totalGuest,purpose,hostCell,guardName,getCell;
     ImageView logout_iv;
     Button chkBtn;
-    TextView guestNameTv,guestCellTv,totalGuestTv,purposeTv,hostCellTv;
+    TextView guestNameTv,guestCellTv,totalGuestTv,purposeTv,hostCellTv,guestCountTv,guardNameTv;
     private List<Guest> guestList;
     private ApiInterface apiInterface;
     @Override
@@ -113,7 +116,10 @@ public class GuardHomeActivity extends AppCompatActivity {
                 Codedialog();
             }
         });
-
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+        getGuardName(getCell);
     }
     public void getQrData(final String qr_code) {
         Call<List<Guest>> call = apiInterface.getQr(qr_code);
@@ -194,7 +200,7 @@ public class GuardHomeActivity extends AppCompatActivity {
         totalGuestTv=dialog.findViewById(R.id.qr_total_guest_tv);
         purposeTv=dialog.findViewById(R.id.qr_purpose_tv);
         hostCellTv=dialog.findViewById(R.id.qr_host_cell_tv);
-        //getGuestData("");
+
         guestNameTv.setText(guestName);
         guestCellTv.setText(guestCell);
         totalGuestTv.setText(totalGuest);
@@ -239,6 +245,8 @@ public class GuardHomeActivity extends AppCompatActivity {
                         totalGuest = profileData.get(0).getTotal_guest();
                         purpose = profileData.get(0).getPurpose();
                         hostCell = profileData.get(0).getHost_cell();
+                        guestCountTv=findViewById(R.id.tgcount);
+                        guestCountTv.setText(totalGuest);
                         Qrdialog();
                     }
 
@@ -247,6 +255,46 @@ public class GuardHomeActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Guest>> call, Throwable t) {
+
+                Toast.makeText(GuardHomeActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
+
+    }
+    public void getGuardName(String cell) {
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Contacts>> call;
+        call = apiInterface.getProfileName(cell);
+
+        call.enqueue(new Callback<List<Contacts>>() {
+            @Override
+            public void onResponse(Call<List<Contacts>> call, Response<List<Contacts>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Contacts> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        Toasty.warning(GuardHomeActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+                        guardName = profileData.get(0).getName();
+                        guardNameTv=findViewById(R.id.guardname);
+                        guardNameTv.setText(guardName);
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Contacts>> call, Throwable t) {
 
                 Toast.makeText(GuardHomeActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
                 Log.d("Error : ", t.toString());

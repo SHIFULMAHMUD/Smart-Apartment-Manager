@@ -104,7 +104,7 @@ android:fitsSystemWindows="true"
 
             <TextView
                 android:id="@+id/aprtname"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
@@ -117,19 +117,29 @@ android:fitsSystemWindows="true"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tgcount"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
                 android:gravity="right"
-                android:text="Today's Guest : 0"
+                android:text="Today's Guest : "
                 android:textColor="#fff"
                 android:textSize="12dp"
                 android:textStyle="bold" />
-
+            <TextView
+                android:id="@+id/tgcount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:fontFamily="@font/roboto"
+                android:gravity="left"
+                android:textColor="#fff"
+                android:text="0"
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

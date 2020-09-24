@@ -1,0 +1,9 @@
+
+s	java:S116/"RRename this field "rent_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½‡Áıÿÿÿÿ8ÖÖÈÒË.
+X	java:S125;"<This block of commented-out lines of code should be removed.(Ö™Â§8ç£ªË.
+G
+java:S1659/"%Declare "date_tv" on a separate line.(½‡Áıÿÿÿÿ8ø÷ÈÒË.
+G
+java:S1659/"%Declare "rent_tv" on a separate line.(½‡Áıÿÿÿÿ8ÖÖÈÒË.
+t	java:S116/"SRename this field "month_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½‡Áıÿÿÿÿ8‘ùÇÒË.
+s	java:S116/"RRename this field "date_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½‡Áıÿÿÿÿ8ø÷ÈÒË.

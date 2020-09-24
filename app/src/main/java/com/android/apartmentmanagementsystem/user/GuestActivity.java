@@ -13,11 +13,17 @@ import retrofit2.Response;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Display;
 import android.view.MenuItem;
@@ -29,6 +35,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
@@ -36,6 +43,8 @@ import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.google.zxing.Result;
 import com.google.zxing.WriterException;
 
+import java.io.OutputStream;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Random;
 
@@ -48,7 +57,7 @@ public class GuestActivity extends AppCompatActivity{
     String name,cell,total,purpose;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
-    String current_date,current_time;
+    String current_date,current_time,getCell;
     private ProgressDialog loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +68,10 @@ public class GuestActivity extends AppCompatActivity{
         getSupportActionBar().setTitle("Add Guest");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
+        //Fetching cell from shared preferences
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
         name = getIntent().getStringExtra("name");
         cell = getIntent().getStringExtra("cell");
         total = getIntent().getStringExtra("total");
@@ -73,6 +86,7 @@ public class GuestActivity extends AppCompatActivity{
         purpose_et=findViewById(R.id.editTextPurpose);
         purpose_et.setText(purpose);
         host_cell_et=findViewById(R.id.editTextHostCell);
+        host_cell_et.setText(getCell);
         start = (Button) findViewById(R.id.start);
         save = (Button) findViewById(R.id.save);
         send = (Button) findViewById(R.id.send);
@@ -232,7 +246,31 @@ public class GuestActivity extends AppCompatActivity{
                 send.setVisibility(View.VISIBLE);
             }
         });
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("image/jpeg");
 
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.Images.Media.TITLE, "title");
+                values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+                Uri uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                        values);
+
+                OutputStream outstream;
+                try {
+                    outstream = getContentResolver().openOutputStream(uri);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outstream);
+                    outstream.close();
+                } catch (Exception e) {
+                    System.err.println(e.toString());
+                }
+
+                share.putExtra(Intent.EXTRA_STREAM, uri);
+                startActivity(Intent.createChooser(share, "Share Image"));
+            }
+        });
     }
     private void guestRequest(String name,String cell,String total_guest,String purpose, String host_cell, String qr_code,String date, String time) {
 

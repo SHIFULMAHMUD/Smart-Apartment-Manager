@@ -1,25 +1,49 @@
 
-u	java:S116 "TRename this field "qrcode_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖŒ«Äüÿÿÿÿ8Õ¹‹­É.
-j	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÉœ§8Êİ±É.
-L
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8š´¾É.
-T
-java:S1128"7Remove this unused import 'android.app.ProgressDialog'.(¶ÍÔÓ8š´¾É.
-W	java:S125W"<This block of commented-out lines of code should be removed.(½Ú–R8û¥ö±É.
-U
-java:S1128"3Remove this unused import 'org.json.JSONException'.(¹Ó·úÿÿÿÿ8š´¾É.
-P
-java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8š´¾É.
-M
-java:S1659"+Declare "entermanually" on a separate line.(¦¶–˜øÿÿÿÿ8è«Ø±É.
-R
-java:S1128"0Remove this unused import 'org.json.JSONObject'.(œÖ´üşÿÿÿÿ8š´¾É.
-]	java:S125."<This block of commented-out lines of code should be removed.(£Âóøşÿÿÿÿ8‡ÙÙ±É.
-O
-java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8š´¾É.
-w
-java:S1450"URemove the "scanqr" field and declare it as a local variable in the relevant methods.(¦¶–˜øÿÿÿÿ8è«Ø±É.
-S
-java:S1128"1Remove this unused import 'android.view.Gravity'.(ÎÎÎıÿÿÿÿ8š´¾É.
+m
+java:S1301B"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8êÊ‚áË.
+J
+java:S1659-"(Declare "totalGuest" on a separate line.(ò–ëÈıÿÿÿÿ8çßæâË.
+F
+java:S16590")Declare "guardNameTv" on a separate line.(Ùôÿä8àºÜõË.
+H
+java:S1659-"&Declare "hostCell" on a separate line.(ò–ëÈıÿÿÿÿ8ğŠéâË.
 ~
-java:S1450"\Remove the "entermanually" field and declare it as a local variable in the relevant methods.(¦¶–˜øÿÿÿÿ8ı¢Û±É.
+java:S1450+"\Remove the "entermanually" field and declare it as a local variable in the relevant methods.(¦¶–˜øÿÿÿÿ8Š°İË.
+G
+java:S1659-"%Declare "getCell" on a separate line.(ò–ëÈıÿÿÿÿ8ùÍáõË.
+C	java:S131B""Add a default case to this switch.(¼œóÛüÿÿÿÿ8êÊ‚áË.
+G
+java:S16590"*Declare "totalGuestTv" on a separate line.(Ùôÿä8Î÷òâË.
+I
+java:S1659-"'Declare "guestCell" on a separate line.(ò–ëÈıÿÿÿÿ8ìŒæâË.
+D
+java:S16590"'Declare "purposeTv" on a separate line.(Ùôÿä8Î÷òâË.
+E
+java:S16590"(Declare "hostCellTv" on a separate line.(Ùôÿä8Î÷òâË.
+w
+java:S1450+"URemove the "scanqr" field and declare it as a local variable in the relevant methods.(¦¶–˜øÿÿÿÿ8è«Ø±É.
+G
+java:S1659-"%Declare "purpose" on a separate line.(ò–ëÈıÿÿÿÿ8¶¢èâË.
+M
+java:S1128'"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8îÉàË.
+T
+java:S1128"7Remove this unused import 'android.app.ProgressDialog'.(¶ÍÔÓ8×—˜âË.
+z
+java:S1128!"XRemove this unused import 'com.android.apartmentmanagementsystem.UpdateProfileActivity'.(·ìÔùÿÿÿÿ8êÊ‚áË.
+G
+java:S16590"*Declare "guestCountTv" on a separate line.(Ùôÿä8é­õË.
+o
+java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.ProfileActivity'.(ÑœÛã8±Ş¬âË.
+Ÿ
+java:S1186•"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë÷ÚÊ8±ÚŒãË.
+I
+java:S1659-"'Declare "guestName" on a separate line.(ò–ëÈıÿÿÿÿ8ÈºåâË.
+I
+java:S1659-"'Declare "guardName" on a separate line.(ò–ëÈıÿÿÿÿ8äÙõË.
+F
+java:S16590")Declare "guestCellTv" on a separate line.(Ùôÿä8Î÷òâË.
+j	java:S100¼"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÚ¦8±ÚŒãË.
+u	java:S116."TRename this field "logout_iv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íö¬Éşÿÿÿÿ8©×âàË.
+M
+java:S1659+"+Declare "entermanually" on a separate line.(¦¶–˜øÿÿÿÿ8è«Ø±É.
+k	java:S100š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÉœ§8±ÚŒãË.

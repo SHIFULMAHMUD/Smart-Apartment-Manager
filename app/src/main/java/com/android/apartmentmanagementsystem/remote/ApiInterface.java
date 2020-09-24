@@ -195,4 +195,8 @@ public interface ApiInterface {
     Call<List<Guest>> getQrGuest(
             @Query("qr_code") String qr_code
     );
+    @GET("profile_name.php")
+    Call<List<Contacts>> getProfileName(
+            @Query("cell") String cell
+    );
 }

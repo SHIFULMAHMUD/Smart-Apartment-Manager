@@ -9,8 +9,11 @@ import retrofit2.Response;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +23,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
@@ -42,7 +46,7 @@ public class TaskActivity extends AppCompatActivity {
     String guard_name="";
     private List<Contacts> contactsList;
     private ApiInterface apiInterface;
-    String current_date,current_time;
+    String current_date,current_time,getCell,profileName;
     private ProgressDialog loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +57,18 @@ public class TaskActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Manage Task");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
+        //Fetching cell from shared preferences
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
         guard = new ArrayList<String>();
         renter_name_et =findViewById(R.id.renter_name_et);
         renter_cell_et =findViewById(R.id.renter_cell_et);
+        renter_cell_et.setText(getCell);
         task_et =findViewById(R.id.task_et);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         getGuardData("");
+        getProfileName(getCell);
         Thread t = new Thread() {
             @Override
             public void run() {
@@ -227,6 +237,45 @@ public class TaskActivity extends AppCompatActivity {
                 accountTypeDialog.show();
             }
         });
+
+    }
+    public void getProfileName(String cell) {
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Contacts>> call;
+        call = apiInterface.getProfileName(cell);
+
+        call.enqueue(new Callback<List<Contacts>>() {
+            @Override
+            public void onResponse(Call<List<Contacts>> call, Response<List<Contacts>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Contacts> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        Toasty.warning(TaskActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+                        profileName = profileData.get(0).getName();
+                        renter_name_et.setText(profileName);
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Contacts>> call, Throwable t) {
+
+                Toast.makeText(TaskActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
 
     }
     public void getGuardData(String name) {

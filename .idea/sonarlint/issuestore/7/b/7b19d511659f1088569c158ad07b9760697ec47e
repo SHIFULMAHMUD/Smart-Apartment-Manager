@@ -1,21 +1,25 @@
 
-K
-java:S1659".Declare "cardViewComplain" on a separate line.(ÎÉ¼·8ï¨ñÇ.
-Q
-java:S1659"/Declare "linearLayoutEvent" on a separate line.(ŠºÍ¡ùÿÿÿÿ8şÏÍ›È.
-f
-java:S1301z"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
-H
-java:S1659"+Declare "cardViewGuest" on a separate line.(ÎÉ¼·8¶ƒÚ°È.
-M
-java:S1659"0Declare "cardViewPayUtility" on a separate line.(ÎÉ¼·8—×¼ğÇ.
-H
-java:S1659"+Declare "cardViewGuard" on a separate line.(ÎÉ¼·8…“ˆÈ.
-G
-java:S1659"*Declare "cardViewTask" on a separate line.(ÎÉ¼·8˜æøòÇ.
-J
-java:S1659"-Declare "cardViewPayRent" on a separate line.(ÎÉ¼·8 ÇæêÇ.
 S
-java:S1659"1Declare "linearLayoutHistory" on a separate line.(ŠºÍ¡ùÿÿÿÿ8’÷ŠĞÊ.
+java:S1659""1Declare "linearLayoutHistory" on a separate line.(ŠºÍ¡ùÿÿÿÿ8’÷ŠĞÊ.
 I
-java:S1659",Declare "cardViewLogout" on a separate line.(ÎÉ¼·8…‹ñÇ.
+java:S1659!",Declare "cardViewReport" on a separate line.(ÊäŸŸ8×àËË.
+K
+java:S1659!".Declare "cardViewComplain" on a separate line.(ÊäŸŸ8ï¨ñÇ.
+I
+java:S1659!",Declare "cardViewLogout" on a separate line.(ÊäŸŸ8…‹ñÇ.
+g
+java:S1301Á"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+Q
+java:S1659""/Declare "linearLayoutEvent" on a separate line.(ŠºÍ¡ùÿÿÿÿ8şÏÍ›È.
+H
+java:S1659!"+Declare "cardViewGuard" on a separate line.(ÊäŸŸ8…“ˆÈ.
+H
+java:S1659!"+Declare "cardViewGuest" on a separate line.(ÊäŸŸ8¶ƒÚ°È.
+J
+java:S1659!"-Declare "cardViewPayRent" on a separate line.(ÊäŸŸ8 ÇæêÇ.
+G
+java:S1659!"*Declare "cardViewTask" on a separate line.(ÊäŸŸ8˜æøòÇ.
+K
+java:S1659$")Declare "profileName" on a separate line.(Ôìûÿÿÿÿ8ÃõĞöË.
+M
+java:S1659!"0Declare "cardViewPayUtility" on a separate line.(ÊäŸŸ8—×¼ğÇ.

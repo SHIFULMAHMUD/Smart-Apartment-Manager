@@ -1,39 +1,39 @@
 
-R
-java:S1068"0Remove this unused "contactsList" private field.(ãÔş–ùÿÿÿÿ8¬ŸµÇ.
-]	java:S125u"<This block of commented-out lines of code should be removed.(Ì€ûÿÿÿÿ8­à³³Ê.
-H
-java:S1659#"&Declare "genderTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
-n
-java:S1301œ"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8­à³³Ê.
-E
-java:S1659!"(Declare "userGender" on a separate line.(šşÔŒ8øµ³³Ê.
-I
-java:S1659#"'Declare "accountTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
-U
-java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8À¬´ÁÇ.
 C
 java:S1659!"&Declare "userCell" on a separate line.(šşÔŒ8øµ³³Ê.
+E
+java:S1659!"(Declare "userGender" on a separate line.(šşÔŒ8øµ³³Ê.
+]	java:S125u"<This block of commented-out lines of code should be removed.(Ì€ûÿÿÿÿ8­à³³Ê.
+E
+java:S1659#"#Declare "nidTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+n
+java:S1301œ"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8­à³³Ê.
 J
 java:S1659!"-Declare "userAccountType" on a separate line.(šşÔŒ8øµ³³Ê.
-C
-java:S1659!"&Declare "userName" on a separate line.(šşÔŒ8øµ³³Ê.
+G
+java:S1659!"*Declare "userPassword" on a separate line.(šşÔŒ8øµ³³Ê.
 O
 java:S1874M"2Remove this use of "setMessage"; it is deprecated.(³°ˆ¼8­à³³Ê.
-B
-java:S1659!"%Declare "userNid" on a separate line.(šşÔŒ8øµ³³Ê.
+]	java:S125l"<This block of commented-out lines of code should be removed.(È”üøûÿÿÿÿ8­à³³Ê.
+H
+java:S1659#"&Declare "genderTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+U
+java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8À¬´ÁÇ.
+F
+java:S1659#"$Declare "cellTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
 Y
 java:S1128"7Remove this unused import 'android.widget.ProgressBar'.(³ñÿŸùÿÿÿÿ8¿ôƒÁÇ.
 z
 java:S1128"XRemove this unused import 'com.android.apartmentmanagementsystem.user.ComplainActivity'.(ÊÅÂÓşÿÿÿÿ8¨Ø¯ŠÉ.
-F
-java:S1659#"$Declare "cellTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
-G
-java:S1659!"*Declare "userPassword" on a separate line.(šşÔŒ8øµ³³Ê.
-E
-java:S1659#"#Declare "nidTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+R
+java:S1068"0Remove this unused "contactsList" private field.(ãÔş–ùÿÿÿÿ8¬ŸµÇ.
 S
 java:S1874$"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8üÕ‹ºÈ.
+I
+java:S1659#"'Declare "accountTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+B
+java:S1659!"%Declare "userNid" on a separate line.(šşÔŒ8øµ³³Ê.
+C
+java:S1659!"&Declare "userName" on a separate line.(šşÔŒ8øµ³³Ê.
 S
 java:S1874K"6Remove this use of "ProgressDialog"; it is deprecated.(ç›ù8­à³³Ê.
-]	java:S125l"<This block of commented-out lines of code should be removed.(È”üøûÿÿÿÿ8­à³³Ê.

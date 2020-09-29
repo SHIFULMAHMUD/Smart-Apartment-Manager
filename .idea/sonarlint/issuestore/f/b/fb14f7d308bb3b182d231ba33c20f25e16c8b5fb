@@ -1,11 +1,11 @@
 
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ΧΨ8ν©ναΚ.
-o	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Φ¥όϊÿÿÿÿ8ν©ναΚ.
-o	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ήώª†ύÿÿÿÿ8ν©ναΚ.
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ µΐ8ν©ναΚ.
-u	java:S116"TRename this field "host_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Λόÿÿÿÿ8ƒ¶λαΚ.
-q	java:S116"URename this field "guest_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Υ¶µ‡8ρκλαΚ.
 w	java:S116"VRename this field "total_guest" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µΊΖ­ϋÿÿÿÿ8¶ μαΚ.
-q	java:S116	"URename this field "guest_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Χ¦ΧΎ8ύ†μαΚ.
+u	java:S116"TRename this field "host_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Λόÿÿÿÿ8ƒ¶λαΚ.
+o	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Φ¥όϊÿÿÿÿ8ν©ναΚ.
 m	java:S116"RRename this field "qr_code" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ηυ98­‰λαΚ.
+o	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ήώª†ύÿÿÿÿ8ν©ναΚ.
+q	java:S116"URename this field "guest_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Υ¶µ‡8ρκλαΚ.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ µΐ8ν©ναΚ.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ΧΨ8ν©ναΚ.
 o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½®·ώÿÿÿÿ8ν©ναΚ.
+q	java:S116	"URename this field "guest_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Χ¦ΧΎ8ύ†μαΚ.

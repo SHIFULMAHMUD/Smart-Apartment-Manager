@@ -39,7 +39,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_alignParentTop="true" />
-
+            <LinearLayout
+                android:id="@+id/SliderDots"
+                android:layout_below="@+id/pager"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,7 +59,7 @@
                 android:layout_marginRight="5dp"
                 android:id="@+id/heading"
                 android:textColor="@color/colorLogo"
-                android:layout_below="@+id/pager"
+                android:layout_below="@+id/SliderDots"
                 android:layout_marginTop="15dp"
                 android:gravity="center">
             </TextView>

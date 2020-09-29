@@ -1,6 +1,6 @@
 
-S
-java:S1197"8Move the array designator from the variable to the type.(°ã“ùÿÿÿÿ
-S
-java:S1197"8Move the array designator from the variable to the type.(ö¿û£ıÿÿÿÿ
-Q	java:S125/"<This block of commented-out lines of code should be removed.(¬Í·
+Q	java:S125?"<This block of commented-out lines of code should be removed.(¬Í·
+]
+java:S1128"@Remove this unused import 'androidx.viewpager.widget.ViewPager'.(¨Ù›æ8±éìØÌ.
+L
+java:S3740"/Provide the parametrized type for this generic.(ÎÛ±ê8¥œÚØÌ.

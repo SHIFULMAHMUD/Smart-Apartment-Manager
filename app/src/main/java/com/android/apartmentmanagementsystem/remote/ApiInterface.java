@@ -1,14 +1,12 @@
 package com.android.apartmentmanagementsystem.remote;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.model.Complain;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.model.Guest;
 import com.android.apartmentmanagementsystem.model.Rent;
 import com.android.apartmentmanagementsystem.model.Report;
+import com.android.apartmentmanagementsystem.model.Slider;
 import com.android.apartmentmanagementsystem.model.Task;
 import com.android.apartmentmanagementsystem.model.Utility;
 
@@ -198,5 +196,11 @@ public interface ApiInterface {
     @GET("profile_name.php")
     Call<List<Contacts>> getProfileName(
             @Query("cell") String cell
+    );
+    @GET("slider_image.php")
+    Call<List<Slider>> getSliderImage(
+            @Query("imageone") String imageone,
+            @Query("imagetwo") String imagetwo,
+            @Query("imagethree") String imagethree
     );
 }

@@ -179,6 +179,7 @@ tools:context=".user.GuestActivity">
                 android:layout_marginRight="10dp"
                 android:textColorHint="@color/colorAccent"
                 android:layout_marginLeft="10dp"
+                android:focusable="false"
                 android:hint="Host Mobile Number"
                 android:backgroundTint="@color/colorAccent"
                 android:inputType="phone"

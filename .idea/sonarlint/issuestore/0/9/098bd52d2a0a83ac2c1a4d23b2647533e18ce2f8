@@ -1,7 +1,7 @@
 
-l
-java:S1104"QMake color a static final constant or non-public and provide accessors if needed.(æ®şôûÿÿÿÿ
-k
-java:S1104"PMake text a static final constant or non-public and provide accessors if needed.(øò¨ıÿÿÿÿ
 o
 java:S1104"TMake drawable a static final constant or non-public and provide accessors if needed.(Ï¢ëÛÿÿÿÿÿ
+k
+java:S1104"PMake text a static final constant or non-public and provide accessors if needed.(øò¨ıÿÿÿÿ
+l
+java:S1104"QMake color a static final constant or non-public and provide accessors if needed.(æ®şôûÿÿÿÿ

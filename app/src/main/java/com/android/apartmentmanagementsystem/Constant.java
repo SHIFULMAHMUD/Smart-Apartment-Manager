@@ -3,7 +3,7 @@ package com.android.apartmentmanagementsystem;
 public class Constant {
 
     public static final String BASE_URL = "https://apartmentsecurity.cf/android/";
-
+    public static final String IMAGE_URL = "https://apartmentsecurity.cf/admin/image/";
     public static final String KEY_NAME="name";
     public static final String KEY_PASSWORD="password";
     public static final String KEY_CELL="cell";

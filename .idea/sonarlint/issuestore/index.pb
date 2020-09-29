@@ -138,10 +138,6 @@ $app/src/main/res/drawable/border.xml,9\2\927357214e239a307ed0db06d4605b263a4fd
 +app/src/main/res/layout/activity_events.xml,6\0\60d00ea871f09873124056cd1c9b80dc917e5eca
 V
 &app/src/main/res/layout/event_item.xml,a\d\ad0f874385175bb5b39a3d48c84515105e695a96
-P
- app/src/main/res/layout/item.xml,2\4\24207c6e5787d938f87222913959f9cb4affa227
-^
-.app/src/main/res/layout/recycler_view_item.xml,1\5\158701189d4e2d21208993bb06e00608de74db45
 R
 "app/src/main/res/values/styles.xml,f\7\f79cc2688e29fcbc286fda14ae07b27c9e83690f
 Å
@@ -242,8 +238,6 @@ Y
 )app/src/main/res/font/source_sans_pro.xml,8\d\8d5868519f3eef9d11d607ac8e9fb5fd8e527029
 P
  app/src/main/res/font/ubuntu.xml,1\0\1050283c6c42d1279fd2e7d3361a42531c9ce33a
-]
--app/src/main/res/layout/activity_complain.xml,f\8\f8fe4c0651352cc306796bab5678dbdceffe2f5e
 e
 5app/src/main/res/layout/activity_complain_history.xml,9\3\9338d23835877082b87ae39501daa41eff7967ac
 _
@@ -252,10 +246,6 @@ b
 2app/src/main/res/layout/activity_guest_history.xml,7\e\7e85abbd64e4593a06f8a32fac9258b518f7a4d5
 [
 +app/src/main/res/layout/activity_notice.xml,e\c\ecbd5f1fe8744b15cf2af8d0116b2dfcca070d90
-]
--app/src/main/res/layout/activity_pay_rent.xml,e\3\e3ec9e08048f6b498abdfa7931083520313eb91a
-e
-5app/src/main/res/layout/activity_pay_utility_bill.xml,e\0\e0efd369dbd6b8c16f99f5b57816804e69d41f8b
 \
 ,app/src/main/res/layout/activity_profile.xml,4\f\4feb8df09bb6546108e9d5489cd9c002981d116c
 a
@@ -284,10 +274,6 @@ Papp/src/main/java/com/android/apartmentmanagementsystem/user/ReportActivity.jav
 Wapp/src/main/java/com/android/apartmentmanagementsystem/user/UtilityReportActivity.java,9\9\99f387018be9d4d87ffc2ff7bf9e05cac9010774
 T
 $app/src/main/res/drawable/ic_add.xml,6\9\699c3d6616ccc6ddf6bb7357bbf7c0f43d8ba9b8
-_
-/app/src/main/res/layout/activity_guest_home.xml,f\a\fab04fea006bc49935219fb58c9b453f8f765e44
-Z
-*app/src/main/res/layout/activity_login.xml,1\f\1f7e901185d74bf05f9fcb38f9ed35ea78cd4c6e
 `
 0app/src/main/res/layout/activity_rent_report.xml,f\4\f40565ea27ee00e8bf517980590ac546c33da92e
 [
@@ -312,3 +298,11 @@ $app/src/main/res/layout/qrdialog.xml,6\4\64799846470198326a543e74a1ab2785bc899
 0app/src/main/res/layout/utility_history_item.xml,b\c\bc1233480fe4c229d47914b53176782fc969079a
 _
 /app/src/main/res/layout/utility_report_item.xml,a\3\a34b9d6c8cb623cb8aa157e71ac083e3baa2d8ff
+_
+/app/src/main/res/layout/activity_guard_home.xml,2\4\2412a9cdda189e87fb69d05db93a3a2dd45b01f0
+Y
+)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
+S
+#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e
+y
+Iapp/src/main/java/com/android/apartmentmanagementsystem/model/Slider.java,3\b\3be9d881bb2547a553c4eaa397acf1fbaa073088

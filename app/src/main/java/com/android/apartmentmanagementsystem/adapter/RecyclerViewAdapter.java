@@ -1,91 +1,69 @@
 package com.android.apartmentmanagementsystem.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.apartmentmanagementsystem.DataModel;
+import com.android.apartmentmanagementsystem.FlatActivity;
+import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-
-    ArrayList mValues;
-    Context mContext;
-    protected ItemListener mListener;
-
-    public RecyclerViewAdapter(Context context, ArrayList values, ItemListener itemListener) {
-
-        mValues = values;
-        mContext = context;
-        mListener=itemListener;
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
+    private List<Flat> flats;
+    Context context;
+    public RecyclerViewAdapter(Context context, List<Flat> flats) {
+        this.context = context;
+        this.flats = flats;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    @Override
+    public RecyclerViewAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_item, parent, false);
+        return new RecyclerViewAdapter.MyViewHolder(view);
+    }
 
-        public TextView textView;
-        public ImageView imageView;
-        public RelativeLayout relativeLayout;
-        DataModel item;
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
+        holder.imageView.setImageResource(R.drawable.apartment);
+        holder.flat.setText(flats.get(position).getFlat_no());
+        holder.floor.setText(flats.get(position).getFloor_no());
+    }
 
-        public ViewHolder(View v) {
+    @Override
+    public int getItemCount() { return flats.size(); }
 
-            super(v);
-
-            v.setOnClickListener(this);
-            textView = (TextView) v.findViewById(R.id.textView);
-            imageView = (ImageView) v.findViewById(R.id.imageView);
-            relativeLayout = (RelativeLayout) v.findViewById(R.id.relativeLayout);
-
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        ImageView imageView;
+        TextView flat, floor;
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            imageView=itemView.findViewById(R.id.flat_imageView);
+            flat = itemView.findViewById(R.id.flat_textView);
+            floor = itemView.findViewById(R.id.floor_textView);
+            itemView.setOnClickListener(this);
         }
-
-        public void setData(DataModel item) {
-            this.item = item;
-
-            textView.setText(item.text);
-            imageView.setImageResource(item.drawable);
-            relativeLayout.setBackgroundColor(Color.parseColor(item.color));
-
-        }
-
 
         @Override
         public void onClick(View view) {
-            if (mListener != null) {
-                mListener.onItemClick(item);
-            }
+            Intent i = new Intent(context, FlatActivity.class);
+            i.putExtra("flat", flats.get(getAdapterPosition()).getFlat_no());
+            i.putExtra("floor", flats.get(getAdapterPosition()).getFloor_no());
+            i.putExtra("details", flats.get(getAdapterPosition()).getFlat_details());
+            i.putExtra("price", flats.get(getAdapterPosition()).getFlat_price());
+            i.putExtra("one", flats.get(getAdapterPosition()).getImageone());
+            i.putExtra("two", flats.get(getAdapterPosition()).getImagetwo());
+            i.putExtra("three", flats.get(getAdapterPosition()).getImagethree());
+            context.startActivity(i);
         }
     }
-
-    @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(mContext).inflate(R.layout.recycler_view_item, parent, false);
-
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.setData((DataModel) mValues.get(position));
-    }
-    @Override
-    public int getItemCount() {
-
-        return mValues.size();
-    }
-
-    public interface ItemListener {
-        void onItemClick(DataModel item);
-    }
 }
-

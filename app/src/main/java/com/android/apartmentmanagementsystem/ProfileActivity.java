@@ -112,27 +112,6 @@ public class ProfileActivity extends AppCompatActivity {
                         accountTv.setText(userAccountType);
                         genderTv.setText(userGender);
                         nidTv.setText(userNid);
-
-
-                        /*String imageUrl= Constant.PRODUCT_IMAGE_URL+productImage;
-
-                        if (productImage != null) {
-                            if (productImage.length() < 3) {
-
-                                imgProduct.setImageResource(R.drawable.image_placeholder);
-                            } else {
-
-
-                                Glide.with(EditProductActivity.this)
-                                        .load(imageUrl)
-                                        .placeholder(R.drawable.loading)
-                                        .error(R.drawable.image_placeholder)
-                                        .into(imgProduct);
-
-                            }
-                        }*/
-
-
                     }
 
                 }

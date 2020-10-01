@@ -1,12 +1,19 @@
 
-Q	java:S1251"<This block of commented-out lines of code should be removed.(İÓ–å
-t
-java:S32528"YUse static access with "androidx.recyclerview.widget.LinearLayoutManager" for "VERTICAL".(ÖïâÉıÿÿÿÿ
-E
-java:S3740!"/Provide the parametrized type for this generic.(Êƒ×©
-^
-java:S1192""HDefine a constant instead of duplicating this literal "#3E51B1" 6 times.(«øˆğ
-J
-java:S3740"/Provide the parametrized type for this generic.(ûââúÿÿÿÿ
+O
+java:S1128"3Remove this unused import 'android.content.Intent'.(³ğ‹G8’ÔÕÍ.
+P
+java:S1128".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8Ÿ¦ßÕÍ.
+o
+java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.adapter.Adapter'.(‰Åæ8åÜÕÍ.
 f
-java:S1301D"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+java:S1301F"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+k
+java:S1128"ORemove this unused import 'com.android.apartmentmanagementsystem.FlatActivity'.(Æ³ü78’ÔÕÍ.
+Y
+java:S1128"7Remove this unused import 'android.widget.ProgressBar'.(³ñÿŸùÿÿÿÿ8¯ÕÑÕÍ.
+s
+java:S1128"QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8ÔùŞÕÍ.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¤›çÕÍ.
+t
+java:S32520"YUse static access with "androidx.recyclerview.widget.LinearLayoutManager" for "VERTICAL".(ÖïâÉıÿÿÿÿ

@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuardHomeActivity extends AppCompatActivity {
-    private LinearLayout scanqr, entermanually;
+    private LinearLayout scanqr, entermanually,tasklayout;
     private Dialog dialog;
     String qrCode,guestName,guestCell,totalGuest,purpose,hostCell,guardName,getCell;
     ImageView logout_iv;
@@ -98,6 +98,8 @@ public class GuardHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        tasklayout=findViewById(R.id.task_layout);
+
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         qrCode = getIntent().getStringExtra("qrvalue");
 
@@ -120,6 +122,14 @@ public class GuardHomeActivity extends AppCompatActivity {
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
         getGuardName(getCell);
+        tasklayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(GuardHomeActivity.this,GuardTaskActivity.class);
+                intent.putExtra("name",guardName);
+                startActivity(intent);
+            }
+        });
     }
     public void getQrData(final String qr_code) {
         Call<List<Guest>> call = apiInterface.getQr(qr_code);
@@ -129,17 +139,18 @@ public class GuardHomeActivity extends AppCompatActivity {
                 guestList = response.body();
 
                 for (int i = 0; i < guestList.size(); i++) {
-                    if (qrCode !=null && qrCode.equals(guestList.get(i).getQr_code())){
+                    if (qrCode !=null && qrCode.equals(guestList.get(i).getQr_code()))
+                    {
                         getGuestData(qrCode);
-                        Toasty.success(GuardHomeActivity.this,"QR Code Matched !",Toasty.LENGTH_LONG).show();
+                        Toasty.success(GuardHomeActivity.this,"QR Code Matched !",Toasty.LENGTH_SHORT).show();
                     }
                     else if (qr_code != null && qr_code.equals(guestList.get(i).getQr_code()))
                     {
                         getGuestData(qr_code);
-                        Toasty.success(GuardHomeActivity.this,"QR Code Matched !",Toasty.LENGTH_LONG).show();
+                        Toasty.success(GuardHomeActivity.this,"QR Code Matched !",Toasty.LENGTH_SHORT).show();
                     }
                     else {
-                        Toasty.error(GuardHomeActivity.this,"QR Code not matched !",Toasty.LENGTH_LONG).show();
+                        Toasty.error(GuardHomeActivity.this,"QR Code not matched !",Toasty.LENGTH_SHORT).show();
                     }
                 }
 
@@ -177,7 +188,7 @@ public class GuardHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (codes.getText().toString().equals("")) {
-                    Toast.makeText(GuardHomeActivity.this, "Please Enter Correct Code!!", Toast.LENGTH_SHORT).show();
+                    Toasty.error(GuardHomeActivity.this, "Please Enter Correct Code !", Toasty.LENGTH_SHORT).show();
                 } else {
                     getQrData(codes.getText().toString());
                 }

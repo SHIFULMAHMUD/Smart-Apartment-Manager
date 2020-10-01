@@ -148,6 +148,7 @@ android:fitsSystemWindows="true"
             android:layout_height="wrap_content"
             android:layout_below="@id/llayout2"
             android:layout_centerHorizontal="true"
+            android:id="@+id/cardview_scan"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="35dp"
             android:layout_marginRight="15dp"
@@ -173,6 +174,7 @@ android:fitsSystemWindows="true"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -209,6 +211,7 @@ android:fitsSystemWindows="true"
 
                 <LinearLayout
                     android:id="@+id/manualcode"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -245,6 +248,26 @@ android:fitsSystemWindows="true"
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/task_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gradient1"
+            android:layout_below="@+id/cardview_scan">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="View Assigned Tasks">
+            </TextView>
+        </LinearLayout>
     </RelativeLayout>
     <Button
         android:layout_width="wrap_content"

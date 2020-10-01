@@ -76,14 +76,16 @@
                         android:text="Rent an Apartment"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="20sp">
+                    </TextView>
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_weight="1"
+                        android:layout_weight="1.5"
                         android:layout_height="wrap_content"
                         android:text="Find apartments for rent. Check out your desired apartment from list and hire it."
                         android:textColor="@android:color/white"
-                        android:textSize="15sp"></TextView>
+                        android:textSize="15sp">
+                    </TextView>
                 </LinearLayout>
 
             </LinearLayout>
@@ -119,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="You can find the details features here. But you can only avail them if you rent an apartment."
-                        android:layout_weight="1"
+                        android:layout_weight="1.5"
                         android:textColor="@android:color/white"
                         android:textSize="15sp"></TextView>
                 </LinearLayout>

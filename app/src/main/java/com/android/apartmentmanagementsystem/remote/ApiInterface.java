@@ -3,6 +3,7 @@ package com.android.apartmentmanagementsystem.remote;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.model.Complain;
 import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.model.Guest;
 import com.android.apartmentmanagementsystem.model.Rent;
 import com.android.apartmentmanagementsystem.model.Report;
@@ -114,6 +115,19 @@ public interface ApiInterface {
             @Field(Constant.KEY_CELL) String cell);
 
     @FormUrlEncoded
+    @POST("request_flat.php")
+    Call<Flat> requestFlat(
+            @Field("flat_no") String flat_no,
+            @Field("floor_no") String floor_no,
+            @Field("request") String request);
+
+    @FormUrlEncoded
+    @POST("task_status.php")
+    Call<Task> submitTask(
+            @Field("id") String id,
+            @Field("status") String status);
+
+    @FormUrlEncoded
     @POST("guest.php")
     Call<Contacts> guestRequest(
             @Field(Constant.KEY_GUEST_NAME) String guest_name,
@@ -177,6 +191,10 @@ public interface ApiInterface {
     Call<List<Task>> getTask(
             @Query("cell") String cell
     );
+    @GET("guard_task.php")
+    Call<List<Task>> getGuardTask(
+            @Query("guard_name") String guard_name
+    );
     @GET("complain_history.php")
     Call<List<Complain>> getComplain(
             @Query("cell") String cell
@@ -202,5 +220,10 @@ public interface ApiInterface {
             @Query("imageone") String imageone,
             @Query("imagetwo") String imagetwo,
             @Query("imagethree") String imagethree
+    );
+    @GET("get_flat.php")
+    Call<List<Flat>> getFlatDetails(
+            @Query("flat_no") String flat_no,
+            @Query("floor_no") String floor_no
     );
 }

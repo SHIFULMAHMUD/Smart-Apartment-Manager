@@ -4,27 +4,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.apartmentmanagementsystem.adapter.Adapter;
 import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.model.Slider;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.android.apartmentmanagementsystem.user.GuardActivity;
+import com.android.apartmentmanagementsystem.user.PayRentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +45,11 @@ public class FlatActivity extends AppCompatActivity {
     ViewPager viewPager;
     MyCustomPagerAdapter myCustomPagerAdapter;
     int currentPage = 0,NUM_PAGES=4;
+    TextView flat_details_tv,flat_price_tv;
     Timer timer;
+    private ProgressDialog loading;
+    Button confirmBtn;
+    String flat_no,floor_no,flat_details,flat_price,slider_one,slider_two,slider_three;
     ArrayList<String> cc;
     final long DELAY_MS = 1000;//delay in milliseconds before task is to be executed
     final long PERIOD_MS = 10000; // time in milliseconds between successive task executions.
@@ -57,6 +69,9 @@ public class FlatActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         viewPager = (ViewPager)findViewById(R.id.pager);
+        flat_details_tv=findViewById(R.id.room_details);
+        flat_price_tv=findViewById(R.id.room_price);
+        confirmBtn=findViewById(R.id.cirConfirmButton);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         slider = new ArrayList<>();
         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
@@ -84,10 +99,56 @@ public class FlatActivity extends AppCompatActivity {
 
             }
         });
-
+        flat_no = getIntent().getStringExtra("flat");
+        floor_no = getIntent().getStringExtra("floor");
+        flat_details = getIntent().getStringExtra("details");
+        flat_price = getIntent().getStringExtra("price");
+        slider_one = getIntent().getStringExtra("one");
+        slider_two = getIntent().getStringExtra("two");
+        slider_three = getIntent().getStringExtra("three");
+        flat_details_tv.setText(flat_details);
+        flat_price_tv.setText("Tk "+ flat_price);
+        cc.add(Constant.IMAGE_URL+slider_one);
+        cc.add(Constant.IMAGE_URL+slider_two);
+        cc.add(Constant.IMAGE_URL+slider_three);
         getSliderData("","","");
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String[] taskList = {"Yes", "No"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(FlatActivity.this);
+                builder.setTitle("Confirm Submission?");
+                builder.setCancelable(false);
+                builder.setItems(taskList, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int position) {
+                        switch (position) {
+                            case 0:
+                                String request = "Pending";
+
+                                    submitRequest(flat_no,floor_no,request);
+
+                                break;
+                            case 1:
+                                dialog.dismiss();
+                                break;
+                        }
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int position) {
+                        dialog.dismiss();
+                    }
+                });
 
 
+                AlertDialog accountTypeDialog = builder.create();
+
+                accountTypeDialog.show();
+            }
+        });
     }
     public void getSliderData(String imageone, String imagetwo,String imagethree) {
         Call<List<Slider>> call = apiInterface.getSliderImage(imageone,imagetwo,imagethree);
@@ -96,12 +157,6 @@ public class FlatActivity extends AppCompatActivity {
             public void onResponse(Call<List<Slider>> call, Response<List<Slider>> response) {
 
                 slider = response.body();
-                cc.clear();
-                for (int i = 0; i < slider.size(); i++) {
-                    cc.add(Constant.IMAGE_URL+slider.get(i).getImageone());
-                    cc.add(Constant.IMAGE_URL+slider.get(i).getImagetwo());
-                    cc.add(Constant.IMAGE_URL+slider.get(i).getImagethree());
-                }
                 myCustomPagerAdapter = new MyCustomPagerAdapter(FlatActivity.this, cc);
                 viewPager.setAdapter(myCustomPagerAdapter);
                 myCustomPagerAdapter.notifyDataSetChanged();
@@ -149,6 +204,44 @@ public class FlatActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Slider>> call, Throwable t) {
                 Toast.makeText(FlatActivity.this, "Error : "+ t.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void submitRequest(String flatno,String floorno, String request) {
+
+        loading=new ProgressDialog(this);
+        loading.setMessage("Please wait....");
+        loading.show();
+
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        Call<Flat> call = apiInterface.requestFlat(flatno,floorno,request);
+        call.enqueue(new Callback<Flat>() {
+            @Override
+            public void onResponse(Call<Flat> call, Response<Flat> response) {
+
+                String value = response.body().getValue();
+                String message = response.body().getMassage();
+
+                if (value.equals("success"))
+                {
+                    loading.dismiss();
+                    Toasty.success(FlatActivity.this, message, Toasty.LENGTH_SHORT).show();
+                }
+
+
+
+                else {
+                    loading.dismiss();
+                    Toasty.error(FlatActivity.this, message, Toasty.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Flat> call, Throwable t) {
+
+                loading.dismiss();
+                Toasty.error(FlatActivity.this, "Error! " + t.toString(), Toasty.LENGTH_SHORT).show();
             }
         });
     }

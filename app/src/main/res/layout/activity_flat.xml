@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FLAT DETAILS"
+                android:text="FLAT INFO"
                 android:background="@android:color/white"
                 android:textStyle="bold"
                 android:textSize="20sp"
@@ -63,30 +63,75 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center">
             </TextView>
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/heading"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/room_description"
-                android:justificationMode="inter_word"
-                android:text="The apartment has 7 rooms total with 2 Bedrooms, 1 Dining, 1 Kitchen, 1 Guestroon &amp; 2 Bathrooms. Monthly rent price is Tk 15,000 only."
-                android:textSize="16sp"
-                android:textColor="@android:color/white">
-            </TextView>
+                android:orientation="horizontal"
+                android:layout_below="@+id/heading">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Details :"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/room_details"
+                    android:justificationMode="inter_word"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/room_price_layout"
+                android:orientation="horizontal"
+                android:layout_below="@+id/room_description">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Price :"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/room_price"
+                    android:justificationMode="inter_word"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white">
+                </TextView>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/cirLoginButton"
+                android:id="@+id/cirConfirmButton"
                 style="@style/loginButton"
                 android:text="Confirm Rent"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/colorLogo"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_alignParentBottom="true"
-                android:layout_below="@+id/room_description"
+                android:layout_below="@+id/room_price_layout"
                 android:textSize="15sp" />
         </RelativeLayout>
     </RelativeLayout>

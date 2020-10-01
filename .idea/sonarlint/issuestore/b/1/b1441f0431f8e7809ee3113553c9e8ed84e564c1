@@ -1,0 +1,15 @@
+
+y
+java:S1450 "\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8Á¼àÛÍ.
+Z
+java:S1128">Remove this unused import 'android.content.SharedPreferences'.(íÎÉr8ÈûõÛÍ.
+
+java:S1128"]Remove this unused import 'com.android.apartmentmanagementsystem.adapter.TaskHistoryAdapter'.(ãáÛêüÿÿÿÿ8ô÷åÛÍ.
+…
+java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.TaskHistoryActivity'.(ÑóãØùÿÿÿÿ8œ·áÛÍ.
+m
+java:S1128"KRemove this unused import 'com.android.apartmentmanagementsystem.Constant'.(áÜ–üÿÿÿÿ8ÈûõÛÍ.
+m
+java:S1301Q"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Á¼àÛÍ.
+Q
+java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è8ÈûõÛÍ.

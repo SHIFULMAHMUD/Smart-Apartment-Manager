@@ -1,5 +1,11 @@
 
-v	java:S116	"URename this field "guard_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å£Ä–üÿÿÿÿ8 š©ùÊ.
 /
 java:S1700"Rename field "task"(¨ù´38ÏÖ©ùÊ.
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û‚®Äúÿÿÿÿ8 š©ùÊ.
+r	java:S116"VRename this field "renter_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“À¸İ8ûá¢ÜÍ.
+o	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ¤ Èøÿÿÿÿ8¾‡¨ÜÍ.
+s	java:S116"RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú™Åüÿÿÿÿ8©ö£ÜÍ.
+o	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û‚®Äúÿÿÿÿ8¹ä¥ÜÍ.
+o	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İšŞûÿÿÿÿ8¾‡¨ÜÍ.
+v	java:S116	"URename this field "guard_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å£Ä–üÿÿÿÿ8 š©ùÊ.
+i	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÚôu8¾‡¨ÜÍ.
+t	java:S116"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¹Òˆşÿÿÿÿ8¹ä¥ÜÍ.

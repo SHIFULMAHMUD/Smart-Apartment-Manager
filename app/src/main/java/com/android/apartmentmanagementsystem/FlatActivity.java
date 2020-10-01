@@ -13,9 +13,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -32,6 +36,7 @@ import com.android.apartmentmanagementsystem.model.Slider;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.android.apartmentmanagementsystem.user.GuardActivity;
+import com.android.apartmentmanagementsystem.user.HomeActivity;
 import com.android.apartmentmanagementsystem.user.PayRentActivity;
 
 import java.util.ArrayList;
@@ -47,6 +52,7 @@ public class FlatActivity extends AppCompatActivity {
     int currentPage = 0,NUM_PAGES=4;
     TextView flat_details_tv,flat_price_tv;
     Timer timer;
+    String getCell,profileName;
     private ProgressDialog loading;
     Button confirmBtn;
     String flat_no,floor_no,flat_details,flat_price,slider_one,slider_two,slider_three;
@@ -73,6 +79,10 @@ public class FlatActivity extends AppCompatActivity {
         flat_price_tv=findViewById(R.id.room_price);
         confirmBtn=findViewById(R.id.cirConfirmButton);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+        getProfileName(getCell);
         slider = new ArrayList<>();
         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
         cc=new ArrayList<>();
@@ -126,7 +136,7 @@ public class FlatActivity extends AppCompatActivity {
                             case 0:
                                 String request = "Pending";
 
-                                    submitRequest(flat_no,floor_no,request);
+                                    submitRequest(flat_no,floor_no,request,profileName,getCell);
 
                                 break;
                             case 1:
@@ -207,7 +217,7 @@ public class FlatActivity extends AppCompatActivity {
             }
         });
     }
-    private void submitRequest(String flatno,String floorno, String request) {
+    private void submitRequest(String flatno,String floorno, String request,String name,String cell) {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Please wait....");
@@ -215,7 +225,7 @@ public class FlatActivity extends AppCompatActivity {
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<Flat> call = apiInterface.requestFlat(flatno,floorno,request);
+        Call<Flat> call = apiInterface.requestFlat(flatno,floorno,request,name,cell);
         call.enqueue(new Callback<Flat>() {
             @Override
             public void onResponse(Call<Flat> call, Response<Flat> response) {
@@ -227,6 +237,9 @@ public class FlatActivity extends AppCompatActivity {
                 {
                     loading.dismiss();
                     Toasty.success(FlatActivity.this, message, Toasty.LENGTH_SHORT).show();
+                    Intent intent=new Intent(FlatActivity.this,HomeActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
 
 
@@ -244,6 +257,44 @@ public class FlatActivity extends AppCompatActivity {
                 Toasty.error(FlatActivity.this, "Error! " + t.toString(), Toasty.LENGTH_SHORT).show();
             }
         });
+    }
+    public void getProfileName(String cell) {
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Contacts>> call;
+        call = apiInterface.getProfileName(cell);
+
+        call.enqueue(new Callback<List<Contacts>>() {
+            @Override
+            public void onResponse(Call<List<Contacts>> call, Response<List<Contacts>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Contacts> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        Toasty.warning(FlatActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+                        profileName = profileData.get(0).getName();
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Contacts>> call, Throwable t) {
+
+                Toast.makeText(FlatActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
+
     }
     //for back button
     @Override

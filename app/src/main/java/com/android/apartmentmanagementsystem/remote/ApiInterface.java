@@ -119,7 +119,9 @@ public interface ApiInterface {
     Call<Flat> requestFlat(
             @Field("flat_no") String flat_no,
             @Field("floor_no") String floor_no,
-            @Field("request") String request);
+            @Field("request") String request,
+            @Field("renter_name") String renter_name,
+            @Field("renter_cell") String renter_cell);
 
     @FormUrlEncoded
     @POST("task_status.php")
@@ -225,5 +227,9 @@ public interface ApiInterface {
     Call<List<Flat>> getFlatDetails(
             @Query("flat_no") String flat_no,
             @Query("floor_no") String floor_no
+    );
+    @GET("get_owner.php")
+    Call<List<Flat>> getFlatOwner(
+            @Query("renter_cell") String renter_cell
     );
 }

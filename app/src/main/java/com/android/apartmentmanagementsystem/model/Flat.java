@@ -19,6 +19,10 @@ public class Flat {
     private String imagethree;
     @SerializedName("request")
     private String request;
+    @SerializedName("renter_name")
+    private String renter_name;
+    @SerializedName("renter_cell")
+    private String renter_cell;
     @SerializedName("value")
     private String value;
     @SerializedName("message")
@@ -62,5 +66,13 @@ public class Flat {
 
     public String getMassage() {
         return massage;
+    }
+
+    public String getRenter_name() {
+        return renter_name;
+    }
+
+    public String getRenter_cell() {
+        return renter_cell;
     }
 }

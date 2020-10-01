@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,9 +19,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.apartmentmanagementsystem.Constant;
+import com.android.apartmentmanagementsystem.ProfileActivity;
 import com.android.apartmentmanagementsystem.R;
+import com.android.apartmentmanagementsystem.adapter.RecyclerViewAdapter;
 import com.android.apartmentmanagementsystem.guard.GuardHomeActivity;
 import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 
@@ -28,8 +32,9 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     LinearLayout linearLayoutRent,linearLayoutFeature;
-    String getCell,profileName;
+    String getCell,profileName,userCell;
     TextView profileNameTv;
+    private List<Flat> flatList;
     private ApiInterface apiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
         getProfileName(getCell);
-
+        getFlatData(getCell);
         linearLayoutRent=findViewById(R.id.layout2);
         linearLayoutFeature=findViewById(R.id.layout3);
         linearLayoutRent.setOnClickListener(new View.OnClickListener() {
@@ -56,8 +61,12 @@ public class HomeActivity extends AppCompatActivity {
         linearLayoutFeature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(HomeActivity.this, MainActivity.class);
-                startActivity(intent);
+                if (getCell.equals(userCell)) {
+                    Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }else {
+                    Toasty.info(HomeActivity.this,"Rent a Flat to avail all features !",Toasty.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -96,6 +105,41 @@ public class HomeActivity extends AppCompatActivity {
 
                 Toast.makeText(HomeActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
                 Log.d("Error : ", t.toString());
+            }
+        });
+
+
+    }
+    public void getFlatData(String cell) {
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Flat>> call;
+        call = apiInterface.getFlatOwner(cell);
+
+        call.enqueue(new Callback<List<Flat>>() {
+            @Override
+            public void onResponse(Call<List<Flat>> call, Response<List<Flat>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Flat> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+                        userCell = "0";
+                    } else {
+
+                        userCell = profileData.get(0).getRenter_cell();
+
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Flat>> call, Throwable t) {
+
             }
         });
 

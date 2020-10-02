@@ -1,30 +1,32 @@
 
-X	java:S125z"<This block of commented-out lines of code should be removed.(¦¶ƒ8Ì‹åÍ.
-C	java:S131\""Add a default case to this switch.(¼œóÛüÿÿÿÿ8·öäÍ.
-@
-java:S1659@"#Declare "floor" on a separate line.(£´â„8¹ÜÍ.
-?
-java:S1659@""Declare "date" on a separate line.(£´â„8µ“ÂÛÍ.
-?
-java:S1659@""Declare "task" on a separate line.(£´â„8µ“ÂÛÍ.
-o
-java:S1128"MRemove this unused import 'com.android.apartmentmanagementsystem.model.Flat'.(Çš»ˆúÿÿÿÿ8Â„¥åÍ.
-r	java:S117x"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óªı”üÿÿÿÿ8ó¡¢åÍ.
-?
-java:S1659@""Declare "time" on a separate line.(£´â„8µ“ÂÛÍ.
-?
-java:S1659@""Declare "cell" on a separate line.(£´â„8 ¿¸ÜÍ.
 k
-java:S1128"ORemove this unused import 'com.android.apartmentmanagementsystem.FlatActivity'.(Æ³ü78Í‹‰åÍ.
-X	java:S125O"<This block of commented-out lines of code should be removed.(Ö™Â§8µ“ÂÛÍ.
-Y	java:S125‰"<This block of commented-out lines of code should be removed.(“­ó8Éõ‚æÍ.
-Z
-java:S1117^"8Rename "task" which hides the field declared at line 64.(“¨éöúÿÿÿÿ8Î÷²åÍ.
-Y	java:S125"<This block of commented-out lines of code should be removed.(“­ó8Éõ‚æÍ.
-v
-java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardTaskActivity'.(øß“8…îùäÍ.
+java:S1128"ORemove this unused import 'com.android.apartmentmanagementsystem.FlatActivity'.(Æ³ü78Í‹‰åÍ.
 m
-java:S1301\"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8·öäÍ.
+java:S1301["KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8·öäÍ.
+Y	java:S125‘"<This block of commented-out lines of code should be removed.(“­ó8»òŠåÍ.
+o
+java:S1128"MRemove this unused import 'com.android.apartmentmanagementsystem.model.Flat'.(Çš»ˆúÿÿÿÿ8ş†ç”Î.
+Y	java:S125‰"<This block of commented-out lines of code should be removed.(“­ó8Éõ‚æÍ.
+T
+java:S1128"7Remove this unused import 'android.app.ProgressDialog'.(¶ÍÔÓ8õ•é”Î.
+O
+java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ş†ç”Î.
 ?
-java:S1659@""Declare "flat" on a separate line.(£´â„8¹ÜÍ.
-Y	java:S125˜"<This block of commented-out lines of code should be removed.(“­ó8»òŠåÍ.
+java:S1659C""Declare "date" on a separate line.(°ÚÓ¢8µ“ÂÛÍ.
+?
+java:S1659C""Declare "task" on a separate line.(°ÚÓ¢8µ“ÂÛÍ.
+Z
+java:S1117]"8Rename "task" which hides the field declared at line 67.(“¨éöúÿÿÿÿ8Î÷²åÍ.
+?
+java:S1659C""Declare "flat" on a separate line.(°ÚÓ¢8¹ÜÍ.
+?
+java:S1659C""Declare "cell" on a separate line.(°ÚÓ¢8 ¿¸ÜÍ.
+?
+java:S1659C""Declare "time" on a separate line.(°ÚÓ¢8µ“ÂÛÍ.
+A
+java:S1659C"$Declare "status" on a separate line.(°ÚÓ¢8‚îñ”Î.
+v
+java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardTaskActivity'.(øß“8ıÙ•Î.
+@
+java:S1659C"#Declare "floor" on a separate line.(°ÚÓ¢8¹ÜÍ.
+C	java:S131[""Add a default case to this switch.(¼œóÛüÿÿÿÿ8·öäÍ.

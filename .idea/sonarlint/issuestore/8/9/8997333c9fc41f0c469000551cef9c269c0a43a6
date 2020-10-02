@@ -1,9 +1,13 @@
 
-i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÚôu8òªÅÙÍ.
-o	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õªóØûÿÿÿÿ8òªÅÙÍ.
-o	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àò…èÿÿÿÿÿ8òªÅÙÍ.
+o	java:S100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İšŞûÿÿÿÿ8Ç­¼–Î.
+o	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ¤ Èøÿÿÿÿ8»»–Î.
+r	java:S116"VRename this field "renter_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àñ–Ã8»»–Î.
+r	java:S116"VRename this field "renter_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“À¸İ8Î¥»–Î.
+o	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àò…èÿÿÿÿÿ8»»–Î.
+o	java:S100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²Ìçøÿÿÿÿ8Ç­¼–Î.
 s	java:S116"RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú™Åüÿÿÿÿ8ì¢şÔÍ.
+x	java:S116"WRename this field "flat_details" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ÍàÄùÿÿÿÿ8ñ­€ÕÍ.
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÚôu8»»–Î.
+o	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õªóØûÿÿÿÿ8»»–Î.
 v	java:S116"URename this field "flat_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ìÈ“ıÿÿÿÿ8Äû€ÕÍ.
 t	java:S116	"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¹Òˆşÿÿÿÿ8×ÌÿÔÍ.
-x	java:S116"WRename this field "flat_details" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ÍàÄùÿÿÿÿ8ñ­€ÕÍ.
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ¤ Èøÿÿÿÿ8òªÅÙÍ.

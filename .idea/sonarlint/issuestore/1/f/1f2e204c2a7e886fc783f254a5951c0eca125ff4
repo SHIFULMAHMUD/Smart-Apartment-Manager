@@ -1,53 +1,53 @@
 
-w
-java:S1450+"URemove the "scanqr" field and declare it as a local variable in the relevant methods.(·î÷Éıÿÿÿÿ8è«Ø±É.
-u	java:S116."TRename this field "logout_iv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íö¬Éşÿÿÿÿ8©×âàË.
-Ÿ
-java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë÷ÚÊ8±ÚŒãË.
-M
-java:S1128'"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8îÉàË.
-G
-java:S1659-"%Declare "purpose" on a separate line.(ò–ëÈıÿÿÿÿ8¶¢èâË.
-J
-java:S1659+"(Declare "tasklayout" on a separate line.(·î÷Éıÿÿÿÿ8Â°¯ÛÍ.
-T
-java:S1128"7Remove this unused import 'android.app.ProgressDialog'.(¶ÍÔÓ8×—˜âË.
-G
-java:S16590"*Declare "totalGuestTv" on a separate line.(Ùôÿä8Î÷òâË.
 ~
 java:S1450+"\Remove the "entermanually" field and declare it as a local variable in the relevant methods.(·î÷Éıÿÿÿÿ8Š°İË.
-I
-java:S1659-"'Declare "guestCell" on a separate line.(ò–ëÈıÿÿÿÿ8ìŒæâË.
-F
-java:S16590")Declare "guardNameTv" on a separate line.(Ùôÿä8àºÜõË.
 I
 java:S1659-"'Declare "guardName" on a separate line.(ò–ëÈıÿÿÿÿ8äÙõË.
 E
 java:S16590"(Declare "hostCellTv" on a separate line.(Ùôÿä8Î÷òâË.
+G
+java:S16590"*Declare "totalGuestTv" on a separate line.(Ùôÿä8Î÷òâË.
+{
+java:S1450+"YRemove the "tasklayout" field and declare it as a local variable in the relevant methods.(·î÷Éıÿÿÿÿ8ŸÉ±ÛÍ.
 C	java:S131B""Add a default case to this switch.(¼œóÛüÿÿÿÿ8êÊ‚áË.
-k	java:S100¤"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÉœ§8±ÚŒãË.
+J
+java:S1659-"(Declare "totalGuest" on a separate line.(ò–ëÈıÿÿÿÿ8çßæâË.
+I
+java:S1659-"'Declare "guestCell" on a separate line.(ò–ëÈıÿÿÿÿ8ìŒæâË.
+T
+java:S1128"7Remove this unused import 'android.app.ProgressDialog'.(¶ÍÔÓ8×—˜âË.
+I
+java:S1659-"'Declare "guestName" on a separate line.(ò–ëÈıÿÿÿÿ8ÈºåâË.
+G
+java:S1659-"%Declare "purpose" on a separate line.(ò–ëÈıÿÿÿÿ8¶¢èâË.
+w
+java:S1450+"URemove the "scanqr" field and declare it as a local variable in the relevant methods.(·î÷Éıÿÿÿÿ8è«Ø±É.
+G
+java:S1659-"%Declare "getCell" on a separate line.(ò–ëÈıÿÿÿÿ8ùÍáõË.
+m
+java:S1301B"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8êÊ‚áË.
+H
+java:S1659-"&Declare "hostCell" on a separate line.(ò–ëÈıÿÿÿÿ8ğŠéâË.
+M
+java:S1659+"+Declare "entermanually" on a separate line.(·î÷Éıÿÿÿÿ8è«Ø±É.
+G
+java:S16590"*Declare "guestCountTv" on a separate line.(Ùôÿä8é­õË.
+k	java:S100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÉœ§8±ÚŒãË.
+J
+java:S1659+"(Declare "tasklayout" on a separate line.(·î÷Éıÿÿÿÿ8Â°¯ÛÍ.
+j	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÚ¦8±ÚŒãË.
+M
+java:S1128'"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8îÉàË.
 z
 java:S1128!"XRemove this unused import 'com.android.apartmentmanagementsystem.UpdateProfileActivity'.(·ìÔùÿÿÿÿ8êÊ‚áË.
 o
 java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.ProfileActivity'.(ÑœÛã8±Ş¬âË.
-m
-java:S1301B"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8êÊ‚áË.
-j	java:S100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÚ¦8±ÚŒãË.
-G
-java:S1659-"%Declare "getCell" on a separate line.(ò–ëÈıÿÿÿÿ8ùÍáõË.
 F
 java:S16590")Declare "guestCellTv" on a separate line.(Ùôÿä8Î÷òâË.
-M
-java:S1659+"+Declare "entermanually" on a separate line.(·î÷Éıÿÿÿÿ8è«Ø±É.
-{
-java:S1450+"YRemove the "tasklayout" field and declare it as a local variable in the relevant methods.(·î÷Éıÿÿÿÿ8ŸÉ±ÛÍ.
 D
 java:S16590"'Declare "purposeTv" on a separate line.(Ùôÿä8Î÷òâË.
-H
-java:S1659-"&Declare "hostCell" on a separate line.(ò–ëÈıÿÿÿÿ8ğŠéâË.
-G
-java:S16590"*Declare "guestCountTv" on a separate line.(Ùôÿä8é­õË.
-J
-java:S1659-"(Declare "totalGuest" on a separate line.(ò–ëÈıÿÿÿÿ8çßæâË.
-I
-java:S1659-"'Declare "guestName" on a separate line.(ò–ëÈıÿÿÿÿ8ÈºåâË.
+Ÿ
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë÷ÚÊ8±ÚŒãË.
+u	java:S116."TRename this field "logout_iv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íö¬Éşÿÿÿÿ8©×âàË.
+F
+java:S16590")Declare "guardNameTv" on a separate line.(Ùôÿä8àºÜõË.

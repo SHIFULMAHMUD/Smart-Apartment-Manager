@@ -51,8 +51,7 @@ public class FlatActivity extends AppCompatActivity {
     MyCustomPagerAdapter myCustomPagerAdapter;
     int currentPage = 0,NUM_PAGES=4;
     TextView flat_details_tv,flat_price_tv;
-    Timer timer;
-    String getCell,profileName;
+    Timer timer;String getCell,profileName,userCell;
     private ProgressDialog loading;
     Button confirmBtn;
     String flat_no,floor_no,flat_details,flat_price,slider_one,slider_two,slider_three;
@@ -83,6 +82,7 @@ public class FlatActivity extends AppCompatActivity {
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
         getProfileName(getCell);
+        getFlatData(getCell);
         slider = new ArrayList<>();
         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
         cc=new ArrayList<>();
@@ -135,8 +135,11 @@ public class FlatActivity extends AppCompatActivity {
                         switch (position) {
                             case 0:
                                 String request = "Pending";
-
-                                    submitRequest(flat_no,floor_no,request,profileName,getCell);
+                                    if (userCell=="0") {
+                                        submitRequest(flat_no, floor_no, request, profileName, getCell);
+                                    }else if (userCell.equals(getCell)){
+                                        Toasty.error(FlatActivity.this,"Sorry! You can not request more than one flat.",Toasty.LENGTH_LONG).show();
+                                    }
 
                                 break;
                             case 1:
@@ -216,6 +219,41 @@ public class FlatActivity extends AppCompatActivity {
                 Toast.makeText(FlatActivity.this, "Error : "+ t.toString(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    public void getFlatData(String cell) {
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Flat>> call;
+        call = apiInterface.getFlatRenter(cell);
+
+        call.enqueue(new Callback<List<Flat>>() {
+            @Override
+            public void onResponse(Call<List<Flat>> call, Response<List<Flat>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Flat> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+                        userCell = "0";
+                    } else {
+
+                        userCell = profileData.get(0).getRenter_cell();
+
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Flat>> call, Throwable t) {
+
+            }
+        });
+
+
     }
     private void submitRequest(String flatno,String floorno, String request,String name,String cell) {
 

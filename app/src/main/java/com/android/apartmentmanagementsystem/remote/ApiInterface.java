@@ -232,4 +232,8 @@ public interface ApiInterface {
     Call<List<Flat>> getFlatOwner(
             @Query("renter_cell") String renter_cell
     );
+    @GET("check_renter.php")
+    Call<List<Flat>> getFlatRenter(
+            @Query("renter_cell") String renter_cell
+    );
 }

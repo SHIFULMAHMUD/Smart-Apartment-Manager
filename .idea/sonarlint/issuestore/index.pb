@@ -304,3 +304,17 @@ Gapp/src/main/java/com/android/apartmentmanagementsystem/model/Flat.java,8\9\89
 Uapp/src/main/java/com/android/apartmentmanagementsystem/adapter/GuardTaskAdapter.java,9\b\9be707bcd56ebd4591595954aa27e0bd4f0b27bf
 „
 Tapp/src/main/java/com/android/apartmentmanagementsystem/guard/GuardTaskActivity.java,b\1\b1441f0431f8e7809ee3113553c9e8ed84e564c1
+Y
+)app/src/main/res/layout/activity_flat.xml,b\c\bcfe4d817944860f417f111560e4beb88810831a
+_
+/app/src/main/res/layout/activity_guard_home.xml,2\4\2412a9cdda189e87fb69d05db93a3a2dd45b01f0
+_
+/app/src/main/res/layout/activity_guard_task.xml,7\f\7fd252fcef2f4e5446586bac7ba7cbf4d7174b71
+Y
+)app/src/main/res/layout/activity_home.xml,8\4\84bbfd95b490b92591d2b037417f036942315d57
+Y
+)app/src/main/res/layout/activity_rent.xml,f\6\f6f951029a1831786d14aff54b4cc92eedaa5af4
+[
++app/src/main/res/layout/guard_task_item.xml,a\6\a6b6b1c7a4c968fabb7c3cd6df2e6fec5601cbe5
+^
+.app/src/main/res/layout/recycler_view_item.xml,1\5\158701189d4e2d21208993bb06e00608de74db45

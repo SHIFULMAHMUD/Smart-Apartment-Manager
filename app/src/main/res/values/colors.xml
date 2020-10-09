@@ -7,4 +7,7 @@
     <color name="colorHome">#E2E6E9</color>
     <color name="colorBack">#5B6E81</color>
     <color name="colorFlat">#3E51B1</color>
+    <color name="function_color">#0258c9</color>
+    <color name="equal_color">#01c854</color>
+    <color name="colorRed">#dd3333</color>
 </resources>

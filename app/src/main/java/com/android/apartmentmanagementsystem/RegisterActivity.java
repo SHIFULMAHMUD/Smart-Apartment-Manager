@@ -17,6 +17,7 @@ import retrofit2.http.PUT;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
+import com.android.apartmentmanagementsystem.user.GuestActivity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -52,6 +53,13 @@ public class RegisterActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle("Create New Account");
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(RegisterActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }
         etxtName = findViewById(R.id.editTextRegisterName);
         etxtCell = findViewById(R.id.editTextRegisterPhone);
         etxtPassword = findViewById(R.id.editTextRegisterPassword);
@@ -176,65 +184,55 @@ public class RegisterActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//Internet connection checker
+                ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+                // Check if Internet present
+                if (!cd.isConnectingToInternet()) {
+                    // Internet Connection is not present
+                    Toasty.error(RegisterActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+                }else {
+                    //taking values
+                    user_name = etxtName.getText().toString();
+                    user_cell = etxtCell.getText().toString();
+                    user_password = etxtPassword.getText().toString();
+                    user_account = etxtAccount.getText().toString();
+                    user_gender = etxtGender.getText().toString();
+                    user_nid = etxtNidNumber.getText().toString();
 
-                //taking values
-                 user_name = etxtName.getText().toString();
-                 user_cell = etxtCell.getText().toString();
-                 user_password = etxtPassword.getText().toString();
-                 user_account = etxtAccount.getText().toString();
-                 user_gender = etxtGender.getText().toString();
-                 user_nid = etxtNidNumber.getText().toString();
 
+                    //validation
+                    if (user_name.isEmpty()) {
+                        etxtName.setError("Name can not be empty! ");
+                        etxtName.requestFocus();
 
-                //validation
-                if (user_name.isEmpty())
-                {
-                    etxtName.setError("Name can not be empty! ");
-                    etxtName.requestFocus();
+                    } else if (user_cell.length() != 11 || !user_cell.startsWith("01")) {
+                        etxtCell.setError("Invalid cell!");
+                        etxtCell.requestFocus();
 
+                    } else if (user_password.isEmpty()) {
+                        etxtPassword.setError("Password can not be empty! ");
+                        etxtPassword.requestFocus();
+
+                    } else if ((user_password.length() < 4)) {
+                        etxtPassword.setError("Password should be more than 3 characters!");
+                        etxtPassword.requestFocus();
+
+                    } else if (user_account.isEmpty()) {
+                        etxtAccount.setError("Account Type can not be empty! ");
+                        etxtAccount.requestFocus();
+                        Toasty.error(RegisterActivity.this, "Please select account type !", Toast.LENGTH_SHORT).show();
+                    } else if (user_gender.isEmpty()) {
+                        etxtGender.setError("Please select gender ! ");
+                        etxtGender.requestFocus();
+                        Toasty.error(RegisterActivity.this, "Please select gender !", Toast.LENGTH_SHORT).show();
+                    } else if (user_nid.isEmpty()) {
+                        etxtNidNumber.setError("NID number can not be empty! ");
+                        etxtNidNumber.requestFocus();
+                    } else {
+                        //call signup method
+                        sign_up(user_name, user_cell, user_password, user_account, user_gender, user_nid);
+                    }
                 }
-
-                else if (user_cell.length()!=11 || !user_cell.startsWith("01"))
-                {
-                    etxtCell.setError("Invalid cell!");
-                    etxtCell.requestFocus();
-
-                }
-
-
-                else if (user_password.isEmpty())
-                {
-                    etxtPassword.setError("Password can not be empty! ");
-                    etxtPassword.requestFocus();
-
-                }else if ((user_password.length() < 4)) {
-                    etxtPassword.setError("Password should be more than 3 characters!");
-                    etxtPassword.requestFocus();
-
-                }
-                else if (user_account.isEmpty())
-                {
-                    etxtAccount.setError("Account Type can not be empty! ");
-                    etxtAccount.requestFocus();
-                    Toasty.error(RegisterActivity.this, "Please select account type !", Toast.LENGTH_SHORT).show();
-                }
-                else if (user_gender.isEmpty())
-                {
-                    etxtGender.setError("Please select gender ! ");
-                    etxtGender.requestFocus();
-                    Toasty.error(RegisterActivity.this, "Please select gender !", Toast.LENGTH_SHORT).show();
-                }
-                else if (user_nid.isEmpty())
-                {
-                    etxtNidNumber.setError("NID number can not be empty! ");
-                    etxtNidNumber.requestFocus();
-                }
-                else
-                {
-                    //call signup method
-                    sign_up(user_name,user_cell,user_password,user_account,user_gender,user_nid);
-                }
-
             }
         });
 

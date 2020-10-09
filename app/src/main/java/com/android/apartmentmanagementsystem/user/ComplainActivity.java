@@ -23,11 +23,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
+import com.android.apartmentmanagementsystem.user.history.RentHistoryActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -36,8 +38,8 @@ public class ComplainActivity extends AppCompatActivity {
     EditText renter_name_et, renter_cell_et, complain_et;
     Spinner spinner_flat_no, spinner_floor_no;
     Button submit_btn;
-    String[] flat = { "1st", "2nd", "3rd", "4th"};
-    String[] floor = { "1st", "2nd", "3rd", "4th", "5th", "6th"};
+    String[] flat = { "101", "201", "102", "202","103", "203", "104", "204", "105", "205"};
+    String[] floor = { "1st", "2nd", "3rd", "4th", "5th"};
     String flat_no="";
     String floor_no="";
     String current_date,current_time,getCell,profileName;
@@ -57,7 +59,16 @@ public class ComplainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-        getProfileName(getCell);
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(ComplainActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+
+            getProfileName(getCell);
+        }
         renter_name_et =findViewById(R.id.renter_name_et);
         renter_cell_et =findViewById(R.id.renter_cell_et);
         renter_cell_et.setText(getCell);

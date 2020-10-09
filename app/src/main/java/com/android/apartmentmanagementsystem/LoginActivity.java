@@ -36,6 +36,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.user.GuestActivity;
 import com.android.apartmentmanagementsystem.user.HomeActivity;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -72,6 +73,13 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Apartment Manager");
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(LoginActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }
         if (ContextCompat.checkSelfPermission(LoginActivity.this,
                 Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             if (Build.VERSION.SDK_INT>=23) //Android MarshMellow Version or above
@@ -157,36 +165,42 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Internet connection checker
+                ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+                // Check if Internet present
+                if (!cd.isConnectingToInternet()) {
+                    // Internet Connection is not present
+                    Toasty.error(LoginActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+                }else {
 
-                String cell = etxtCell.getText().toString();
-                String password = etxtPassword.getText().toString();
-                String account = etxtAccount.getText().toString();
+                    String cell = etxtCell.getText().toString();
+                    String password = etxtPassword.getText().toString();
+                    String account = etxtAccount.getText().toString();
 
-                //validation
+                    //validation
 
 
-                if (cell.length() != 11 || !cell.startsWith("01")) {
-                    etxtCell.setError("Invalid cell!");
-                    etxtCell.requestFocus();
+                    if (cell.length() != 11 || !cell.startsWith("01")) {
+                        etxtCell.setError("Invalid cell!");
+                        etxtCell.requestFocus();
 
-                } else if (password.isEmpty()) {
-                    etxtPassword.setError("Password can not be empty! ");
-                    etxtPassword.requestFocus();
+                    } else if (password.isEmpty()) {
+                        etxtPassword.setError("Password can not be empty! ");
+                        etxtPassword.requestFocus();
 
-                }else if ((password.length() < 4)) {
-                    etxtPassword.setError("Password should be more than 3 characters!");
-                    etxtPassword.requestFocus();
+                    } else if ((password.length() < 4)) {
+                        etxtPassword.setError("Password should be more than 3 characters!");
+                        etxtPassword.requestFocus();
 
+                    } else if (account.isEmpty()) {
+                        etxtAccount.setError("Select account type! ");
+                        etxtAccount.requestFocus();
+                        Toasty.error(LoginActivity.this, "Please select account type !", Toast.LENGTH_SHORT).show();
+                    } else {
+                        //call login method
+                        login(cell, password, account);
+                    }
                 }
-                else if (account.isEmpty()) {
-                    etxtAccount.setError("Select account type! ");
-                    etxtAccount.requestFocus();
-                    Toasty.error(LoginActivity.this, "Please select account type !", Toast.LENGTH_SHORT).show();
-                } else {
-                    //call login method
-                    login(cell, password,account);
-                }
-
             }
         });
 

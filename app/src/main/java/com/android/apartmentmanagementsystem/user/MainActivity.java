@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.LoginActivity;
 import com.android.apartmentmanagementsystem.ProfileActivity;
@@ -48,7 +49,15 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-        getProfileName(getCell);
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(MainActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+            getProfileName(getCell);
+        }
         linearLayoutNotice=findViewById(R.id.notice_layout);
         linearLayoutNotice.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -34,6 +34,8 @@ public class Contacts {
 
     @SerializedName("time")
     private String time;
+    @SerializedName("status")
+    private String status;
 
 
 
@@ -85,5 +87,7 @@ public class Contacts {
 
     public String getEvent() { return event; }
 
-
+    public String getStatus() {
+        return status;
+    }
 }

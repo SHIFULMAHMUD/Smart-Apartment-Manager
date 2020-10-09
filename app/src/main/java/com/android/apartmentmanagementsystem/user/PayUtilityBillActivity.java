@@ -24,6 +24,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
@@ -37,8 +38,8 @@ public class PayUtilityBillActivity extends AppCompatActivity {
     EditText renter_name_et, renter_cell_et, gas_bill_amount_et,electricity_bill_amount_et, bkash_trx_id_et, bkash_cell_et, note_et;
     Spinner spinner_flat_no, spinner_floor_no, spinner_payment_month;
     Button submit_btn;
-    String[] flat = { "1st", "2nd", "3rd", "4th"};
-    String[] floor = { "1st", "2nd", "3rd", "4th", "5th", "6th"};
+    String[] flat = { "101", "201", "102", "202","103", "203", "104", "204", "105", "205"};
+    String[] floor = { "1st", "2nd", "3rd", "4th", "5th"};
     String[] month = { "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"};
     String flat_no="";
     String floor_no="";
@@ -60,7 +61,14 @@ public class PayUtilityBillActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-        getProfileName(getCell);
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(PayUtilityBillActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+        getProfileName(getCell);}
         renter_name_et =findViewById(R.id.renter_name_et);
         renter_cell_et =findViewById(R.id.renter_cell_et);
         gas_bill_amount_et =findViewById(R.id.gas_bill_amount_et);

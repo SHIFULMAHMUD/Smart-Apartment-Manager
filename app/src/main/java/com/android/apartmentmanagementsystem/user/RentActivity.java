@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.adapter.Adapter;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.model.Flat;
@@ -44,7 +46,14 @@ public class RentActivity extends AppCompatActivity{
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        getFlatData("","");
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(RentActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+        getFlatData("","");}
         GridLayoutManager manager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
     }

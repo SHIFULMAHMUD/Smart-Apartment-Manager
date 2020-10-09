@@ -92,7 +92,8 @@ public interface ApiInterface {
             @Field(Constant.KEY_GUARD_NAME) String guard_name,
             @Field(Constant.KEY_TASK) String task,
             @Field(Constant.KEY_DATE) String paying_date,
-            @Field(Constant.KEY_TIME) String paying_time);
+            @Field(Constant.KEY_TIME) String paying_time,
+            @Field(Constant.KEY_STATUS) String status);
 
     @FormUrlEncoded
     @POST("complain.php")

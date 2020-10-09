@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
@@ -37,8 +38,8 @@ public class TaskActivity extends AppCompatActivity {
     EditText renter_name_et, renter_cell_et, task_et;
     Spinner spinner_flat_no, spinner_floor_no, spinner_guard_name;
     Button submit_btn;
-    String[] flat = { "1st", "2nd", "3rd", "4th"};
-    String[] floor = { "1st", "2nd", "3rd", "4th", "5th", "6th"};
+    String[] flat = { "101", "201", "102", "202","103", "203", "104", "204", "105", "205"};
+    String[] floor = { "1st", "2nd", "3rd", "4th", "5th"};
     private ArrayList<String> guard;
     ArrayAdapter<String> cc;
     String flat_no="";
@@ -67,8 +68,16 @@ public class TaskActivity extends AppCompatActivity {
         renter_cell_et.setText(getCell);
         task_et =findViewById(R.id.task_et);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        getGuardData("");
-        getProfileName(getCell);
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(TaskActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+            getGuardData("");
+            getProfileName(getCell);
+        }
         Thread t = new Thread() {
             @Override
             public void run() {
@@ -183,6 +192,7 @@ public class TaskActivity extends AppCompatActivity {
                                 String task = task_et.getText().toString();
                                 String date = current_date;
                                 String time = current_time;
+                                String status = "Pending";
 
                                 //validation
 
@@ -213,7 +223,7 @@ public class TaskActivity extends AppCompatActivity {
 
                                 else {
                                     //call login method
-                                    assignTask(name,cell, flat_num,floor_num,guard,task,date,time);
+                                    assignTask(name,cell, flat_num,floor_num,guard,task,date,time,status);
                                 }
 
                                 break;
@@ -297,7 +307,7 @@ public class TaskActivity extends AppCompatActivity {
             }
         });
     }
-    private void assignTask(String name,String cell,String flat_no,String floor_no, String guard_name, String task, String date, String time) {
+    private void assignTask(String name,String cell,String flat_no,String floor_no, String guard_name, String task, String date, String time,String status) {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Please wait....");
@@ -305,7 +315,7 @@ public class TaskActivity extends AppCompatActivity {
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<Contacts> call = apiInterface.assignTask(name,cell,flat_no,floor_no,guard_name,task,date,time);
+        Call<Contacts> call = apiInterface.assignTask(name,cell,flat_no,floor_no,guard_name,task,date,time,status);
         call.enqueue(new Callback<Contacts>() {
             @Override
             public void onResponse(Call<Contacts> call, Response<Contacts> response) {

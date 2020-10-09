@@ -1,71 +1,79 @@
 
-]
-java:S1117â"@Rename "apiInterface" which hides the field declared at line 66.(·­ˆI8ì¡¢ÙÍ.
-K
-java:S16597")Declare "profileName" on a separate line.(Ôìûÿÿÿÿ8æÉÉ–Î.
-J
-java:S1659:"(Declare "slider_two" on a separate line.(™¥·›øÿÿÿÿ8ùÄ¸×Í.
-H
-java:S1659:"&Declare "floor_no" on a separate line.(™¥·›øÿÿÿÿ8†ŠïÙÍ.
-J
-java:S1659:"(Declare "slider_one" on a separate line.(™¥·›øÿÿÿÿ8¼æ·×Í.
-P
-java:S1874ß"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8‚Ÿ¥ÙÍ.
->
-java:S1170<"!Make this final field static too.(Ÿ…÷Š8”ÿ‰ÙÌ.
-l
-java:S1128"JRemove this unused import 'retrofit2.converter.gson.GsonConverterFactory'.(ì§¤¹ÿÿÿÿÿ8Í´¬Í.
-q
-java:S1128/"TRemove this unused import 'com.android.apartmentmanagementsystem.Constant.BASE_URL'.(‚üùÄ8Í´¬Í.
-s	java:S1165"XRename this field "flat_price_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ïá%8áæ÷×Í.
-L
-java:S1128"/Remove this unused import 'retrofit2.Retrofit'.(ŠĞİ8Í´¬Í.
-s	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‘—Öÿÿÿÿÿ8¦¾«ĞÍ.
-s
-java:S3252Ê"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÅÔŞ±ûÿÿÿÿ8öİ›ÓÍ.
-Y
-java:S1874Ş"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8ì¡¢ÙÍ.
-£
-java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Î«şÿÿÿÿ8ÀÅšÓÍ.
-s	java:S116:"RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8†ŠïÙÍ.
-n
-java:S1301‡"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8”´”ÙÍ.
-t	java:S116:"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8†ŠïÙÍ.
-L
-java:S1659:"*Declare "slider_three" on a separate line.(™¥·›øÿÿÿÿ8µ¹×Í.
-S
-java:S18748"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8‚Ÿ¥ÙÍ.
-G
-java:S16595"+Declare "flat_price_tv" on a separate line.(˜Ïá%8áæ÷×Í.
-u	java:S116="TRename this field "PERIOD_MS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚’ÙÊıÿÿÿÿ8”ÿ‰ÙÌ.
-v	java:S116:"URename this field "slider_one" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8¼æ·×Í.
-o	java:S116<"SRename this field "DELAY_MS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ…÷Š8”ÿ‰ÙÌ.
-D	java:S131‡""Add a default case to this switch.(¼œóÛüÿÿÿÿ8”´”ÙÍ.
-o
-java:S1128 "RRemove this unused import 'com.android.apartmentmanagementsystem.adapter.Adapter'.(‰Åæ8öİ›ÓÍ.
-D
-java:S16594"'Declare "NUM_PAGES" on a separate line.(ñÕœ8”ÿ‰ÙÌ.
-s
-java:S3252Ê"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÅÔŞ±ûÿÿÿÿ8öİ›ÓÍ.
-v	java:S116:"URename this field "flat_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Ñ·×Í.
-v	java:S116:"URename this field "slider_two" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8ùÄ¸×Í.
-n
-java:S1301®"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8™ÃëÙÌ.
-u	java:S1165"ZRename this field "flat_details_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ïá%8áæ÷×Í.
-x	java:S116:"WRename this field "slider_three" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8µ¹×Í.
-y
-java:S1128("WRemove this unused import 'com.android.apartmentmanagementsystem.user.PayRentActivity'.(÷£Ëˆûÿÿÿÿ8»æòÙÍ.
-i	java:S1164"TRename this field "NUM_PAGES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÕœ
-£
-java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ø´´øÿÿÿÿ8ÀÅšÓÍ.
-w
-java:S1128&"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuardActivity'.(Å×…éıÿÿÿÿ8Í´¬Í.
-J
-java:S1659:"(Declare "flat_price" on a separate line.(™¥·›øÿÿÿÿ8Ñ·×Í.
-C
-java:S1170="!Make this final field static too.(‚’ÙÊıÿÿÿÿ8”ÿ‰ÙÌ.
 Z
 java:S1128"8Remove this unused import 'android.widget.ArrayAdapter'.( €ŠÑÿÿÿÿÿ8­Ì—ÒÍ.
-x	java:S116:"WRename this field "flat_details" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8çÇ¶×Í.
+G
+java:S16595"+Declare "flat_price_tv" on a separate line.(˜Ïá%8áæ÷×Í.
+P
+java:S1874…"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8ş˜¿Î.
+x	java:S1169"WRename this field "flat_details" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.
+J
+java:S16599"(Declare "flat_price" on a separate line.(™¥·›øÿÿÿÿ8Õ±¿Î.
+D
+java:S16594"'Declare "NUM_PAGES" on a separate line.(ñÕœ8”ÿ‰ÙÌ.
+H
+java:S16599"&Declare "floor_no" on a separate line.(™¥·›øÿÿÿÿ8Õ±¿Î.
+C
+java:S16596"&Declare "userCell" on a separate line.(‚Æíò8ø¬…¿Î.
+l
+java:S1128"JRemove this unused import 'retrofit2.converter.gson.GsonConverterFactory'.(ì§¤¹ÿÿÿÿÿ8Í´¬Í.
+v	java:S1169"URename this field "slider_one" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.
+n
+java:S1301Ô"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Õ±¿Î.
+s
+java:S3252Í"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÅÔŞ±ûÿÿÿÿ8Õ±¿Î.
+S
+java:S18747"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8Õ±¿Î.
+u	java:S116<"TRename this field "PERIOD_MS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚’ÙÊıÿÿÿÿ8”ÿ‰ÙÌ.
+s	java:S1169"RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.
+v	java:S1169"URename this field "slider_two" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.
+J
+java:S16599"(Declare "slider_two" on a separate line.(™¥·›øÿÿÿÿ8Õ±¿Î.
+C
+java:S1170<"!Make this final field static too.(‚’ÙÊıÿÿÿÿ8”ÿ‰ÙÌ.
+w
+java:S1128&"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuardActivity'.(Å×…éıÿÿÿÿ8Í´¬Í.
+D	java:S131‡""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Õ±¿Î.
+>
+java:S1170;"!Make this final field static too.(Ÿ…÷Š8Õ±¿Î.
+¤
+java:S1186û"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ó¬îÉøÿÿÿÿ8Õ±¿Î.
 L
-java:S1659:"*Declare "flat_details" on a separate line.(™¥·›øÿÿÿÿ8†ŠïÙÍ.
+java:S16599"*Declare "slider_three" on a separate line.(™¥·›øÿÿÿÿ8Õ±¿Î.
+s
+java:S3252Í"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÅÔŞ±ûÿÿÿÿ8Õ±¿Î.
+L
+java:S16599"*Declare "flat_details" on a separate line.(™¥·›øÿÿÿÿ8Õ±¿Î.
+s	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‘—Öÿÿÿÿÿ8Õ±¿Î.
+W
+java:S4973Š"9Use the "equals" method if value comparison was intended.(è¶8İ®Ë¿Î.
+J
+java:S16599"(Declare "slider_one" on a separate line.(™¥·›øÿÿÿÿ8Õ±¿Î.
+t	java:S1169"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.
+u	java:S1165"ZRename this field "flat_details_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ïá%8áæ÷×Í.
+s	java:S1165"XRename this field "flat_price_tv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ïá%8áæ÷×Í.
+i	java:S1164"TRename this field "NUM_PAGES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÕœ
+B
+java:S16596"%Declare "getCell" on a separate line.(‚Æíò8ø¬…¿Î.
+o
+java:S1128 "RRemove this unused import 'com.android.apartmentmanagementsystem.adapter.Adapter'.(‰Åæ8öİ›ÓÍ.
+£
+java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Î«şÿÿÿÿ8Õ±¿Î.
+n
+java:S1301‡"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Õ±¿Î.
+]
+java:S1117ˆ"@Rename "apiInterface" which hides the field declared at line 65.(·­ˆI8Õ±¿Î.
+q
+java:S1128/"TRemove this unused import 'com.android.apartmentmanagementsystem.Constant.BASE_URL'.(‚üùÄ8Í´¬Í.
+L
+java:S1128"/Remove this unused import 'retrofit2.Retrofit'.(ŠĞİ8Í´¬Í.
+Y
+java:S1874„"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8Õ±¿Î.
+y
+java:S1128("WRemove this unused import 'com.android.apartmentmanagementsystem.user.PayRentActivity'.(÷£Ëˆûÿÿÿÿ8»æòÙÍ.
+x	java:S1169"WRename this field "slider_three" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.
+£
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ø´´øÿÿÿÿ8Õ±¿Î.
+F
+java:S16596")Declare "profileName" on a separate line.(‚Æíò8ø¬…¿Î.
+o	java:S116;"SRename this field "DELAY_MS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ…÷Š8Õ±¿Î.
+v	java:S1169"URename this field "flat_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥·›øÿÿÿÿ8Õ±¿Î.

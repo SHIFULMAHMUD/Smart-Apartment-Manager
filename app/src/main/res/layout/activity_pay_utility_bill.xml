@@ -184,7 +184,7 @@
                     android:gravity="center"
                     android:textColor="@color/colorLogo"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:text="Send Money to: 01716116457">
                 </TextView>
             </LinearLayout>

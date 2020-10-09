@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.adapter.UtilityHistoryAdapter;
@@ -54,9 +55,15 @@ public class UtilityHistoryActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-
-        getUtilityData(getCell);
-
+//Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toast.makeText(UtilityHistoryActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+        }else {
+            getUtilityData(getCell);
+        }
     }
     public void getUtilityData(String cell) {
         Call<List<Utility>> call = apiInterface.getUtility(cell);

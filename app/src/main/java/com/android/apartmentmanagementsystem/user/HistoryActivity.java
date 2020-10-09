@@ -2,6 +2,7 @@ package com.android.apartmentmanagementsystem.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import es.dmoral.toasty.Toasty;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.user.history.ComplainHistoryActivity;
 import com.android.apartmentmanagementsystem.user.history.GuestHistoryActivity;
@@ -33,6 +35,13 @@ public class HistoryActivity extends AppCompatActivity {
         guestLayout=findViewById(R.id.layout3);
         taskLayout=findViewById(R.id.layout4);
         complainLayout=findViewById(R.id.layout5);
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(HistoryActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }
         rentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

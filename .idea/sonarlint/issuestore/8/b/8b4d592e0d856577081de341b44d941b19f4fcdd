@@ -1,16 +1,16 @@
 
 ?
 java:S16596""Declare "time" on a separate line.(£•ø˜8¢‚‡âÊ.
+X	java:S125E"<This block of commented-out lines of code should be removed.(‡éßÖ8ì€ö©Ë.
 s
 java:S1128"QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8½·ïáÊ.
-X	java:S125E"<This block of commented-out lines of code should be removed.(‡éßÖ8ì€ö©Ë.
 B
 java:S16596"%Declare "purpose" on a separate line.(£•ø˜8½¤†âÊ.
-@
-java:S16596"#Declare "total" on a separate line.(£•ø˜8­à…âÊ.
 ?
 java:S16596""Declare "cell" on a separate line.(£•ø˜8­à…âÊ.
-?
-java:S16596""Declare "date" on a separate line.(£•ø˜8ØğÂÔÊ.
+@
+java:S16596"#Declare "total" on a separate line.(£•ø˜8­à…âÊ.
 A
 java:S16596"$Declare "qrcode" on a separate line.(£•ø˜8¢‚‡âÊ.
+?
+java:S16596""Declare "date" on a separate line.(£•ø˜8ØğÂÔÊ.

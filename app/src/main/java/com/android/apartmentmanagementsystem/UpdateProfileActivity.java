@@ -40,6 +40,13 @@ public class UpdateProfileActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Update Profile");
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(UpdateProfileActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }
         //Fetching cell from shared preferences
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);

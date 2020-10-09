@@ -201,7 +201,7 @@ tools:context=".user.GuestActivity">
             android:gravity="center"
             android:textColor="@color/colorBack"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:text="Generate QR Code"></TextView>
     </LinearLayout>
     <LinearLayout

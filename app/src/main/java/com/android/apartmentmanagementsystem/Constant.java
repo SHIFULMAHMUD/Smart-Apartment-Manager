@@ -33,6 +33,7 @@ public class Constant {
     public static final String KEY_NOTE= "note";
     public static final String KEY_DATE="paying_date";
     public static final String KEY_TIME="paying_time";
+    public static final String KEY_STATUS="status";
 
 
     //share preference

@@ -88,7 +88,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:text="Notice"></TextView>
                     </LinearLayout>
@@ -108,7 +108,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:text="Events">
                         </TextView>
@@ -128,7 +128,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:text="History"></TextView>
                     </LinearLayout>
@@ -190,7 +190,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -206,8 +205,8 @@
                             android:text="Profile"
                             android:gravity="center"
                             android:textColor="@android:color/white"
-                            android:layout_marginTop="12dp"
-                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14sp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -231,7 +230,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -245,10 +243,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Flat Rent"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:gravity="center"
                             android:textColor="@android:color/white"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -267,15 +265,11 @@
                     app:cardBackgroundColor="#6398DE"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="6dp">
-                    <!--<ImageView
-                        android:src="@drawable/background_apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp" />-->
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -289,10 +283,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Utility Bill"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@android:color/white"
                             android:gravity="center"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -320,7 +314,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -336,8 +329,8 @@
                             android:text="Guests"
                             android:gravity="center"
                             android:textColor="@android:color/white"
-                            android:layout_marginTop="12dp"
-                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14sp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -362,7 +355,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -376,10 +368,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Tasks"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:gravity="center"
                             android:textColor="@android:color/white"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -404,7 +396,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -418,10 +409,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Report"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@android:color/white"
                             android:gravity="center"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -446,7 +437,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -462,8 +452,8 @@
                             android:text="Complain"
                             android:gravity="center"
                             android:textColor="@android:color/white"
-                            android:layout_marginTop="12dp"
-                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14sp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -488,7 +478,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -502,10 +491,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Guard"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:gravity="center"
                             android:textColor="@android:color/white"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -530,7 +519,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -544,10 +532,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Logout"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@android:color/white"
                             android:gravity="center"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 

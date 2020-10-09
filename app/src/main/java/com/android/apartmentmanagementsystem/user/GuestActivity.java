@@ -35,11 +35,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
+import com.android.apartmentmanagementsystem.user.history.RentHistoryActivity;
 import com.google.zxing.Result;
 import com.google.zxing.WriterException;
 
@@ -72,6 +74,13 @@ public class GuestActivity extends AppCompatActivity{
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(GuestActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }
         name = getIntent().getStringExtra("name");
         cell = getIntent().getStringExtra("cell");
         total = getIntent().getStringExtra("total");

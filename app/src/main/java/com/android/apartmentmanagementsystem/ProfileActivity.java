@@ -11,6 +11,7 @@ import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.android.apartmentmanagementsystem.user.ComplainActivity;
+import com.android.apartmentmanagementsystem.user.GuestActivity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -54,8 +55,15 @@ public class ProfileActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-        getProfileData(getCell);
-
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(ProfileActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+            getProfileData(getCell);
+        }
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

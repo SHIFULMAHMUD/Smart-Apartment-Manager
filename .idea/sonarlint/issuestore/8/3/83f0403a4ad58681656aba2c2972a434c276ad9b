@@ -1,32 +1,32 @@
 
-=	java:S131""Add a default case to this switch.(¼œóÛüÿÿÿÿ
-L
-java:S1874;"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú
-Ÿ
-java:S1186İ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8Ë­í‘É.
-¤
-java:S1186ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×åó«øÿÿÿÿ8Ë­í‘É.
+R	java:S125š"<This block of commented-out lines of code should be removed.(æ³¨¾
+g
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ
 s	java:S116="WRename this field "rem_userpass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¬Ë8ò„É‘É.
 _
 java:S1126^"BReplace this if-then-else statement by a single method invocation.(˜·Øã8ÁêÑ‘É.
-E
-java:S1066M"/Merge this if statement with the enclosing one.(ÜÉÌâ
 e
 java:S1871‡"IThis case's code block is the same as the block for the case on line 130.(ªëÅŞúÿÿÿÿ
+=	java:S131""Add a default case to this switch.(¼œóÛüÿÿÿÿ
+E
+java:S1066M"/Merge this if statement with the enclosing one.(ÜÉÌâ
+Ÿ
+java:S1186İ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8Ë­í‘É.
+E
+java:S1659<"*Declare "etxtPassword" on a separate line.(ÕÉÇŠúÿÿÿÿ
 |
 java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardMainActivity'.(ß•»Áøÿÿÿÿ8Œşü¥Ê.
+b
+java:S1117W"ERename "sharedPreferences" which hides the field declared at line 62.(½Ìúğ8ØÌ‘É.
+L
+java:S1874;"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú
+X
+java:S1117¹":Rename "editor" which hides the field declared at line 63.(Íµ’ı8ñ±Ü‘É.
 I
 java:S1874¦"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜
+¤
+java:S1186ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×åó«øÿÿÿÿ8Ë­í‘É.
 D
 java:S1659<")Declare "etxtAccount" on a separate line.(ÕÉÇŠúÿÿÿÿ
 R
 java:S1874¥"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ
-X
-java:S1117¹":Rename "editor" which hides the field declared at line 63.(Íµ’ı8ñ±Ü‘É.
-E
-java:S1659<"*Declare "etxtPassword" on a separate line.(ÕÉÇŠúÿÿÿÿ
-R	java:S125š"<This block of commented-out lines of code should be removed.(æ³¨¾
-g
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ
-b
-java:S1117W"ERename "sharedPreferences" which hides the field declared at line 62.(½Ìúğ8ØÌ‘É.

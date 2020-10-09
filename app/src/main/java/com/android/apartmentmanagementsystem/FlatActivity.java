@@ -36,6 +36,7 @@ import com.android.apartmentmanagementsystem.model.Slider;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.android.apartmentmanagementsystem.user.GuardActivity;
+import com.android.apartmentmanagementsystem.user.GuestActivity;
 import com.android.apartmentmanagementsystem.user.HomeActivity;
 import com.android.apartmentmanagementsystem.user.PayRentActivity;
 
@@ -81,8 +82,16 @@ public class FlatActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-        getProfileName(getCell);
-        getFlatData(getCell);
+        //Internet connection checker
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            Toasty.error(FlatActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }else {
+            getProfileName(getCell);
+            getFlatData(getCell);
+        }
         slider = new ArrayList<>();
         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
         cc=new ArrayList<>();

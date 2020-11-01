@@ -1,5 +1,6 @@
 package com.android.apartmentmanagementsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -28,6 +29,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,6 +40,10 @@ import android.widget.Toast;
 
 import com.android.apartmentmanagementsystem.user.GuestActivity;
 import com.android.apartmentmanagementsystem.user.HomeActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -56,7 +62,8 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
     LinearLayout gotoSignUp;
     Button loginBtn;
     String text;
-    String getCell;
+    private ApiInterface apiInterface;
+    String getCell,user_token,userStatus;
     private ProgressDialog loading;
     EditText etxtCell,etxtPassword,etxtAccount;
     private CheckBox rem_userpass;
@@ -73,6 +80,17 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Apartment Manager");
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (task.isSuccessful()){
+                            user_token =task.getResult().getToken();
+                        }
+                    }
+                });
         //Internet connection checker
         ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
         // Check if Internet present
@@ -95,6 +113,7 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
         SharedPreferences sharedPreferences;
         sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+        getStatusData(getCell);
         rem_userpass=findViewById(R.id.ch_rememberme);
         sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -199,6 +218,7 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
                     } else {
                         //call login method
                         login(cell, password, account);
+                        updateToken(getCell,user_token);
                     }
                 }
             }
@@ -321,25 +341,46 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
                 if (value.equals("success"))
                 {
                     loading.dismiss();
+
                     SharedPreferences sp = LoginActivity.this.getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
                     //Creating editor to store values to shared preferences
                     SharedPreferences.Editor editor = sp.edit();
                     //Adding values to editor
                     editor.putString(Constant.CELL_SHARED_PREF, cell);
+                    editor.putString(Constant.TOKEN_SHARED_PREF, user_token);
 
                     //Saving values to editor
                     editor.commit();
-                    Toasty.success(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
-                    if (account.equals("Renter")) {
+
+                    if (userStatus==null && account.equals("Renter")) {
+                        Toasty.success(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
                         finish();
-                    }else if (account.equals("Guard")) {
+                    }
+                    else if (userStatus==null && account.equals("Guard")) {
+                        Toasty.success(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, GuardHomeActivity.class);
                         startActivity(intent);
                         finish();
                     }
+                    else if (!userStatus.equals("Rejected") && account.equals("Renter")) {
+                        Toasty.success(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else if (!userStatus.equals("Rejected") && account.equals("Guard")) {
+                        Toasty.success(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, GuardHomeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else if(userStatus.equals("Rejected")){
+
+                    Toasty.error(LoginActivity.this,"User restricted.\nCan't login.",Toasty.LENGTH_SHORT).show();
+                        loading.dismiss();
+                }
+
                 }
 
 
@@ -392,4 +433,87 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
             editor.apply();
         }
 }
+    private void updateToken(String cell,String token) {
+
+        loading=new ProgressDialog(this);
+        loading.setMessage("Please wait....");
+        loading.show();
+
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        Call<Contacts> call = apiInterface.updateToken(cell,token);
+        call.enqueue(new Callback<Contacts>() {
+            @Override
+            public void onResponse(Call<Contacts> call, Response<Contacts> response) {
+
+                String value = response.body().getValue();
+                String message = response.body().getMassage();
+
+                if (value.equals("success"))
+                {
+                    loading.dismiss();
+                }
+
+
+
+                else {
+                    loading.dismiss();
+                    Toasty.error(LoginActivity.this, message, Toasty.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Contacts> call, Throwable t) {
+
+                loading.dismiss();
+                Toasty.error(LoginActivity.this, "Error! " + t.toString(), Toasty.LENGTH_SHORT).show();
+            }
+        });
+    }
+    public void getStatusData(String cell) {
+
+        loading=new ProgressDialog(LoginActivity.this);
+        loading.setCancelable(false);
+        loading.setMessage(getString(R.string.please_wait));
+
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Contacts>> call;
+        call = apiInterface.getProfile(cell);
+
+        call.enqueue(new Callback<List<Contacts>>() {
+            @Override
+            public void onResponse(Call<List<Contacts>> call, Response<List<Contacts>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Contacts> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        //Toasty.warning(LoginActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+
+                        userStatus = profileData.get(0).getStatus();
+
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Contacts>> call, Throwable t) {
+
+                loading.dismiss();
+                Toast.makeText(LoginActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
+
+    }
 }

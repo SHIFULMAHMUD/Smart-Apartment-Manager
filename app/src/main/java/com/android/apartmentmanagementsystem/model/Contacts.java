@@ -24,7 +24,8 @@ public class Contacts {
     private String value;
     @SerializedName("message")
     private String massage;
-
+    @SerializedName("token")
+    private String token;
     @SerializedName("date")
     private String date;
     @SerializedName("notice")
@@ -89,5 +90,9 @@ public class Contacts {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getToken() {
+        return token;
     }
 }

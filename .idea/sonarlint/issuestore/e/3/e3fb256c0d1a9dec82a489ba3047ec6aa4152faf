@@ -1,52 +1,52 @@
 
-^
-java:S1117r"<Rename "password" which hides the field declared at line 32.(Òşæâüÿÿÿÿ8Ëà¼³Ê.
-C
-java:S1659 "!Declare "nid" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
-Y
-java:S1874ª"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8¢˜¢²Ê.
-p	java:S116"URename this field "update_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÖÑ`8ßèú­Ê.
 D
 java:S1659 ""Declare "text" on a separate line.(Û’øèøÿÿÿÿ8›Ó›³Ê.
-w	java:S116"VRename this field "password_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8·ù­Ê.
-F
-java:S1659"$Declare "nid_et" on a separate line.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
-I
-java:S1659"'Declare "gender_et" on a separate line.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
-m
-java:S1301G"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
-n
-java:S1301Ô"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8òÊ¿³Ê.
-U
-java:S1128"3Remove this unused import 'android.widget.Spinner'.(¸£ÃØüÿÿÿÿ8Ä·ú­Ê.
-T
-java:S1117t"7Rename "nid" which hides the field declared at line 32.(Û§á8òÊ¿³Ê.
-z
-java:S1128"XRemove this unused import 'com.android.apartmentmanagementsystem.user.ComplainActivity'.(ÊÅÂÓşÿÿÿÿ8Ü£¨²Ê.
-T
-java:S1117q"8Rename "name" which hides the field declared at line 32.(›Í·{8Ëà¼³Ê.
+Y
+java:S1874±"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8¢˜¢²Ê.
 H
 java:S1659 "&Declare "password" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
-\
-java:S1117s":Rename "gender" which hides the field declared at line 32.(¸şäñûÿÿÿÿ8Ëà¼³Ê.
-D
-java:S1659 ""Declare "name" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
-P
-java:S1874«"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8òÊ¿³Ê.
+m
+java:S1301v"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
+r	java:S116"QRename this field "nid_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
+U
+java:S1128"3Remove this unused import 'android.widget.Spinner'.(¸£ÃØüÿÿÿÿ8Ä·ú­Ê.
+C	java:S131v""Add a default case to this switch.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
+p	java:S116"URename this field "update_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÖÑ`8ßèú­Ê.
 S
 java:S1874!"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8¬¬¤±Ê.
-C	java:S131G""Add a default case to this switch.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
-u	java:S116"TRename this field "gender_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
+\
+java:S1117z":Rename "gender" which hides the field declared at line 32.(¸şäñûÿÿÿÿ8Ëà¼³Ê.
 m
-java:S1301o"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
-s	java:S116"RRename this field "name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8”¦ø­Ê.
-F
-java:S1659 "$Declare "gender" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
-j
-java:S1871M"HThis case's code block is the same as the block for the case on line 72.(ªëÅŞúÿÿÿÿ8Ìßš³Ê.
-C	java:S131o""Add a default case to this switch.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
-r	java:S116"QRename this field "nid_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
-K
-java:S1659")Declare "password_et" on a separate line.(ûÃÑ†ıÿÿÿÿ8·ù­Ê.
+java:S1301N"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
+^
+java:S1117y"<Rename "password" which hides the field declared at line 32.(Òşæâüÿÿÿÿ8Ëà¼³Ê.
+T
+java:S1117{"7Rename "nid" which hides the field declared at line 32.(Û§á8òÊ¿³Ê.
+z
+java:S1128"XRemove this unused import 'com.android.apartmentmanagementsystem.user.ComplainActivity'.(ÊÅÂÓşÿÿÿÿ8Ü£¨²Ê.
 S
 java:S1128"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8Ó¶°±Ê.
+F
+java:S1659 "$Declare "gender" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
+K
+java:S1659")Declare "password_et" on a separate line.(ûÃÑ†ıÿÿÿÿ8·ù­Ê.
+T
+java:S1117x"8Rename "name" which hides the field declared at line 32.(›Í·{8Ëà¼³Ê.
+u	java:S116"TRename this field "gender_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
+F
+java:S1659"$Declare "nid_et" on a separate line.(ûÃÑ†ıÿÿÿÿ8İú­Ê.
+C
+java:S1659 "!Declare "nid" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
+s	java:S116"RRename this field "name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8”¦ø­Ê.
+D
+java:S1659 ""Declare "name" on a separate line.(Û’øèøÿÿÿÿ8Ëà¼³Ê.
+w	java:S116"VRename this field "password_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃÑ†ıÿÿÿÿ8·ù­Ê.
+C	java:S131N""Add a default case to this switch.(¼œóÛüÿÿÿÿ8òÊ¿³Ê.
+P
+java:S1874²"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8òÊ¿³Ê.
+n
+java:S1301Û"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8òÊ¿³Ê.
+j
+java:S1871T"HThis case's code block is the same as the block for the case on line 79.(ªëÅŞúÿÿÿÿ8Ìßš³Ê.
+I
+java:S1659"'Declare "gender_et" on a separate line.(ûÃÑ†ıÿÿÿÿ8İú­Ê.

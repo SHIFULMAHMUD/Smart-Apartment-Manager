@@ -11,7 +11,9 @@ public class Constant {
     public static final String KEY_ACCOUNT="account";
     public static final String KEY_GENDER="gender";
     public static final String KEY_NID="nid";
-    public static final String KEY_NID_PHOTO="nid_pic";
+    public static final String KEY_TOKEN="token";
+    public static final String KEY_TITLE="title";
+    public static final String KEY_MESSAGE="message";
     public static final String KEY_FILE= "file";
 
     public static final String KEY_RENTER_NAME="renter_name";
@@ -42,6 +44,7 @@ public class Constant {
 
     //This would be used to store the cell of current logged in user
     public static final String CELL_SHARED_PREF = "cell";
+    public static final String TOKEN_SHARED_PREF = "token";
 
     //json array name.We will received data in this array
     public static final String JSON_ARRAY = "result";

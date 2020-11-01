@@ -28,6 +28,7 @@ import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 
@@ -44,7 +45,7 @@ public class PayUtilityBillActivity extends AppCompatActivity {
     String flat_no="";
     String floor_no="";
     String month_name="";
-    String current_date,current_time,getCell,profileName;
+    String current_date,current_time,getCell,profileName,gasBill,electricityBill;
     private ProgressDialog loading;
     private ApiInterface apiInterface;
     @Override
@@ -68,7 +69,9 @@ public class PayUtilityBillActivity extends AppCompatActivity {
             // Internet Connection is not present
             Toasty.error(PayUtilityBillActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
         }else {
-        getProfileName(getCell);}
+        getProfileName(getCell);
+        getUtilityBill(getCell);
+        }
         renter_name_et =findViewById(R.id.renter_name_et);
         renter_cell_et =findViewById(R.id.renter_cell_et);
         gas_bill_amount_et =findViewById(R.id.gas_bill_amount_et);
@@ -293,6 +296,55 @@ public class PayUtilityBillActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Contacts>> call, Throwable t) {
 
+                Toast.makeText(PayUtilityBillActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
+
+    }
+    public void getUtilityBill(String cell) {
+
+        loading=new ProgressDialog(PayUtilityBillActivity.this);
+        loading.setCancelable(false);
+        loading.setMessage(getString(R.string.please_wait));
+
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Flat>> call;
+        call = apiInterface.getUtilityBill(cell);
+
+        call.enqueue(new Callback<List<Flat>>() {
+            @Override
+            public void onResponse(Call<List<Flat>> call, Response<List<Flat>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Flat> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        Toasty.warning(PayUtilityBillActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+
+                        gasBill = profileData.get(0).getGas_bill();
+                        electricityBill = profileData.get(0).getElectricity_bill();
+                        gas_bill_amount_et.setText(gasBill);
+                        electricity_bill_amount_et.setText(electricityBill);
+
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Flat>> call, Throwable t) {
+
+                loading.dismiss();
                 Toast.makeText(PayUtilityBillActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
                 Log.d("Error : ", t.toString());
             }

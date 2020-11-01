@@ -1,5 +1,6 @@
 package com.android.apartmentmanagementsystem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,15 +19,24 @@ import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.android.apartmentmanagementsystem.user.GuestActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -42,10 +52,12 @@ public class RegisterActivity extends AppCompatActivity {
     EditText etxtName, etxtCell, etxtPassword,etxtAccount,etxtGender,etxtNidNumber;
     Button btnSignUp;
     ImageView viewImage;
-    String text,mediaPath,user_name,user_cell,user_password,user_account,user_gender,user_nid;
+    String text,mediaPath,user_name,user_cell,user_password,user_account,user_gender,user_nid,user_token,user_status;
     LinearLayout linearLayoutGotoLogin,linearLayoutNidPic;
     private ProgressDialog loading;
-
+    private static final String CHANNEL_ID = "apartment_manager";
+    private static final String CHANNEL_NAME= "Apartment Manager";
+    private static final String CHANNEL_DESC = "Android Push Notification Tutorial";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,12 +65,29 @@ public class RegisterActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle("Create New Account");
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (task.isSuccessful()){
+                            user_token =task.getResult().getToken();
+                        }
+                    }
+                });
+
         //Internet connection checker
         ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
         // Check if Internet present
         if (!cd.isConnectingToInternet()) {
             // Internet Connection is not present
             Toasty.error(RegisterActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
+        }
+        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O){
+            NotificationChannel channel=new NotificationChannel(CHANNEL_ID,CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription(CHANNEL_DESC);
+            NotificationManager manager=getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
         }
         etxtName = findViewById(R.id.editTextRegisterName);
         etxtCell = findViewById(R.id.editTextRegisterPhone);
@@ -198,7 +227,7 @@ public class RegisterActivity extends AppCompatActivity {
                     user_account = etxtAccount.getText().toString();
                     user_gender = etxtGender.getText().toString();
                     user_nid = etxtNidNumber.getText().toString();
-
+                    user_status = "Pending";
 
                     //validation
                     if (user_name.isEmpty()) {
@@ -230,7 +259,7 @@ public class RegisterActivity extends AppCompatActivity {
                         etxtNidNumber.requestFocus();
                     } else {
                         //call signup method
-                        sign_up(user_name, user_cell, user_password, user_account, user_gender, user_nid);
+                        sign_up(user_name, user_cell, user_password, user_account, user_gender, user_nid,user_status,user_token);
                     }
                 }
             }
@@ -262,7 +291,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     //signup method
-    private void sign_up(String name,String cell,String password,String account,String gender,String nid) {
+    private void sign_up(String name,String cell,String password,String account,String gender,String nid,String status,String token) {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Please wait....");
@@ -280,9 +309,11 @@ public class RegisterActivity extends AppCompatActivity {
         RequestBody p_account = RequestBody.create(MediaType.parse("text/plain"), user_account);
         RequestBody p_gender = RequestBody.create(MediaType.parse("text/plain"), user_gender);
         RequestBody p_nid = RequestBody.create(MediaType.parse("text/plain"),user_nid);
+        RequestBody p_status = RequestBody.create(MediaType.parse("text/plain"),user_status);
+        RequestBody p_token = RequestBody.create(MediaType.parse("text/plain"),user_token);
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<Contacts> call = apiInterface.signUp(fileToUpload, filename,p_name, p_cell, p_password,p_account,p_gender,p_nid);
+        Call<Contacts> call = apiInterface.signUp(fileToUpload, filename,p_name, p_cell, p_password,p_account,p_gender,p_nid,p_status,p_token);
         call.enqueue(new Callback<Contacts>() {
             @Override
             public void onResponse(Call<Contacts> call, Response<Contacts> response) {

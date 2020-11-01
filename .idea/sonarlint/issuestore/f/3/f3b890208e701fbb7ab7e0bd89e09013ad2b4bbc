@@ -1,9 +1,9 @@
 
-o
-java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.adapter.Adapter'.(‰Åæ8¢®óøÊ.
 s
-java:S1128"QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8¦ıñøÊ.
+java:S1128"QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8¦ıñøÊ.
+o
+java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.adapter.Adapter'.(‰Åæ8¢®óøÊ.
 y
-java:S1450 "\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8ÑÒÊ.
+java:S1450!"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8ÑÒÊ.
 m
-java:S1301V"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8ÑÒÊ.
+java:S1301]"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8ÑÒÊ.

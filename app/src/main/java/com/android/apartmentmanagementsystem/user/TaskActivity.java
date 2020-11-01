@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
+import com.android.apartmentmanagementsystem.ProfileActivity;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
@@ -47,7 +48,7 @@ public class TaskActivity extends AppCompatActivity {
     String guard_name="";
     private List<Contacts> contactsList;
     private ApiInterface apiInterface;
-    String current_date,current_time,getCell,profileName;
+    String current_date,current_time,getCell,profileName,guardToken;
     private ProgressDialog loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,6 +161,7 @@ public class TaskActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 getGuardData("");
                 guard_name= guard.get(position);
+                getTokenData(guard_name);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -224,6 +226,11 @@ public class TaskActivity extends AppCompatActivity {
                                 else {
                                     //call login method
                                     assignTask(name,cell, flat_num,floor_num,guard,task,date,time,status);
+                                    String title = "New Task";
+                                    String message = "You have assigned a new task by a flat owner. See details from app.";
+                                    String token=guardToken;
+                                    Log.d("getto",token);
+                                    SendNotification(title,message,token);
                                 }
 
                                 break;
@@ -346,7 +353,92 @@ public class TaskActivity extends AppCompatActivity {
             }
         });
     }
+    public void getTokenData(String name) {
 
+        loading=new ProgressDialog(TaskActivity.this);
+        loading.setCancelable(false);
+        loading.setMessage(getString(R.string.please_wait));
+
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Contacts>> call;
+        call = apiInterface.getToken(name);
+
+        call.enqueue(new Callback<List<Contacts>>() {
+            @Override
+            public void onResponse(Call<List<Contacts>> call, Response<List<Contacts>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Contacts> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        Toasty.warning(TaskActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+
+                        guardToken = profileData.get(0).getToken();
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Contacts>> call, Throwable t) {
+
+                loading.dismiss();
+                Toast.makeText(TaskActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
+
+    }
+    private void SendNotification(String title,String message,String token) {
+
+        /*loading=new ProgressDialog(this);
+        loading.setMessage("Please wait....");
+*/
+
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        Call<Contacts> call = apiInterface.sendGuardNotification(title,message,token);
+        call.enqueue(new Callback<Contacts>() {
+            @Override
+            public void onResponse(Call<Contacts> call, Response<Contacts> response) {
+
+                /*String value = response.body().getValue();
+                String message = response.body().getMassage();
+
+                if (value.equals("success"))
+                {
+                    loading.dismiss();
+                    Toasty.success(TaskActivity.this, message, Toasty.LENGTH_SHORT).show();
+                    *//*Intent intent=new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish();*//*
+                }
+
+
+
+                else {
+                    loading.dismiss();
+                    Toasty.error(TaskActivity.this, message, Toasty.LENGTH_SHORT).show();
+                }*/
+            }
+
+            @Override
+            public void onFailure(Call<Contacts> call, Throwable t) {
+
+  /*              loading.dismiss();
+                Toasty.error(TaskActivity.this, "Error! " + t.toString(), Toasty.LENGTH_SHORT).show();*/
+            }
+        });
+    }
     //for back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

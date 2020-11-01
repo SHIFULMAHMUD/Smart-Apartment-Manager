@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385687876524",
+    "firebase_url": "https://round-cable-210916.firebaseio.com",
+    "project_id": "round-cable-210916",
+    "storage_bucket": "round-cable-210916.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385687876524:android:a2192ab38908a730354009",
+        "android_client_info": {
+          "package_name": "com.android.apartmentmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385687876524-db4ccl2f8b1879ue4np7t1sppi8i1qmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgGUEzO6GpL49UrTNLDUf5d0W_o5GiFco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385687876524-db4ccl2f8b1879ue4np7t1sppi8i1qmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

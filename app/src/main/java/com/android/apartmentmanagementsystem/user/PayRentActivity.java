@@ -28,8 +28,10 @@ import android.widget.Toast;
 import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.LoginActivity;
+import com.android.apartmentmanagementsystem.ProfileActivity;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 
@@ -46,7 +48,7 @@ public class PayRentActivity extends AppCompatActivity {
     String flat_no="";
     String floor_no="";
     String month_name="";
-    String current_date,current_time,getCell,profileName;;
+    String current_date,current_time,getCell,profileName,flatPrice;
     private ApiInterface apiInterface;
     private ProgressDialog loading;
     @Override
@@ -71,6 +73,7 @@ public class PayRentActivity extends AppCompatActivity {
             Toasty.error(PayRentActivity.this, "No Internet Connection", Toasty.LENGTH_LONG).show();
         }else {
             getProfileName(getCell);
+            getFlatRent(getCell);
         }
         renter_name_et =findViewById(R.id.renter_name_et);
         renter_cell_et =findViewById(R.id.renter_cell_et);
@@ -288,6 +291,53 @@ public class PayRentActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Contacts>> call, Throwable t) {
 
+                Toast.makeText(PayRentActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                Log.d("Error : ", t.toString());
+            }
+        });
+
+
+    }
+    public void getFlatRent(String cell) {
+
+        loading=new ProgressDialog(PayRentActivity.this);
+        loading.setCancelable(false);
+        loading.setMessage(getString(R.string.please_wait));
+
+
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Flat>> call;
+        call = apiInterface.getFlatPrice(cell);
+
+        call.enqueue(new Callback<List<Flat>>() {
+            @Override
+            public void onResponse(Call<List<Flat>> call, Response<List<Flat>> response) {
+
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    List<Flat> profileData;
+                    profileData = response.body();
+
+                    if (profileData.isEmpty()) {
+
+                        Toasty.warning(PayRentActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+
+                        flatPrice = profileData.get(0).getFlat_price();
+                        rent_amount_et.setText(flatPrice);
+
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Flat>> call, Throwable t) {
+
+                loading.dismiss();
                 Toast.makeText(PayRentActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
                 Log.d("Error : ", t.toString());
             }

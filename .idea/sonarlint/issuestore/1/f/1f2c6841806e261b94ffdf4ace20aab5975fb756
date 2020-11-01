@@ -1,12 +1,12 @@
 
+]
+java:S1128"@Remove this unused import 'androidx.viewpager.widget.ViewPager'.(¨Ù›æ8ëÆªÍ.
+–
+java:S1319"tThe type of the "imageUrls" object should be an interface such as "List" rather than the implementation "ArrayList".(ÏÎÙïüÿÿÿÿ8ÜÏ‰ÓÍ.
+X	java:S1256"<This block of commented-out lines of code should be removed.(¬Í·8æÈ‡ĞÍ.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ş“³ÒÍ.
 q
 java:S1128"ORemove this unused import 'com.android.apartmentmanagementsystem.model.Slider'.(ˆ©¯ûÿÿÿÿ8Îë˜ÓÍ.
 O
 java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ÂÚ—ÓÍ.
-]
-java:S1128"@Remove this unused import 'androidx.viewpager.widget.ViewPager'.(¨Ù›æ8ëÆªÍ.
-X	java:S1256"<This block of commented-out lines of code should be removed.(¬Í·8æÈ‡ĞÍ.
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ş“³ÒÍ.
-–
-java:S1319"tThe type of the "imageUrls" object should be an interface such as "List" rather than the implementation "ArrayList".(ÏÎÙïüÿÿÿÿ8ÜÏ‰ÓÍ.

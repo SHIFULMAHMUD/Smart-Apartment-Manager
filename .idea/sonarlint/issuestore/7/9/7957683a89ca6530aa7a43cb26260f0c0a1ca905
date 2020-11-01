@@ -1,0 +1,14 @@
+
+C
+java:S1874"-Remove this use of "State"; it is deprecated.(º¥ÿ
+I
+java:S1874"3Remove this use of "NetworkInfo"; it is deprecated.(“Å°¿
+O
+java:S1874"9Remove this use of "getAllNetworkInfo"; it is deprecated.(“Å°¿
+F
+java:S1874"0Remove this use of "getState"; it is deprecated.(º¥ÿ
+I
+java:S1874"3Remove this use of "NetworkInfo"; it is deprecated.(º¥ÿ
+m	java:S116	"SRename this field "_context" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú§Ğşÿÿÿÿ
+G
+java:S1874"1Remove this use of "CONNECTED"; it is deprecated.(º¥ÿ

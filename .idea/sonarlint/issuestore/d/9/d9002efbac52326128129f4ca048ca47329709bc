@@ -1,85 +1,87 @@
 
-l
-java:S3252€"NUse static access with "android.provider.MediaStore$MediaColumns" for "TITLE".(ç­şÜ8£ƒ‚‡Ì.
 >
-java:S16596""Declare "send" on a separate line.(•êì8¼‰ƒ‡Ì.
-V	java:S106‹"9Replace this use of System.out or System.err by a logger.(å˜¹8Šô§‡Ì.
-s	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî¸øÿÿÿÿ8Šô§‡Ì.
-t	java:S1168"XRename this field "guest_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
+java:S16598""Declare "save" on a separate line.(•êì8¼‰ƒ‡Ì.
+t	java:S116:"XRename this field "guest_name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
 S
-java:S1874="6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8¼‰ƒ‡Ì.
-F	java:S108†")Either remove or fill this block of code.(ä ¹€8Šô§‡Ì.
-U
-java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ8¼¡á©Ë.
-G
-java:S16598"*Declare "host_cell_et" on a separate line.(ëæÿ8¼‰ƒ‡Ì.
+java:S1874?"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8¼‰ƒ‡Ì.
+@
+java:S1659;"#Declare "total" on a separate line.(ÓÃ°8¼‰ƒ‡Ì.
+F	java:S108")Either remove or fill this block of code.(ä ¹€8Šô§‡Ì.
+P
+java:S1874Ÿ"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8Šô§‡Ì.
+c
+java:S2142y"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Šô§‡Ì.
+S
+java:S11281"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ8¼‰ƒ‡Ì.
 V
-java:S1128#"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8ÜÙ·±È.
-s	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî¸øÿÿÿÿ8Šô§‡Ì.
-I
-java:S16598",Declare "total_guest_et" on a separate line.(ëæÿ8¢½”‰É.
-u	java:S1168"YRename this field "total_guest_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
-d
-java:S2142†"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Šô§‡Ì.
-F
-java:S1659<"*Declare "current_time" on a separate line.(í¬Û68¼‰ƒ‡Ì.
-S
-java:S1128$"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8Û¿¾‰É.
-b
-java:S1128"FRemove this unused import 'androidmads.library.qrgenearator.QRGSaver'.(ÂÕ‚D8¶’ÄµÈ.
+java:S1117Ã"8Rename "name" which hides the field declared at line 59.(½ñÎä8¼¡á©Ë.
 ;
-java:S2119Œ"Save and re-use this "Random".(¼İÅf8Šô§‡Ì.
-s	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§·ş’úÿÿÿÿ8Šô§‡Ì.
-n
-java:S1301¿"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Šô§‡Ì.
-?
-java:S16599""Declare "cell" on a separate line.(ÓÃ°8¼‰ƒ‡Ì.
-q	java:S1168"URename this field "purpose_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
-s	java:S1168"WRename this field "host_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
-^	java:S107“"<Method has 8 parameters, which is greater than 7 authorized.(íî¸øÿÿÿÿ8Šô§‡Ì.
-t
-java:S3776?"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(¨Œşÿÿÿÿ8¼‰ƒ‡Ì.
+java:S2119•"Save and re-use this "Random".(¼İÅf8Šô§‡Ì.
+^	java:S107œ"<Method has 8 parameters, which is greater than 7 authorized.(íî¸øÿÿÿÿ8Šô§‡Ì.
 k
 java:S1128	"IRemove this unused import 'me.dm7.barcodescanner.zxing.ZXingScannerView'.(æñïÀıÿÿÿÿ8£ÿº±È.
-B
-java:S16599"%Declare "purpose" on a separate line.(ÓÃ°8¼‰ƒ‡Ì.
-D	java:S131¸""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Šô§‡Ì.
-s	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî¸øÿÿÿÿ8Šô§‡Ì.
-A
-java:S1659<"%Declare "getCell" on a separate line.(í¬Û68¶ß¤‡Ì.
-j	java:S1164"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Šóù8¼‰ƒ‡Ì.
-H
-java:S16598"+Declare "guest_cell_et" on a separate line.(ëæÿ8¢½”‰É.
->
-java:S16596""Declare "save" on a separate line.(•êì8¼‰ƒ‡Ì.
-V
-java:S1117»"8Rename "cell" which hides the field declared at line 57.(Ïµº8Šô§‡Ì.
-P
-java:S1874–"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8Šô§‡Ì.
-^	java:S125§"<This block of commented-out lines of code should be removed.(ş•»³øÿÿÿÿ8Šô§‡Ì.
-S
-java:S1128/"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ8¼‰ƒ‡Ì.
-V
-java:S1117º"8Rename "name" which hides the field declared at line 57.(½ñÎä8¼¡á©Ë.
-Y
-java:S1117½";Rename "purpose" which hides the field declared at line 57.(¸Çç8Šô§‡Ì.
-t	java:S1168"XRename this field "guest_name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
-r	java:S116<"WRename this field "current_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¬Û68¼‰ƒ‡Ì.
-s	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÕÓ™ûÿÿÿÿ8Šô§‡Ì.
-u
-java:S3252"RUse static access with "android.provider.MediaStore$MediaColumns" for "MIME_TYPE".(Úé­£şÿÿÿÿ8Šô§‡Ì.
-E	java:S108p")Either remove or fill this block of code.(ä ¹€8Šô§‡Ì.
-@
-java:S16599"#Declare "total" on a separate line.(ÓÃ°8¼‰ƒ‡Ì.
-V
-java:S1128+"4Remove this unused import 'com.google.zxing.Result'.(ŸˆÅŒûÿÿÿÿ8Êı¹±È.
-E
-java:S16598"(Declare "purpose_et" on a separate line.(ëæÿ8¢½”‰É.
-s	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞºÄëüÿÿÿÿ8¹€»‰É.
-r	java:S116<"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¬Û68¼‰ƒ‡Ì.
-c
-java:S2142p"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Šô§‡Ì.
-Y
-java:S1874•"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8—ãÉ‰É.
+V	java:S106”"9Replace this use of System.out or System.err by a logger.(å˜¹8Šô§‡Ì.
+E	java:S108y")Either remove or fill this block of code.(ä ¹€8Šô§‡Ì.
 n
-java:S1301¸"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Šô§‡Ì.
+java:S1301È"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Šô§‡Ì.
+E
+java:S1659:"(Declare "purpose_et" on a separate line.(ëæÿ8¢½”‰É.
+t
+java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(¨Œşÿÿÿÿ8¼‰ƒ‡Ì.
+>
+java:S16598""Declare "send" on a separate line.(•êì8¼‰ƒ‡Ì.
+u
+java:S3252Š"RUse static access with "android.provider.MediaStore$MediaColumns" for "MIME_TYPE".(Úé­£şÿÿÿÿ8Šô§‡Ì.
+d
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Šô§‡Ì.
+s	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§·ş’úÿÿÿÿ8Šô§‡Ì.
+€
+java:S1128,"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.RentHistoryActivity'.(¤ñŠ8ºØ«ñĞ.
+V
+java:S1128#"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8ÜÙ·±È.
+l
+java:S3252‰"NUse static access with "android.provider.MediaStore$MediaColumns" for "TITLE".(ç­şÜ8£ƒ‚‡Ì.
+V
+java:S1128-"4Remove this unused import 'com.google.zxing.Result'.(ŸˆÅŒûÿÿÿÿ8Êı¹±È.
+U
+java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ8¼¡á©Ë.
+Y
+java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8—ãÉ‰É.
+I
+java:S1659:",Declare "total_guest_et" on a separate line.(ëæÿ8¢½”‰É.
+t	java:S116:"XRename this field "guest_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
+r	java:S116>"WRename this field "current_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¬Û68¼‰ƒ‡Ì.
+A
+java:S1659>"%Declare "getCell" on a separate line.(í¬Û68¶ß¤‡Ì.
+s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî¸øÿÿÿÿ8Šô§‡Ì.
+n
+java:S1301Á"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Šô§‡Ì.
+^	java:S125°"<This block of commented-out lines of code should be removed.(ş•»³øÿÿÿÿ8Šô§‡Ì.
+s	java:S116:"WRename this field "host_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
+s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî¸øÿÿÿÿ8Šô§‡Ì.
+u	java:S116:"YRename this field "total_guest_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
+G
+java:S1659:"*Declare "host_cell_et" on a separate line.(ëæÿ8¼‰ƒ‡Ì.
+F
+java:S1659>"*Declare "current_time" on a separate line.(í¬Û68¼‰ƒ‡Ì.
+j	java:S1166"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Šóù8¼‰ƒ‡Ì.
+H
+java:S1659:"+Declare "guest_cell_et" on a separate line.(ëæÿ8¢½”‰É.
+?
+java:S1659;""Declare "cell" on a separate line.(ÓÃ°8¼‰ƒ‡Ì.
+r	java:S116>"WRename this field "current_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í¬Û68¼‰ƒ‡Ì.
+s	java:S117Ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞºÄëüÿÿÿÿ8¹€»‰É.
+s	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÕÓ™ûÿÿÿÿ8Šô§‡Ì.
+s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî¸øÿÿÿÿ8Šô§‡Ì.
+q	java:S116:"URename this field "purpose_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëæÿ8¼‰ƒ‡Ì.
+B
+java:S1659;"%Declare "purpose" on a separate line.(ÓÃ°8¼‰ƒ‡Ì.
+V
+java:S1117Ä"8Rename "cell" which hides the field declared at line 59.(Ïµº8Šô§‡Ì.
+D	java:S131Á""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Šô§‡Ì.
+S
+java:S1128$"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8ÈìªñĞ.
+Y
+java:S1117Æ";Rename "purpose" which hides the field declared at line 59.(¸Çç8Šô§‡Ì.
+b
+java:S1128"FRemove this unused import 'androidmads.library.qrgenearator.QRGSaver'.(ÂÕ‚D8¶’ÄµÈ.

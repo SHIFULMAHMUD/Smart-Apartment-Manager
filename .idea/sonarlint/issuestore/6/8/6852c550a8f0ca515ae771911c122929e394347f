@@ -1,15 +1,15 @@
 
 ‰
-java:S1128"gRemove this unused import 'com.android.apartmentmanagementsystem.user.history.ComplainHistoryActivity'.(Ñß¨‡şÿÿÿÿ8¸¶üÓË.
-
-java:S1128"dRemove this unused import 'com.android.apartmentmanagementsystem.user.history.GuestHistoryActivity'.(½¢®ä8¸¶üÓË.
-…
-java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.TaskHistoryActivity'.(ÑóãØùÿÿÿÿ8¸¶üÓË.
-M
-java:S1659"+Declare "utilityLayout" on a separate line.(éûÍ¦üÿÿÿÿ8ğ¾òÓË.
+java:S1128"gRemove this unused import 'com.android.apartmentmanagementsystem.user.history.ComplainHistoryActivity'.(Ñß¨‡şÿÿÿÿ8¸¶üÓË.
 ˆ
-java:S1128"fRemove this unused import 'com.android.apartmentmanagementsystem.user.history.UtilityHistoryActivity'.(ÿßñ¶ÿÿÿÿÿ8¯ÓıÓË.
-€
-java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.RentHistoryActivity'.(¤ñŠ8¯ÓıÓË.
+java:S1128"fRemove this unused import 'com.android.apartmentmanagementsystem.user.history.UtilityHistoryActivity'.(ÿßñ¶ÿÿÿÿÿ8¯ÓıÓË.
+…
+java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.TaskHistoryActivity'.(ÑóãØùÿÿÿÿ8¸¶üÓË.
 m
-java:S13014"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Î¦óÓË.
+java:S1301="KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Î¦óÓË.
+M
+java:S1659"+Declare "utilityLayout" on a separate line.(éûÍ¦üÿÿÿÿ8ğ¾òÓË.
+
+java:S1128"dRemove this unused import 'com.android.apartmentmanagementsystem.user.history.GuestHistoryActivity'.(½¢®ä8¸¶üÓË.
+€
+java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.RentHistoryActivity'.(¤ñŠ8¯ÓıÓË.

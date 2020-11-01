@@ -146,6 +146,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:maxLines="1"
+                    android:focusable="false"
                     android:inputType="number"
                     android:id="@+id/rent_amount_et"
                     android:textSize="16sp"/>

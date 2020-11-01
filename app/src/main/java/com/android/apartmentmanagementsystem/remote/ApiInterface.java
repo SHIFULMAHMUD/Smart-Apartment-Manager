@@ -38,7 +38,9 @@ public interface ApiInterface {
             @Part(Constant.KEY_PASSWORD) RequestBody password,
             @Part(Constant.KEY_ACCOUNT) RequestBody account,
             @Part(Constant.KEY_GENDER) RequestBody gender,
-            @Part(Constant.KEY_NID) RequestBody nid);
+            @Part(Constant.KEY_NID) RequestBody nid,
+            @Part(Constant.KEY_STATUS) RequestBody status,
+            @Part(Constant.KEY_TOKEN) RequestBody token);
 
 
 
@@ -65,6 +67,13 @@ public interface ApiInterface {
             @Field(Constant.KEY_NOTE) String note,
             @Field(Constant.KEY_DATE) String paying_date,
             @Field(Constant.KEY_TIME) String paying_time);
+
+    @FormUrlEncoded
+    @POST("api.php")
+    Call<Contacts> sendGuardNotification(
+            @Field(Constant.KEY_TITLE) String title,
+            @Field(Constant.KEY_MESSAGE) String message,
+            @Field(Constant.KEY_TOKEN) String token);
 
     @FormUrlEncoded
     @POST("pay_utility.php")
@@ -116,6 +125,12 @@ public interface ApiInterface {
             @Field(Constant.KEY_CELL) String cell);
 
     @FormUrlEncoded
+    @POST("update_token.php")
+    Call<Contacts> updateToken(
+            @Field(Constant.KEY_CELL) String cell,
+            @Field(Constant.KEY_TOKEN) String token);
+
+    @FormUrlEncoded
     @POST("request_flat.php")
     Call<Flat> requestFlat(
             @Field("flat_no") String flat_no,
@@ -149,13 +164,27 @@ public interface ApiInterface {
             @Query("cell") String cell
 
     );
+    @GET("get_token.php")
+    Call<List<Contacts>> getToken(
+            @Query("name") String name
+
+    );
     @GET("find_qr.php")
     Call<List<Guest>> getQr(
             @Query("qr_code") String qr_code
 
     );
 
+    @GET("flat_price.php")
+    Call<List<Flat>> getFlatPrice(
+            @Query("cell") String cell
 
+    );
+    @GET("utility_bill.php")
+    Call<List<Flat>> getUtilityBill(
+            @Query("cell") String cell
+
+    );
 
     @GET("notice.php")
     Call<List<Contacts>> getNotice(

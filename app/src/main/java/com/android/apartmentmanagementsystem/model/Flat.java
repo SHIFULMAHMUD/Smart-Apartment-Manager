@@ -11,6 +11,10 @@ public class Flat {
     private String flat_details;
     @SerializedName("flat_price")
     private String flat_price;
+    @SerializedName("gas_bill")
+    private String gas_bill;
+    @SerializedName("electricity_bill")
+    private String electricity_bill;
     @SerializedName("imageone")
     private String imageone;
     @SerializedName("imagetwo")
@@ -74,5 +78,13 @@ public class Flat {
 
     public String getRenter_cell() {
         return renter_cell;
+    }
+
+    public String getGas_bill() {
+        return gas_bill;
+    }
+
+    public String getElectricity_bill() {
+        return electricity_bill;
     }
 }

@@ -1,0 +1,10 @@
+
+Q	java:S125."<This block of commented-out lines of code should be removed.(ÀÕÈ–
+Q	java:S125q"<This block of commented-out lines of code should be removed.(…¢ı
+F
+java:S1135!"2Complete the task associated to this TODO comment.(˜Ş6
+q
+java:S3923)"[Remove this conditional structure or edit its code blocks so that they're not all the same.(üÔøØ
+c	java:S116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÉˆÙ
+V	java:S125+"<This block of commented-out lines of code should be removed.(ØšÔşÿÿÿÿ
+Q	java:S125`"<This block of commented-out lines of code should be removed.(ÊÚ’¾

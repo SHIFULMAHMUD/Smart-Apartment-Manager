@@ -42,10 +42,10 @@ import java.util.List;
 public class GuardHomeActivity extends AppCompatActivity {
     private LinearLayout scanqr, entermanually,tasklayout;
     private Dialog dialog;
-    String qrCode,guestName,guestCell,totalGuest,purpose,hostCell,guardName,getCell;
+    String qrCode,guestName,guestCell,totalGuest,purpose,hostCell,guardName,getCell,hostName,visitDate,visitTime,flatNo,floorNo;
     ImageView logout_iv;
     Button chkBtn;
-    TextView guestNameTv,guestCellTv,totalGuestTv,purposeTv,hostCellTv,guestCountTv,guardNameTv;
+    TextView guestNameTv,guestCellTv,totalGuestTv,purposeTv,hostCellTv,guestCountTv,guardNameTv,flatNoTv,floorNoTv,hostNameTv,visitDateTv,visitTimeTv;
     private List<Guest> guestList;
     private ApiInterface apiInterface;
     @Override
@@ -107,7 +107,7 @@ public class GuardHomeActivity extends AppCompatActivity {
         chkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getQrData("");
+                getQrData(qrCode);
             }
         });
         entermanually = (LinearLayout) findViewById(R.id.manualcode);
@@ -137,7 +137,9 @@ public class GuardHomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Guest>> call, Response<List<Guest>> response) {
                 guestList = response.body();
-
+                if (guestList.isEmpty()){
+                Toasty.error(GuardHomeActivity.this,"QR Code not matched !",Toasty.LENGTH_SHORT).show();
+                }
                 for (int i = 0; i < guestList.size(); i++) {
                     if (qrCode !=null && qrCode.equals(guestList.get(i).getQr_code()))
                     {
@@ -148,9 +150,6 @@ public class GuardHomeActivity extends AppCompatActivity {
                     {
                         getGuestData(qr_code);
                         Toasty.success(GuardHomeActivity.this,"QR Code Matched !",Toasty.LENGTH_SHORT).show();
-                    }
-                    else {
-                        Toasty.error(GuardHomeActivity.this,"QR Code not matched !",Toasty.LENGTH_SHORT).show();
                     }
                 }
 
@@ -175,14 +174,6 @@ public class GuardHomeActivity extends AppCompatActivity {
         ImageView delete;
         submit = dialog.findViewById(R.id.submit);
         codes = dialog.findViewById(R.id.code);
-        delete = dialog.findViewById(R.id.deleteicon);
-
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,6 +183,14 @@ public class GuardHomeActivity extends AppCompatActivity {
                 } else {
                     getQrData(codes.getText().toString());
                 }
+            }
+        });
+        delete = dialog.findViewById(R.id.deleteicon);
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
             }
         });
         dialog.show();
@@ -211,12 +210,22 @@ public class GuardHomeActivity extends AppCompatActivity {
         totalGuestTv=dialog.findViewById(R.id.qr_total_guest_tv);
         purposeTv=dialog.findViewById(R.id.qr_purpose_tv);
         hostCellTv=dialog.findViewById(R.id.qr_host_cell_tv);
+        hostNameTv=dialog.findViewById(R.id.qr_host_name_tv);
+        flatNoTv=dialog.findViewById(R.id.qr_flat_no_tv);
+        floorNoTv=dialog.findViewById(R.id.qr_floor_no_tv);
+        visitDateTv=dialog.findViewById(R.id.qr_date_tv);
+        visitTimeTv=dialog.findViewById(R.id.qr_time_tv);
 
         guestNameTv.setText(guestName);
         guestCellTv.setText(guestCell);
         totalGuestTv.setText(totalGuest);
         purposeTv.setText(purpose);
         hostCellTv.setText(hostCell);
+        hostNameTv.setText(hostName);
+        flatNoTv.setText(flatNo);
+        floorNoTv.setText(floorNo);
+        visitDateTv.setText(visitDate);
+        visitTimeTv.setText(visitTime);
 
         delete = dialog.findViewById(R.id.deleteicon);
 
@@ -256,6 +265,11 @@ public class GuardHomeActivity extends AppCompatActivity {
                         totalGuest = profileData.get(0).getTotal_guest();
                         purpose = profileData.get(0).getPurpose();
                         hostCell = profileData.get(0).getHost_cell();
+                        hostName = profileData.get(0).getHost_name();
+                        visitDate = profileData.get(0).getVisit_date();
+                        visitTime = profileData.get(0).getVisit_time();
+                        flatNo = profileData.get(0).getFlat_no();
+                        floorNo = profileData.get(0).getFloor_no();
                         guestCountTv=findViewById(R.id.tgcount);
                         guestCountTv.setText(totalGuest);
                         Qrdialog();

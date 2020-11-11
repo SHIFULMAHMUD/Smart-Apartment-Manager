@@ -1,91 +1,91 @@
 
-v	java:S1167"URename this field "user_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8‚­“Ë×.
-n	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¨ï›8¡­Û¿È.
-M
-java:S16594"+Declare "etxtNidNumber" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-u	java:S1167"TRename this field "user_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8 òı¿È.
-P
-java:S1874©"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8¯‘É¼Å.
-n
-java:S1192°"KDefine a constant instead of duplicating this literal "text/plain" 9 times.(¥ìœ¢ûÿÿÿÿ8¡­Û¿È.
-n
-java:S1128"LRemove this unused import 'com.google.firebase.messaging.FirebaseMessaging'.(Ë¾Òªşÿÿÿÿ8ğ€üò×.
-y	java:S1167"XRename this field "user_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8ë‘ş¿È.
+J
+java:S16594"(Declare "etxtGender" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
 O
 java:S1128'"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8´ø„Ç×.
-K
-java:S16597")Declare "user_status" on a separate line.(—İí‡ùÿÿÿÿ8é±´ô×.
-C	java:S131r""Add a default case to this switch.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
-w	java:S1167"VRename this field "user_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8¶ãş¿È.
-x	java:S1167"WRename this field "user_account" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8­°ş¿È.
-m
-java:S1301r"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
-L
-java:S16594"*Declare "etxtPassword" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-m
-java:S3252ë"OUse static access with "android.view.ViewGroup$LayoutParams" for "FILL_PARENT".(ğèê¬8¯‘É¼Å.
-J
-java:S16597"(Declare "user_token" on a separate line.(—İí‡ùÿÿÿÿ8‚­“Ë×.
-Q
-java:S1874ë"3Remove this use of "FILL_PARENT"; it is deprecated.(ğèê¬8¯‘É¼Å.
-L
-java:S1128"/Remove this unused import 'retrofit2.http.PUT'.(Ğµ ‹8ø¡‚ÂÈ.
-D	java:S131š""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
-I
-java:S16597"'Declare "user_cell" on a separate line.(—İí‡ùÿÿÿÿ8 òı¿È.
-W
-java:S1128"5Remove this unused import 'retrofit2.http.Multipart'.(ù«÷åşÿÿÿÿ8Şõ„ÂÈ.
-S
-java:S18749"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8–ÈŒúÂ.
-s	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñé¬òùÿÿÿÿ8¡­Û¿È.
-I
-java:S16597"'Declare "user_name" on a separate line.(—İí‡ùÿÿÿÿ8íµı¿È.
-s	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†…è¦şÿÿÿÿ8‹ÛÇ×.
-t
-java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¨Œşÿÿÿÿ8”ÿÜãÅ.
-s	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾š¢İıÿÿÿÿ8¡­Û¿È.
-s	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÅšƒÿÿÿÿÿ8¡­Û¿È.
-I
-java:S16597"'Declare "mediaPath" on a separate line.(—İí‡ùÿÿÿÿ8€Ïß¿È.
-M
-java:S16598"0Declare "linearLayoutNidPic" on a separate line.(£§İè8¦úı‘Å.
-u	java:S1167"TRename this field "user_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8íµı¿È.
-k	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éò¿8¯‘É¼Å.
-t	java:S1167"SRename this field "user_nid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8¯‚ÿ¿È.
-S
-java:S1874í"0Remove this use of "getColor"; it is deprecated.(©ÖåÂüÿÿÿÿ8¯‘É¼Å.
-l
-java:S1871 "IThis case's code block is the same as the block for the case on line 155.(ªëÅŞúÿÿÿÿ8ÈÉĞ¼Å.
-Y	java:S107¦"<Method has 8 parameters, which is greater than 7 authorized.(éò¿8ŠÜ¶ô×.
-H
-java:S16597"&Declare "user_nid" on a separate line.(—İí‡ùÿÿÿÿ8¯‚ÿ¿È.
-n	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÀæà8¡­Û¿È.
-H
-java:S16594"&Declare "etxtCell" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-n
-java:S3252ë"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ğèê¬8¯‘É¼Å.
-k
-java:S1871x"IThis case's code block is the same as the block for the case on line 115.(ªëÅŞúÿÿÿÿ8¯‘É¼Å.
+P
+java:S1874©"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8¯‘É¼Å.
 K
 java:S16597")Declare "user_gender" on a separate line.(—İí‡ùÿÿÿÿ8¶ãş¿È.
-w	java:S1167"VRename this field "user_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8é±´ô×.
+K
+java:S16597")Declare "user_status" on a separate line.(—İí‡ùÿÿÿÿ8é±´ô×.
 L
 java:S16597"*Declare "user_account" on a separate line.(—İí‡ùÿÿÿÿ8­°ş¿È.
+J
+java:S16597"(Declare "user_token" on a separate line.(—İí‡ùÿÿÿÿ8‚­“Ë×.
 M
-java:S16597"+Declare "user_password" on a separate line.(—İí‡ùÿÿÿÿ8ë‘ş¿È.
+java:S16598"0Declare "linearLayoutNidPic" on a separate line.(£§İè8¦úı‘Å.
+D	java:S131š""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
+w	java:S1167"VRename this field "user_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8¶ãş¿È.
+H
+java:S16594"&Declare "etxtCell" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+Q
+java:S1874ë"3Remove this use of "FILL_PARENT"; it is deprecated.(ğèê¬8¯‘É¼Å.
+n	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÀæà8¡­Û¿È.
+I
+java:S16597"'Declare "mediaPath" on a separate line.(—İí‡ùÿÿÿÿ8€Ïß¿È.
+s	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾š¢İıÿÿÿÿ8¡­Û¿È.
+S
+java:S18749"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8–ÈŒúÂ.
+n
+java:S1301š"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
+I
+java:S16597"'Declare "user_name" on a separate line.(—İí‡ùÿÿÿÿ8íµı¿È.
+k
+java:S1871x"IThis case's code block is the same as the block for the case on line 115.(ªëÅŞúÿÿÿÿ8¯‘É¼Å.
+S
+java:S1874í"0Remove this use of "getColor"; it is deprecated.(©ÖåÂüÿÿÿÿ8¯‘É¼Å.
+H
+java:S16597"&Declare "user_nid" on a separate line.(—İí‡ùÿÿÿÿ8¯‚ÿ¿È.
+L
+java:S1128"/Remove this unused import 'retrofit2.http.PUT'.(Ğµ ‹8ø¡‚ÂÈ.
 Y
 java:S1874¨"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8¯‘É¼Å.
 D
 java:S1172¦"&Remove these unused method parameters.(éò¿8üÉˆÀÈ.
-J
-java:S16594"(Declare "etxtGender" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
-s	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º²Ô½ÿÿÿÿÿ8¡­Û¿È.
-n
-java:S1301š"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ù¥Í¼Å.
 s	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä‘İÖÿÿÿÿÿ8¬…¸ô×.
-r
-java:S1128"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuestActivity'.(ıœò‰8€¹ÒñĞ.
-K
-java:S16594")Declare "etxtAccount" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
 k
 java:S1871Ö"MThis branch's code block is the same as the block for the branch on line 334.(á¢–¬8¯‘É¼Å.
+I
+java:S16597"'Declare "user_cell" on a separate line.(—İí‡ùÿÿÿÿ8 òı¿È.
+n
+java:S1128"LRemove this unused import 'com.google.firebase.messaging.FirebaseMessaging'.(Ë¾Òªşÿÿÿÿ8ğ€üò×.
+v	java:S1167"URename this field "user_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8‚­“Ë×.
+x	java:S1167"WRename this field "user_account" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8­°ş¿È.
+w	java:S1167"VRename this field "user_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8é±´ô×.
+C	java:S131r""Add a default case to this switch.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
+n
+java:S3252ë"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ğèê¬8¯‘É¼Å.
+s	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñé¬òùÿÿÿÿ8¡­Û¿È.
+M
+java:S16594"+Declare "etxtNidNumber" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+n	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¨ï›8¡­Û¿È.
+n
+java:S1192°"KDefine a constant instead of duplicating this literal "text/plain" 9 times.(¥ìœ¢ûÿÿÿÿ8¡­Û¿È.
+y	java:S1167"XRename this field "user_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8ë‘ş¿È.
+m
+java:S1301r"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8¯‘É¼Å.
+t
+java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¨Œşÿÿÿÿ8”ÿÜãÅ.
+r
+java:S1128"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuestActivity'.(ıœò‰8€¹ÒñĞ.
+s	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º²Ô½ÿÿÿÿÿ8¡­Û¿È.
+l
+java:S1871 "IThis case's code block is the same as the block for the case on line 155.(ªëÅŞúÿÿÿÿ8ÈÉĞ¼Å.
+k	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éò¿8¯‘É¼Å.
+s	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÅšƒÿÿÿÿÿ8¡­Û¿È.
+Y	java:S107¦"<Method has 8 parameters, which is greater than 7 authorized.(éò¿8ŠÜ¶ô×.
+t	java:S1167"SRename this field "user_nid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8¯‚ÿ¿È.
+s	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†…è¦şÿÿÿÿ8‹ÛÇ×.
+W
+java:S1128"5Remove this unused import 'retrofit2.http.Multipart'.(ù«÷åşÿÿÿÿ8Şõ„ÂÈ.
+L
+java:S16594"*Declare "etxtPassword" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.
+M
+java:S16597"+Declare "user_password" on a separate line.(—İí‡ùÿÿÿÿ8ë‘ş¿È.
+u	java:S1167"TRename this field "user_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8íµı¿È.
+u	java:S1167"TRename this field "user_cell" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İí‡ùÿÿÿÿ8 òı¿È.
+m
+java:S3252ë"OUse static access with "android.view.ViewGroup$LayoutParams" for "FILL_PARENT".(ğèê¬8¯‘É¼Å.
+K
+java:S16594")Declare "etxtAccount" on a separate line.(„œñöÿÿÿÿÿ8–ÈŒúÂ.

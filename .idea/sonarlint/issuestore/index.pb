@@ -254,10 +254,6 @@ $app/src/main/res/drawable/ic_add.xml,6\9\699c3d6616ccc6ddf6bb7357bbf7c0f43d8ba
 +app/src/main/res/layout/activity_report.xml,6\0\60e6d48da5ad9207dd8986b54491003b2b0d2337
 c
 3app/src/main/res/layout/activity_utility_report.xml,7\a\7acfabb5925d64a171534881fdd124e67a53e43d
-T
-$app/src/main/res/layout/qrdialog.xml,6\4\64799846470198326a543e74a1ab2785bc89924f
-S
-#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e
 y
 Iapp/src/main/java/com/android/apartmentmanagementsystem/model/Slider.java,3\b\3be9d881bb2547a553c4eaa397acf1fbaa073088
 X
@@ -274,8 +270,6 @@ Y
 )app/src/main/res/layout/activity_flat.xml,b\c\bcfe4d817944860f417f111560e4beb88810831a
 
 Oapp/src/main/java/com/android/apartmentmanagementsystem/ConnectionDetector.java,7\9\7957683a89ca6530aa7a43cb26260f0c0a1ca905
-Z
-*app/src/main/res/layout/activity_guest.xml,c\3\c3505a17959e0ae49bdc14571de721cf6e727140
 Y
 )app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
 a
@@ -308,3 +302,5 @@ R
 [app/src/main/java/com/android/apartmentmanagementsystem/notification/MyFirebaseService.java,1\c\1c5923a30da77bb48b01c127a134c0045e9f720d
 H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
+e
+5app/src/main/res/layout/activity_pay_utility_bill.xml,e\0\e0efd369dbd6b8c16f99f5b57816804e69d41f8b

@@ -21,8 +21,11 @@ public class Constant {
     public static final String KEY_FLOOR_NO="floor_no";
     public static final String KEY_COMPLAIN="complain";
     public static final String KEY_HOST_CELL="host_cell";
+    public static final String KEY_HOST_NAME="host_name";
     public static final String KEY_QR_CODE="qr_code";
     public static final String KEY_PURPOSE="purpose";
+    public static final String KEY_VISIT_DATE="visit_date";
+    public static final String KEY_VISIT_TIME="visit_time";
     public static final String KEY_TOTAL_GUEST="total_guest";
     public static final String KEY_GUARD_NAME="guard_name";
     public static final String KEY_TASK="task";

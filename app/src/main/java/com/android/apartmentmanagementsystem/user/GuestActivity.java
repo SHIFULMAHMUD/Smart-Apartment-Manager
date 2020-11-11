@@ -12,7 +12,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -29,10 +31,16 @@ import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.android.apartmentmanagementsystem.ConnectionDetector;
@@ -48,19 +56,28 @@ import com.google.zxing.WriterException;
 import java.io.OutputStream;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Random;
 
 public class GuestActivity extends AppCompatActivity{
     String TAG = "GenerateQRCode";
     ImageView qrImage;
     Button start, save, send;
+    Spinner spinner_flat_no, spinner_floor_no;
     String inputValue;
-    EditText guest_name_et,guest_cell_et,total_guest_et,purpose_et,host_cell_et;
-    String name,cell,total,purpose;
+    String flat_no="";
+    String floor_no="";
+    EditText guest_name_et,guest_cell_et,total_guest_et,purpose_et,host_cell_et,txtTime,txtDate,host_name_et;
+    String[] flat = { "101", "201", "102", "202","103", "203", "104", "204", "105", "205"};
+    String[] floor = { "1st", "2nd", "3rd", "4th", "5th"};
+    String name,cell,total,purpose,time;
     Bitmap bitmap;
     QRGEncoder qrgEncoder;
     String current_date,current_time,getCell;
     private ProgressDialog loading;
+    public Calendar myCalendar = Calendar.getInstance();
+    public DatePickerDialog.OnDateSetListener appointment_date;
+    private int mYear, mMonth, mDay, mHour, mMinute;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +103,9 @@ public class GuestActivity extends AppCompatActivity{
         total = getIntent().getStringExtra("total");
         purpose = getIntent().getStringExtra("purpose");
         qrImage = (ImageView) findViewById(R.id.QR_Image);
+        txtDate=(EditText)findViewById(R.id.in_date_et);
+        txtTime=(EditText)findViewById(R.id.in_time_et);
+        host_name_et=findViewById(R.id.editTextHostName);
         guest_name_et=findViewById(R.id.editTextGuestName);
         guest_name_et.setText(name);
         guest_cell_et=findViewById(R.id.editTextGuestPhone);
@@ -101,6 +121,90 @@ public class GuestActivity extends AppCompatActivity{
         send = (Button) findViewById(R.id.send);
         save.setVisibility(View.INVISIBLE);
         send.setVisibility(View.INVISIBLE);
+        spinner_flat_no =findViewById(R.id.spinner);
+        spinner_flat_no.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                flat_no=flat[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        //Creating the ArrayAdapter instance having the country list
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item, flat);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        spinner_flat_no.setAdapter(aa);
+        spinner_floor_no =findViewById(R.id.spinner2);
+        spinner_floor_no.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                floor_no=floor[position];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        //Creating the ArrayAdapter instance having the country list
+        ArrayAdapter bb = new ArrayAdapter(this,android.R.layout.simple_spinner_item, floor);
+        bb.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        spinner_floor_no.setAdapter(bb);
+        txtDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+// Get Current Date
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+                final DatePickerDialog datePickerDialog = new DatePickerDialog(GuestActivity.this,AlertDialog.THEME_DEVICE_DEFAULT_DARK, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                    }
+                }, mYear, mMonth, mDay);
+                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                datePickerDialog.show();
+            }
+        });
+        txtTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get Current Time
+                final Calendar c = Calendar.getInstance();
+                mHour = c.get(Calendar.HOUR_OF_DAY);
+                mMinute = c.get(Calendar.MINUTE);
+
+                // Launch Time Picker Dialog
+                TimePickerDialog timePickerDialog = new TimePickerDialog(GuestActivity.this,AlertDialog.THEME_DEVICE_DEFAULT_DARK,
+                        new TimePickerDialog.OnTimeSetListener() {
+
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+                                if(hourOfDay>=0 && hourOfDay<12){
+                                    time = hourOfDay + " : " + minute + " AM";
+                                } else {
+                                    if(hourOfDay == 12){
+                                        time = hourOfDay + " : " + minute + " PM";
+                                    } else{
+                                        hourOfDay = hourOfDay -12;
+                                        time = hourOfDay + " : " + minute + " PM";
+                                    }
+                                }
+
+                                txtTime.setText(time);
+                            }
+                        }, mHour, mMinute, true);
+                timePickerDialog.show();
+            }
+
+        });
+
         Thread t = new Thread() {
             @Override
             public void run() {
@@ -196,10 +300,16 @@ public class GuestActivity extends AppCompatActivity{
                                 String cell = guest_cell_et.getText().toString();
                                 String total_guest = total_guest_et.getText().toString();
                                 String purpose = purpose_et.getText().toString();
+                                String guest_date = txtDate.getText().toString().trim();
+                                String guest_time = txtTime.getText().toString().trim();
+                                String host_name = host_name_et.getText().toString();
                                 String host_cell = host_cell_et.getText().toString();
+                                String flat_num = flat_no;
+                                String floor_num = floor_no;
                                 String qr_code = inputValue;
                                 String date = current_date;
                                 String time = current_time;
+
 
                                 //validation
 
@@ -222,14 +332,25 @@ public class GuestActivity extends AppCompatActivity{
                                     purpose_et.setError("Please enter visit purpose ! ");
                                     purpose_et.requestFocus();
                                 }
+                                else if (host_name.isEmpty()) {
+                                    host_name_et.setError("Host name can't be empty! ");
+                                    host_name_et.requestFocus();
+
+                                }
                                 else if (host_cell.length() != 11 || !host_cell.startsWith("01")) {
                                     host_cell_et.setError("Invalid cell!");
                                     host_cell_et.requestFocus();
 
                                 }
+                                else if (flat_num.isEmpty()) {
+                                    Toasty.error(GuestActivity.this, "Please select flat number !", Toast.LENGTH_SHORT).show();
+                                }
+                                else if (floor_num.isEmpty()) {
+                                    Toasty.error(GuestActivity.this, "Please select floor number !", Toast.LENGTH_SHORT).show();
+                                }
                                 else {
                                     //call login method
-                                    guestRequest(name,cell, total_guest,purpose,host_cell,qr_code,date,time);
+                                    guestRequest(name,cell, total_guest,purpose,guest_date,guest_time,host_name,host_cell,flat_num,floor_num,qr_code,date,time);
                                 }
 
                                 break;
@@ -260,7 +381,7 @@ public class GuestActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType("image/jpeg");
-
+                share.setType("text/plain");
                 ContentValues values = new ContentValues();
                 values.put(MediaStore.Images.Media.TITLE, "title");
                 values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
@@ -275,13 +396,13 @@ public class GuestActivity extends AppCompatActivity{
                 } catch (Exception e) {
                     System.err.println(e.toString());
                 }
-
+                share.putExtra(Intent.EXTRA_TEXT, inputValue);
                 share.putExtra(Intent.EXTRA_STREAM, uri);
-                startActivity(Intent.createChooser(share, "Share Image"));
+                startActivity(Intent.createChooser(share, "Share QR Info"));
             }
         });
     }
-    private void guestRequest(String name,String cell,String total_guest,String purpose, String host_cell, String qr_code,String date, String time) {
+    private void guestRequest(String name,String cell,String total_guest,String purpose,String guest_date,String guest_time,String host_name, String host_cell,String flat_no,String floor_no, String qr_code,String date, String time) {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Please wait....");
@@ -289,7 +410,7 @@ public class GuestActivity extends AppCompatActivity{
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<Contacts> call = apiInterface.guestRequest(name,cell,total_guest,purpose,host_cell,qr_code,date,time);
+        Call<Contacts> call = apiInterface.guestRequest(name,cell,total_guest,purpose,guest_date,guest_time,host_name,host_cell,flat_no,floor_no,qr_code,date,time);
         call.enqueue(new Callback<Contacts>() {
             @Override
             public void onResponse(Call<Contacts> call, Response<Contacts> response) {

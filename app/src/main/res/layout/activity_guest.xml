@@ -158,9 +158,103 @@ tools:context=".user.GuestActivity">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:id="@+id/ll7"
+        android:id="@+id/ll8"
         android:layout_margin="10dp"
         android:layout_below="@+id/ll6"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_calender"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Date"
+                style="@style/modifiedEditText"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_margin="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:id="@+id/in_date_et"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll9"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll8"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_time"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Time"
+                style="@style/modifiedEditText"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_margin="10dp"
+                android:maxLines="1"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/in_time_et"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll10"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll9"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_person_white"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent">
+
+            <EditText
+                android:id="@+id/editTextHostName"
+                style="@style/modifiedNewEditText"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginLeft="10dp"
+                android:hint="Host Name"
+                android:backgroundTint="@color/colorAccent"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll7"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll10"
         android:orientation="horizontal">
         <ImageView
             android:layout_width="30dp"
@@ -188,11 +282,75 @@ tools:context=".user.GuestActivity">
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll11"
+        android:weightSum="2"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll7"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textInputPhone"
+            android:text="Flat No :"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv1">
+        </TextView>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll12"
+        android:weightSum="2"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll11"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv1"
+            android:text="Floor No :"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv2">
+        </TextView>
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:id="@+id/ll4"
         android:background="@android:color/white"
-        android:layout_below="@+id/ll7"
+        android:layout_below="@+id/ll12"
         android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"

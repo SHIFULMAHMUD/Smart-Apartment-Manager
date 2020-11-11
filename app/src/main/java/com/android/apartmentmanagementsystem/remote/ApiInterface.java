@@ -152,7 +152,12 @@ public interface ApiInterface {
             @Field(Constant.KEY_CELL) String cell,
             @Field(Constant.KEY_TOTAL_GUEST) String total_guest,
             @Field(Constant.KEY_PURPOSE) String purpose,
+            @Field(Constant.KEY_VISIT_DATE) String visit_date,
+            @Field(Constant.KEY_VISIT_TIME) String visit_time,
+            @Field(Constant.KEY_HOST_NAME) String host_name,
             @Field(Constant.KEY_HOST_CELL) String host_cell,
+            @Field(Constant.KEY_FLAT_NO) String flat_no,
+            @Field(Constant.KEY_FLOOR_NO) String floor_no,
             @Field(Constant.KEY_QR_CODE) String qr_code,
             @Field(Constant.KEY_DATE) String paying_date,
             @Field(Constant.KEY_TIME) String paying_time);

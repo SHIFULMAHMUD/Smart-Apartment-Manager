@@ -19,6 +19,16 @@ public class Guest {
     private String date;
     @SerializedName("time")
     private String time;
+    @SerializedName("host_name")
+    private String host_name;
+    @SerializedName("visit_date")
+    private String visit_date;
+    @SerializedName("visit_time")
+    private String visit_time;
+    @SerializedName("flat_no")
+    private String flat_no;
+    @SerializedName("floor_no")
+    private String floor_no;
 
     public String getGuest_name() {
         return guest_name;
@@ -50,5 +60,25 @@ public class Guest {
 
     public String getTime() {
         return time;
+    }
+
+    public String getHost_name() {
+        return host_name;
+    }
+
+    public String getVisit_date() {
+        return visit_date;
+    }
+
+    public String getVisit_time() {
+        return visit_time;
+    }
+
+    public String getFlat_no() {
+        return flat_no;
+    }
+
+    public String getFloor_no() {
+        return floor_no;
     }
 }

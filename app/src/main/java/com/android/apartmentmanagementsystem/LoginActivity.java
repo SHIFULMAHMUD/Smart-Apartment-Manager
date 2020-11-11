@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
         setContentView(R.layout.activity_login);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Apartment Manager");
+        getSupportActionBar().setTitle(R.string.app_name);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {

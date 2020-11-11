@@ -1,40 +1,40 @@
 
-U
-java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8À¬´ÁÇ.
-]	java:S125t"<This block of commented-out lines of code should be removed.(È”üøûÿÿÿÿ8­à³³Ê.
-Y
-java:S1128"7Remove this unused import 'android.widget.ProgressBar'.(³ñÿŸùÿÿÿÿ8¿ôƒÁÇ.
+O
+java:S1874U"2Remove this use of "setMessage"; it is deprecated.(³°ˆ¼8­à³³Ê.
+S
+java:S1874%"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8üÕ‹ºÈ.
 r
 java:S1128"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuestActivity'.(ıœò‰8Ú²ÑñĞ.
 C
-java:S1659""&Declare "userName" on a separate line.(šşÔŒ8øµ³³Ê.
-n
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8­à³³Ê.
-E
-java:S1659""(Declare "userGender" on a separate line.(šşÔŒ8øµ³³Ê.
-E
-java:S1659$"#Declare "nidTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
-C
 java:S1659""&Declare "userCell" on a separate line.(šşÔŒ8øµ³³Ê.
-I
-java:S1659$"'Declare "accountTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
-S
-java:S1874%"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8üÕ‹ºÈ.
-S
-java:S1874S"6Remove this use of "ProgressDialog"; it is deprecated.(ç›ù8­à³³Ê.
-z
-java:S1128"XRemove this unused import 'com.android.apartmentmanagementsystem.user.ComplainActivity'.(ÊÅÂÓşÿÿÿÿ8¨Ø¯ŠÉ.
-F
-java:S1659$"$Declare "cellTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
 G
 java:S1659""*Declare "userPassword" on a separate line.(šşÔŒ8øµ³³Ê.
-R
-java:S1068 "0Remove this unused "contactsList" private field.(ãÔş–ùÿÿÿÿ8¬ŸµÇ.
+E
+java:S1659""(Declare "userGender" on a separate line.(šşÔŒ8øµ³³Ê.
 B
 java:S1659""%Declare "userNid" on a separate line.(šşÔŒ8øµ³³Ê.
+F
+java:S1659$"$Declare "cellTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+z
+java:S1128"XRemove this unused import 'com.android.apartmentmanagementsystem.user.ComplainActivity'.(ÊÅÂÓşÿÿÿÿ8¨Ø¯ŠÉ.
 H
 java:S1659$"&Declare "genderTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+E
+java:S1659$"#Declare "nidTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.
+U
+java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8À¬´ÁÇ.
+S
+java:S1874S"6Remove this use of "ProgressDialog"; it is deprecated.(ç›ù8­à³³Ê.
+C
+java:S1659""&Declare "userName" on a separate line.(šşÔŒ8øµ³³Ê.
+R
+java:S1068 "0Remove this unused "contactsList" private field.(ãÔş–ùÿÿÿÿ8¬ŸµÇ.
+Y
+java:S1128"7Remove this unused import 'android.widget.ProgressBar'.(³ñÿŸùÿÿÿÿ8¿ôƒÁÇ.
+]	java:S125t"<This block of commented-out lines of code should be removed.(È”üøûÿÿÿÿ8­à³³Ê.
+n
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8­à³³Ê.
 J
 java:S1659""-Declare "userAccountType" on a separate line.(šşÔŒ8øµ³³Ê.
-O
-java:S1874U"2Remove this use of "setMessage"; it is deprecated.(³°ˆ¼8­à³³Ê.
+I
+java:S1659$"'Declare "accountTv" on a separate line.(Ãƒ †úÿÿÿÿ8üÕ‹ºÈ.

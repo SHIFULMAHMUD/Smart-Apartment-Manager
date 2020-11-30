@@ -143,12 +143,21 @@ public class FlatActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int position) {
                         switch (position) {
                             case 0:
-                                String request = "Pending";
+                                SharedPreferences preferences = getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                                if (preferences.contains("isUserLogin")) {
+                                    String request = "Pending";
                                     if (userCell=="0") {
                                         submitRequest(flat_no, floor_no, request, profileName, getCell);
                                     }else if (userCell.equals(getCell)){
                                         Toasty.error(FlatActivity.this,"Sorry! You can not request more than one flat.",Toasty.LENGTH_LONG).show();
                                     }
+
+                                } else {
+                                    Intent intent = new Intent(FlatActivity.this, LoginActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                }
 
                                 break;
                             case 1:
@@ -323,7 +332,7 @@ public class FlatActivity extends AppCompatActivity {
 
                     if (profileData.isEmpty()) {
 
-                        Toasty.warning(FlatActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+//                        Toasty.warning(FlatActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
 
                     } else {
 

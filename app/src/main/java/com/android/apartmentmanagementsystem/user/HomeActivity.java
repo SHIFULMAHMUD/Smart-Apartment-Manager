@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.android.apartmentmanagementsystem.ConnectionDetector;
 import com.android.apartmentmanagementsystem.Constant;
+import com.android.apartmentmanagementsystem.LoginActivity;
 import com.android.apartmentmanagementsystem.ProfileActivity;
 import com.android.apartmentmanagementsystem.R;
 import com.android.apartmentmanagementsystem.adapter.RecyclerViewAdapter;
@@ -89,12 +90,21 @@ public class HomeActivity extends AppCompatActivity {
         linearLayoutFeature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (getCell.equals(userCell)) {
-                    Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                SharedPreferences preferences = getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                if (preferences.contains("isUserLogin")) {
+                    if (getCell.equals(userCell)) {
+                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }else {
+                        Toasty.info(HomeActivity.this,"Rent a Flat to avail all features !",Toasty.LENGTH_LONG).show();
+                    }
+                } else {
+                    Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
-                }else {
-                    Toasty.info(HomeActivity.this,"Rent a Flat to avail all features !",Toasty.LENGTH_LONG).show();
+                    finish();
                 }
+
             }
         });
     }
@@ -116,7 +126,7 @@ public class HomeActivity extends AppCompatActivity {
 
                     if (profileData.isEmpty()) {
 
-                        Toasty.warning(HomeActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
+                        //Toasty.warning(HomeActivity.this, R.string.no_data_found, Toast.LENGTH_SHORT).show();
 
                     } else {
 

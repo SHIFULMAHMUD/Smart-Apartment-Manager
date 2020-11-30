@@ -48,6 +48,7 @@
                 android:id="@+id/profile_name_tv"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:hint="Welcome User"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="@android:color/white">

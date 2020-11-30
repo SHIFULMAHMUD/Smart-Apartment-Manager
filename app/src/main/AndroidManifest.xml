@@ -36,7 +36,7 @@
         <activity android:name=".user.ComplainActivity" />
         <activity android:name=".user.PayUtilityBillActivity" />
         <activity android:name=".user.PayRentActivity" />
-        <activity android:name=".user.HomeActivity" />
+        <activity android:name=".SplashActivity" />
         <activity android:name=".FlatActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".user.RentActivity" />
@@ -45,7 +45,7 @@
         <activity
             android:name=".RegisterActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".user.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

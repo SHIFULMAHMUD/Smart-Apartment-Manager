@@ -270,8 +270,6 @@ Y
 )app/src/main/res/layout/activity_flat.xml,b\c\bcfe4d817944860f417f111560e4beb88810831a
 
 Oapp/src/main/java/com/android/apartmentmanagementsystem/ConnectionDetector.java,7\9\7957683a89ca6530aa7a43cb26260f0c0a1ca905
-Y
-)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
 a
 1app/src/main/res/layout/complain_history_item.xml,b\7\b7b4b3b9c3d26ab839c0c749e33d8d046e1e68d0
 V
@@ -294,8 +292,6 @@ $app/src/main/res/layout/row_item.xml,3\1\31eca07b4730d2a8d7459f4581293acb67fd0
 0app/src/main/res/layout/utility_history_item.xml,b\c\bc1233480fe4c229d47914b53176782fc969079a
 _
 /app/src/main/res/layout/utility_report_item.xml,a\3\a34b9d6c8cb623cb8aa157e71ac083e3baa2d8ff
-Y
-)app/src/main/res/layout/activity_home.xml,8\4\84bbfd95b490b92591d2b037417f036942315d57
 R
 "app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
 ‹
@@ -304,3 +300,15 @@ H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 e
 5app/src/main/res/layout/activity_pay_utility_bill.xml,e\0\e0efd369dbd6b8c16f99f5b57816804e69d41f8b
+Y
+)app/src/main/res/drawable/ic_calender.xml,3\b\3b863a2254f9468ecbc26ff20e3ee5189044b04b
+U
+%app/src/main/res/drawable/ic_time.xml,1\8\186b1b7895df62a5d104fdc52afe18423014ee58
+_
+/app/src/main/res/layout/activity_guard_home.xml,2\4\2412a9cdda189e87fb69d05db93a3a2dd45b01f0
+Z
+*app/src/main/res/layout/activity_guest.xml,c\3\c3505a17959e0ae49bdc14571de721cf6e727140
+T
+$app/src/main/res/layout/qrdialog.xml,6\4\64799846470198326a543e74a1ab2785bc89924f
+S
+#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e

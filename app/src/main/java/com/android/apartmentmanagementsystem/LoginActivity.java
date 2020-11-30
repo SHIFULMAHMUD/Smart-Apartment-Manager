@@ -349,7 +349,7 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher,
                     //Adding values to editor
                     editor.putString(Constant.CELL_SHARED_PREF, cell);
                     editor.putString(Constant.TOKEN_SHARED_PREF, user_token);
-
+                    editor.putBoolean("isUserLogin", true);
                     //Saving values to editor
                     editor.commit();
 

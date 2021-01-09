@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".guard.GuardTaskActivity"></activity>
+        <activity android:name=".user.AddEventActivity"></activity>
+        <activity android:name=".guard.GuardTaskActivity" />
         <activity android:name=".user.ReportActivity" />
         <activity android:name=".user.UtilityReportActivity" />
         <activity android:name=".user.RentReportActivity" />
@@ -52,6 +53,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".notification.MyFirebaseService"
             android:exported="false">
@@ -59,6 +61,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

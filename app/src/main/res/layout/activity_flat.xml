@@ -125,7 +125,7 @@
             <Button
                 android:id="@+id/cirConfirmButton"
                 style="@style/loginButton"
-                android:text="Confirm Rent"
+                android:text="Request Flat"
                 android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/colorLogo"

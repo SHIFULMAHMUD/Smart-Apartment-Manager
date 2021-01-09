@@ -9,6 +9,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,11 +23,13 @@ import com.android.apartmentmanagementsystem.model.Contacts;
 import com.android.apartmentmanagementsystem.remote.ApiClient;
 import com.android.apartmentmanagementsystem.remote.ApiInterface;
 import com.android.apartmentmanagementsystem.user.history.RentHistoryActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
 public class EventsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
+    FloatingActionButton addBtn;
     private RecyclerView.LayoutManager layoutManager;
     private EventAdapter adapter;
     private List<Contacts> contactsList;
@@ -48,6 +51,15 @@ public class EventsActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        addBtn=findViewById(R.id.floatingBtn);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(EventsActivity.this,AddEventActivity.class);
+                startActivity(intent);
+            }
+        });
 //Internet connection checker
         ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
         // Check if Internet present

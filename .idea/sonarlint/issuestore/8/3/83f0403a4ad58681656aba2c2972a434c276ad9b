@@ -1,66 +1,66 @@
 
-d
-java:S1192”"FDefine a constant instead of duplicating this literal "Guard" 3 times.(¨ı®Ÿ8«ş¯Ø.
-f
-java:S2259ğ"HA "NullPointerException" could be thrown; "userStatus" is nullable here.(ÇËúÀ8É¾®Ø.
 D
 java:S1659D")Declare "etxtAccount" on a separate line.(ÕÉÇŠúÿÿÿÿ
-E
-java:S1659D"*Declare "etxtPassword" on a separate line.(ÕÉÇŠúÿÿÿÿ
-D	java:S131œ""Add a default case to this switch.(¼œóÛüÿÿÿÿ8À¥¾ü×.
-Y
-java:S1874¶"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8ñÄÿú×.
-L
-java:S1874C"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú
-Ÿ
-java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8À¥¾ü×.
-g
-java:S1192ğ"IDefine a constant instead of duplicating this literal "Rejected" 3 times.(ÇËúÀ8À¥¾ü×.
-Y	java:S125¼"<This block of commented-out lines of code should be removed.(æ³¨¾8À¥¾ü×.
-^	java:S125ğ"<This block of commented-out lines of code should be removed.(¼Ğ²°ûÿÿÿÿ8ğÌ¼Ø.
-n
-java:S1301œ"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8À¥¾ü×.
-b
-java:S1117q"ERename "sharedPreferences" which hides the field declared at line 70.(½Ìúğ8Ú‚æü×.
-e
-java:S1192”"GDefine a constant instead of duplicating this literal "Renter" 3 times.(¨ı®Ÿ8É¾®Ø.
-]
-java:S1117Ë"@Rename "apiInterface" which hides the field declared at line 65.(·­ˆI8À¥¾ü×.
-k
-java:S1871ğ"MThis branch's code block is the same as the block for the branch on line 356.(ÇËúÀ8‘“‰ı×.
-p
-java:S1871õ"MThis branch's code block is the same as the block for the branch on line 362.(çÍ¶·ûÿÿÿÿ8É¬±Ø.
-_
-java:S1126y"BReplace this if-then-else statement by a single method invocation.(˜·Øã8À¥¾ü×.
 P
 java:S1874İ"2Remove this use of "setMessage"; it is deprecated.(³°ˆ¼8À¥¾ü×.
-]
-java:S1117º"@Rename "apiInterface" which hides the field declared at line 65.(·­ˆI8À¥¾ü×.
-¤
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×åó«øÿÿÿÿ8À¥¾ü×.
-s	java:S116E"WRename this field "rem_userpass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¬Ë8ò„É‘É.
-v	java:S116B"URename this field "user_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïñ§şÿÿÿÿ8ğ®•ó×.
-e
-java:S1871¢"IThis case's code block is the same as the block for the case on line 157.(ªëÅŞúÿÿÿÿ
-P
-java:S1874·"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8À¥¾ü×.
-r
-java:S1128)"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuestActivity'.(ıœò‰8µ÷ÏñĞ.
-J
-java:S1659B"(Declare "user_token" on a separate line.(ïñ§şÿÿÿÿ8ğ®•ó×.
-|
-java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardMainActivity'.(ß•»Áøÿÿÿÿ8Œşü¥Ê.
-E
-java:S1066g"/Merge this if statement with the enclosing one.(ÜÉÌâ
-J
-java:S1659B"(Declare "userStatus" on a separate line.(ïñ§şÿÿÿÿ8ÍÜú×.
-t
-java:S3776M"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¨Œşÿÿÿÿ8×ôÍñĞ.
-R
-java:S1874Ç"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ
-P
-java:S1874È"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8À¥¾ü×.
-X
-java:S1117Ü":Rename "editor" which hides the field declared at line 71.(Íµ’ı8À¥¾ü×.
 T
 java:S1874Û"6Remove this use of "ProgressDialog"; it is deprecated.(»†ì8À¥¾ü×.
+]
+java:S1117Ë"@Rename "apiInterface" which hides the field declared at line 65.(·­ˆI8À¥¾ü×.
+e
+java:S1871¢"IThis case's code block is the same as the block for the case on line 157.(ªëÅŞúÿÿÿÿ
+s	java:S116E"WRename this field "rem_userpass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¬Ë8ò„É‘É.
+J
+java:S1659B"(Declare "userStatus" on a separate line.(ïñ§şÿÿÿÿ8ÍÜú×.
+D	java:S131œ""Add a default case to this switch.(¼œóÛüÿÿÿÿ8À¥¾ü×.
+¤
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×åó«øÿÿÿÿ8À¥¾ü×.
+Ÿ
+java:S1186”"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8À¥¾ü×.
+R
+java:S1874Ç"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ
+^	java:S125ğ"<This block of commented-out lines of code should be removed.(¼Ğ²°ûÿÿÿÿ8ğÌ¼Ø.
+t
+java:S3776M"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¨Œşÿÿÿÿ8×ôÍñĞ.
+Y
+java:S1874¶"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8ñÄÿú×.
+P
+java:S1874È"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8À¥¾ü×.
+_
+java:S1126y"BReplace this if-then-else statement by a single method invocation.(˜·Øã8À¥¾ü×.
+L
+java:S1874C"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú
+f
+java:S2259ğ"HA "NullPointerException" could be thrown; "userStatus" is nullable here.(ÇËúÀ8É¾®Ø.
+k
+java:S1871ğ"MThis branch's code block is the same as the block for the branch on line 356.(ÇËúÀ8‘“‰ı×.
+v	java:S116B"URename this field "user_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïñ§şÿÿÿÿ8ğ®•ó×.
+]
+java:S1117º"@Rename "apiInterface" which hides the field declared at line 65.(·­ˆI8À¥¾ü×.
+e
+java:S1192”"GDefine a constant instead of duplicating this literal "Renter" 3 times.(¨ı®Ÿ8É¾®Ø.
+d
+java:S1192”"FDefine a constant instead of duplicating this literal "Guard" 3 times.(¨ı®Ÿ8«ş¯Ø.
+J
+java:S1659B"(Declare "user_token" on a separate line.(ïñ§şÿÿÿÿ8ğ®•ó×.
+r
+java:S1128)"URemove this unused import 'com.android.apartmentmanagementsystem.user.GuestActivity'.(ıœò‰8µ÷ÏñĞ.
+X
+java:S1117Ü":Rename "editor" which hides the field declared at line 71.(Íµ’ı8À¥¾ü×.
+g
+java:S1192ğ"IDefine a constant instead of duplicating this literal "Rejected" 3 times.(ÇËúÀ8À¥¾ü×.
+|
+java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardMainActivity'.(ß•»Áøÿÿÿÿ8Œşü¥Ê.
+p
+java:S1871õ"MThis branch's code block is the same as the block for the branch on line 362.(çÍ¶·ûÿÿÿÿ8É¬±Ø.
+b
+java:S1117q"ERename "sharedPreferences" which hides the field declared at line 70.(½Ìúğ8Ú‚æü×.
+n
+java:S1301œ"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8À¥¾ü×.
+E
+java:S1659D"*Declare "etxtPassword" on a separate line.(ÕÉÇŠúÿÿÿÿ
+Y	java:S125¼"<This block of commented-out lines of code should be removed.(æ³¨¾8À¥¾ü×.
+P
+java:S1874·"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8À¥¾ü×.
+E
+java:S1066g"/Merge this if statement with the enclosing one.(ÜÉÌâ

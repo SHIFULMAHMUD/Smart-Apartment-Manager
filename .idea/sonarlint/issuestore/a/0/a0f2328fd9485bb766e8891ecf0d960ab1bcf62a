@@ -1,7 +1,7 @@
 
-m
-java:S1301\"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8»ÎğšÈ.
 y
-java:S1450"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8»ÎğšÈ.
+java:S1450!"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8»ÎğšÈ.
 €
-java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.RentHistoryActivity'.(¤ñŠ8—¢ñĞ.
+java:S1128"cRemove this unused import 'com.android.apartmentmanagementsystem.user.history.RentHistoryActivity'.(¤ñŠ8—¢ñĞ.
+m
+java:S1301h"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8»ÎğšÈ.

@@ -3,6 +3,7 @@ package com.android.apartmentmanagementsystem.remote;
 import com.android.apartmentmanagementsystem.Constant;
 import com.android.apartmentmanagementsystem.model.Complain;
 import com.android.apartmentmanagementsystem.model.Contacts;
+import com.android.apartmentmanagementsystem.model.Event;
 import com.android.apartmentmanagementsystem.model.Flat;
 import com.android.apartmentmanagementsystem.model.Guest;
 import com.android.apartmentmanagementsystem.model.Rent;
@@ -67,6 +68,18 @@ public interface ApiInterface {
             @Field(Constant.KEY_NOTE) String note,
             @Field(Constant.KEY_DATE) String paying_date,
             @Field(Constant.KEY_TIME) String paying_time);
+
+    @FormUrlEncoded
+    @POST("add_event.php")
+    Call<Event> submitEventDetails(
+            @Field(Constant.KEY_HOST) String host,
+            @Field(Constant.KEY_CELL) String cell,
+            @Field(Constant.KEY_FLAT_NO) String flat,
+            @Field(Constant.KEY_FLOOR_NO) String floor,
+            @Field(Constant.KEY_EVENT_DATE) String date,
+            @Field(Constant.KEY_EVENT) String event,
+            @Field(Constant.KEY_STATUS) String status,
+            @Field(Constant.KEY_NOTIFICATION) String notification);
 
     @FormUrlEncoded
     @POST("api.php")

@@ -1,11 +1,11 @@
 
 ?
 java:S16591""Declare "time" on a separate line.(åÆ‰æ8Ù½…ùÊ.
+s
+java:S1128
+"QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8İÒíøÊ.
 ?
 java:S16591""Declare "date" on a separate line.(åÆ‰æ8‘åÚÔÊ.
 ?
 java:S16591""Declare "task" on a separate line.(åÆ‰æ8 Ì†ùÊ.
-s
-java:S1128
-"QRemove this unused import 'com.android.apartmentmanagementsystem.model.Contacts'.(é²ÆÍüÿÿÿÿ8İÒíøÊ.
 X	java:S125="<This block of commented-out lines of code should be removed.(Ö™Â§8‘åÚÔÊ.

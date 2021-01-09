@@ -1,19 +1,20 @@
 
-K
-java:S1659&")Declare "profileName" on a separate line.(Šóœıÿÿÿÿ8»Õ°öË.
-I
-java:S1068(",Remove this unused "flatList" private field.(–ˆÖ¹8é³”›Î.
-¤
-java:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ó¬îÉøÿÿÿÿ8†é˜›Î.
 T
 java:S1128"7Remove this unused import 'android.app.ProgressDialog'.(¶ÍÔÓ8³É•›Î.
-H
-java:S1659&"&Declare "userCell" on a separate line.(Šóœıÿÿÿÿ8™Ô—Î.
 L
-java:S1659%"1Declare "linearLayoutFeature" on a separate line.(Óƒš·ùÿÿÿÿ
+java:S1659&"1Declare "linearLayoutFeature" on a separate line.(Óƒš·ùÿÿÿÿ
 o
-java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.ProfileActivity'.(ÑœÛã8¸±™›Î.
-{
-java:S1128"^Remove this unused import 'com.android.apartmentmanagementsystem.adapter.RecyclerViewAdapter'.(ÑÉà•8ú°‹—Î.
+java:S1128"RRemove this unused import 'com.android.apartmentmanagementsystem.ProfileActivity'.(ÑœÛã8¸±™›Î.
 |
-java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardHomeActivity'.(¯ìóÖÿÿÿÿÿ8Í³¬öË.
+java:S1128"ZRemove this unused import 'com.android.apartmentmanagementsystem.guard.GuardHomeActivity'.(¯ìóÖÿÿÿÿÿ8Í³¬öË.
+{
+java:S1128"^Remove this unused import 'com.android.apartmentmanagementsystem.adapter.RecyclerViewAdapter'.(ÑÉà•8ú°‹—Î.
+H
+java:S1659'"&Declare "userCell" on a separate line.(Šóœıÿÿÿÿ8™Ô—Î.
+¤
+java:S1186³"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ó¬îÉøÿÿÿÿ8†é˜›Î.
+I
+java:S1068)",Remove this unused "flatList" private field.(–ˆÖ¹8é³”›Î.
+K
+java:S1659'")Declare "profileName" on a separate line.(Šóœıÿÿÿÿ8»Õ°öË.
+^	java:S125"<This block of commented-out lines of code should be removed.(Ñ™“åøÿÿÿÿ8ÉÕÑºá.

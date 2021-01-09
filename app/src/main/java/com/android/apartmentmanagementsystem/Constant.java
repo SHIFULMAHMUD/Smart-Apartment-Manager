@@ -2,11 +2,12 @@ package com.android.apartmentmanagementsystem;
 
 public class Constant {
 
-    public static final String BASE_URL = "https://apartmentsecurity.cf/android/";
-    public static final String IMAGE_URL = "https://apartmentsecurity.cf/admin/image/";
+    public static final String BASE_URL = "http://oddomi.com/catchy_housing/android/";
+    public static final String IMAGE_URL = "http://oddomi.com/catchy_housing/admin/image/";
     public static final String KEY_NAME="name";
     public static final String KEY_PASSWORD="password";
     public static final String KEY_CELL="cell";
+    public static final String KEY_HOST="host";
     public static final String KEY_GUEST_NAME="guest_name";
     public static final String KEY_ACCOUNT="account";
     public static final String KEY_GENDER="gender";
@@ -37,8 +38,11 @@ public class Constant {
     public static final String KEY_BKASH_CELL="bkash_cell";
     public static final String KEY_NOTE= "note";
     public static final String KEY_DATE="paying_date";
+    public static final String KEY_EVENT_DATE="date";
     public static final String KEY_TIME="paying_time";
     public static final String KEY_STATUS="status";
+    public static final String KEY_NOTIFICATION="notification";
+    public static final String KEY_EVENT="event";
 
 
     //share preference

@@ -1,56 +1,56 @@
 
-L
-java:S3740]"/Provide the parametrized type for this generic.(îÈ»ı8Ïê‰ÿê.
-c
-java:S1874z"ARemove this use of "THEME_DEVICE_DEFAULT_DARK"; it is deprecated.(¾Òì¡ÿÿÿÿÿ8Š½ğ»ë.
-Y
-java:S1874ì"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8Ïê‰ÿê.
-Q
-java:S3740l"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8Ïê‰ÿê.
-K
-java:S16590")Declare "profileName" on a separate line.(Ôìûÿÿÿÿ8²®ÿşê.
-£
-java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Ïê‰ÿê.
-v	java:S116*"ZRename this field "spinner_flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ§óË8²®ÿşê.
-X	java:S107ê"<Method has 8 parameters, which is greater than 7 authorized.(º®…-8¯âğÙì.
-n
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ïê‰ÿê.
-n	java:S116)"RRename this field "date_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8¢Êÿê.
-s	java:S116."RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æĞ¡‘ûÿÿÿÿ8²®ÿşê.
-u	java:S116)"YRename this field "renter_name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8²®ÿşê.
-n
-java:S1301–"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8üÍÕºë.
-Q
-java:S3740l"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8Ïê‰ÿê.
-£
-java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Ïê‰ÿê.
-K
-java:S1659*".Declare "spinner_floor_no" on a separate line.(Õ§óË8²®ÿşê.
-w	java:S116*"[Rename this field "spinner_floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ§óË8²®ÿşê.
-D	java:S131""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ïê‰ÿê.
-D
-java:S16591""Declare "mDay" on a separate line.(İ—Ûéşÿÿÿÿ8éû¤ÿê.
-o	java:S116/"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ñ‰Î8²®ÿşê.
-[
-java:S1117“"8Rename "flat" which hides the field declared at line 44.(‡Áü•øÿÿÿÿ8ÔÅÍÖì.
-u	java:S116)"YRename this field "renter_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8²®ÿşê.
-]
-java:S1117ğ"@Rename "apiInterface" which hides the field declared at line 50.(·­ˆI8üÍÕºë.
-F
-java:S16591"$Declare "mMonth" on a separate line.(İ—Ûéşÿÿÿÿ8éû¤ÿê.
-q	java:S116)"URename this field "details_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8ãí±¹ë.
 E
 java:S1659)"(Declare "details_et" on a separate line.(¦õñ˜8ãí±¹ë.
-v	java:S116+"URename this field "submit_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë‘Ÿñøÿÿÿÿ8²®ÿşê.
-B
-java:S1659)"%Declare "date_et" on a separate line.(¦õñ˜8¢Êÿê.
-S
-java:S18743"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8²®ÿşê.
+F
+java:S16591"$Declare "mMonth" on a separate line.(İ—Ûéşÿÿÿÿ8éû¤ÿê.
+v	java:S116*"ZRename this field "spinner_flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ§óË8²®ÿşê.
+c
+java:S1874z"ARemove this use of "THEME_DEVICE_DEFAULT_DARK"; it is deprecated.(¾Òì¡ÿÿÿÿÿ8Š½ğ»ë.
+D
+java:S16591""Declare "mDay" on a separate line.(İ—Ûéşÿÿÿÿ8éû¤ÿê.
+£
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Ïê‰ÿê.
 \
 java:S1117”"9Rename "floor" which hides the field declared at line 45.(®—Ú¶øÿÿÿÿ8¸äÍÖì.
+Q
+java:S3740l"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8Ïê‰ÿê.
+[
+java:S1117“"8Rename "flat" which hides the field declared at line 44.(‡Áü•øÿÿÿÿ8ÔÅÍÖì.
+n
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¼œóÛüÿÿÿÿ8Ïê‰ÿê.
 I
 java:S1659)",Declare "renter_cell_et" on a separate line.(¦õñ˜8²®ÿşê.
 L
 java:S3740]"/Provide the parametrized type for this generic.(îÈ»ı8Ïê‰ÿê.
+X	java:S107ê"<Method has 8 parameters, which is greater than 7 authorized.(º®…-8¯âğÙì.
+D	java:S131""Add a default case to this switch.(¼œóÛüÿÿÿÿ8Ïê‰ÿê.
+K
+java:S1659*".Declare "spinner_floor_no" on a separate line.(Õ§óË8²®ÿşê.
+B
+java:S1659)"%Declare "date_et" on a separate line.(¦õñ˜8¢Êÿê.
+u	java:S116)"YRename this field "renter_name_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8²®ÿşê.
+o	java:S116/"SRename this field "floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ñ‰Î8²®ÿşê.
+L
+java:S3740]"/Provide the parametrized type for this generic.(îÈ»ı8Ïê‰ÿê.
+Q
+java:S3740l"/Provide the parametrized type for this generic.(€À®²ıÿÿÿÿ8Ïê‰ÿê.
+w	java:S116*"[Rename this field "spinner_floor_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ§óË8²®ÿşê.
+K
+java:S16590")Declare "profileName" on a separate line.(Ôìûÿÿÿÿ8²®ÿşê.
+q	java:S116)"URename this field "details_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8ãí±¹ë.
+s	java:S116."RRename this field "flat_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æĞ¡‘ûÿÿÿÿ8²®ÿşê.
+u	java:S116)"YRename this field "renter_cell_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8²®ÿşê.
+v	java:S116+"URename this field "submit_btn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë‘Ÿñøÿÿÿÿ8²®ÿşê.
+S
+java:S18743"6Remove this use of "ProgressDialog"; it is deprecated.(Ï’Ú8²®ÿşê.
+£
+java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Ïê‰ÿê.
+n
+java:S1301–"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8üÍÕºë.
+]
+java:S1117ğ"@Rename "apiInterface" which hides the field declared at line 50.(·­ˆI8üÍÕºë.
 P
 java:S1874í"2Remove this use of "setMessage"; it is deprecated.(¤¾š˜8üÍÕºë.
+Y
+java:S1874ì"6Remove this use of "ProgressDialog"; it is deprecated.(ú€˜ùşÿÿÿÿ8Ïê‰ÿê.
+n	java:S116)"RRename this field "date_et" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õñ˜8¢Êÿê.
